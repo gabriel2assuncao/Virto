@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Soluções, ferramentas e ideias para facilitar o seu dia a dia de um jeito simples.">
+  <title>Virto — Soluções para o dia a dia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Manrope:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <a href="#inicio"><img class="logo" src="imagens/logo-virto.png" alt="Virto"></a>
+
+    <nav>
+      <a class="ativo" href="#inicio">Início</a>
+      <a href="#explorar">Explorar</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+
+    <!-- Tema escuro sem JavaScript: a caixa marcada muda as cores no CSS -->
+    <label class="tema" title="Tema claro/escuro">
+      <input type="checkbox" aria-label="Ativar tema escuro">
+      <span class="icone"><img src="imagens/lua.png" alt=""></span>
+    </label>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-texto">
+        <img class="faiscas" src="imagens/faisca.png" alt="">
+        <h1>Problemas<br>do dia a dia?<br>A gente <em>resolve.</em></h1>
+        <p>Descubra soluções, ferramentas e ideias<br>para facilitar sua vida — de um jeito <strong>simples.</strong></p>
+
+        <form class="busca" action="#explorar">
+          <span class="icone"><img src="imagens/lupa.png" alt=""></span>
+          <input type="search" placeholder="Buscar por uma solução..." aria-label="Buscar por uma solução">
+          <button type="submit" aria-label="Buscar"><span class="icone"><img src="imagens/seta-direita-de-linha-reta-fina.png" alt=""></span></button>
+        </form>
+      </div>
+
+      <div class="hero-arte">
+        <div class="mancha"></div>
+        <img class="computador" src="imagens/codificacao.png" alt="Notebook ilustrado com um personagem sorridente">
+        <img class="coroa traco" src="imagens/coroa.svg" alt="">
+        <img class="xadrez traco" src="imagens/xadrez.svg" alt="">
+        <p class="nota">mais facilidade<br>por favor!<img class="traco" src="imagens/risco.svg" alt=""></p>
+      </div>
+    </section>
+
+    <a class="destaque" id="explorar" href="#">
+      <div class="destaque-texto">
+        <span class="etiqueta"><span class="icone"><img src="imagens/faisca2.png" alt=""></span> Em destaque</span>
+        <h2>Como bloquear chamadas de <em>spam</em> no celular?</h2>
+        <span class="ver">Ver solução completa <span class="icone"><img src="imagens/seta-direita-de-linha-reta-fina.png" alt=""></span></span>
+      </div>
+      <p class="destaque-desc">Evite ligações indesejadas com algumas configurações simples no seu celular.<img class="traco" src="imagens/risco.svg" alt=""></p>
+      <img class="celular" src="imagens/virtus-spam-call-removebg-preview.png" alt="Celular recebendo uma chamada de spam">
+    </a>
+
+    <section class="sobre" id="sobre">
+      <h2>Sobre o Virto</h2>
+      <p>Acreditamos que muitos problemas do cotidiano podem ser resolvidos de maneiras mais simples. O Virto conecta necessidades reais a ideias, ferramentas e soluções que facilitam a vida das pessoas.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Feito para transformar pequenas dificuldades em grandes facilidades.</p>
+  </footer>
+
+</body>
+</html>
