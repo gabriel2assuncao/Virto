@@ -73,13 +73,13 @@ h2 { font-size: clamp(30px, 3.2vw, 52px); line-height: 1; }
 .destaque:hover .ver .icone { transform: translateX(5px); }
 .destaque-desc { align-self: stretch; margin: 0; padding: 30px 0 0 30px; border-left: 1.5px solid var(--linha); max-width: 28ch; }
 .destaque-desc img { display: block; width: 90px; margin-top: 18px; }
-.celular { align-self: end; width: 100%; margin-bottom: -4%; }
+.celular { align-self: end; width: 100%; margin-bottom: 10%; }
 
 
 .sobre { display: grid; grid-template-columns: 1fr 1.4fr; gap: 60px; padding: 80px 0; border-top: 1px solid var(--linha); }
 .sobre p { margin: 0; font-size: 24px; line-height: 1.4; max-width: 36ch; }
 footer { padding: 24px 4%; border-top: 1px solid var(--linha); font-size: 14px; }
-footer p { margin: 0; }
+footer p { margin: 0; text-align: center; }
 
 
 @media (max-width: 800px) {
@@ -95,7 +95,7 @@ footer p { margin: 0; }
   .nota { right: 0; top: -8%; }
   .destaque { grid-template-columns: 1fr; gap: 20px; }
   .destaque-desc { padding: 0 0 0 20px; }
-  .celular { max-width: 340px; margin: 0 auto; }
+  .celular { max-width: 340px; margin: 0 auto; margin-bottom: 10%; }
   .sobre { grid-template-columns: 1fr; gap: 20px; padding: 50px 0; }
   .sobre p { font-size: 20px; }
 }
