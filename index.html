@@ -13,13 +13,12 @@
 <body>
 
   <header class="topo">
-    <a href="#inicio"><img class="logo" src="imagens/slogan1virto.png" alt="Virto"></a>
+    <a href="#inicio"><img class="logo" src="imagens/logo-virto.png" alt="Virto"></a>
 
     <nav>
       <a class="ativo" href="index.html">Início</a>
       <a href="sobre.html">sobre</a>
     </nav>
-
    
     <label class="tema" title="Tema claro/escuro">
       <input type="checkbox" aria-label="Ativar tema escuro">
@@ -31,14 +30,14 @@
     <section class="hero" id="inicio">
       <div class="hero-texto">
         <img class="faiscas" src="imagens/faisca.png" alt="">
-         <h1>Problemas<br>do dia a dia?<br>A gente <em>resolve.</em></h1> 
+        <h1>Problemas<br>do dia a dia?<br>A gente <em>resolve.</em></h1> 
         <p>Descubra soluções, ferramentas e ideias<br>para facilitar sua vida de um jeito <strong>simples.</strong></p>
 
-        <form class="busca" action="#explorar">
-          <span class="icone"><img src="imagens/lupa.png" alt=""></span>
-          <input type="search" placeholder="Buscar por uma solução..." aria-label="Buscar por uma solução">
-         
-        </form>
+        <!-- Botão substituindo o antigo input de busca -->
+        <a href="solucoes.html" class="botao-todas-solucoes">
+          <span>Veja todas as soluções aqui</span>
+          <span class="icone"><img src="imagens/seta-direita-de-linha-reta-fina.png" alt=""></span>
+        </a>
       </div>
 
       <div class="hero-arte">
@@ -50,7 +49,7 @@
       </div>
     </section>
 
-    <a class="destaque" id="explorar" href="#">
+    <a class="destaque" id="explorar" href="solucao-detalhe.html">
       <div class="destaque-texto">
         <span class="etiqueta"><span class="icone"><img src="imagens/faisca2.png" alt=""></span> Em destaque</span>
         <h2>Como bloquear chamadas de <em>spam</em> no celular?</h2>
@@ -59,12 +58,12 @@
       <p class="destaque-desc">Evite ligações indesejadas com algumas configurações simples no seu celular.<img class="traco" src="imagens/risco.svg" alt=""></p>
       <img class="celular" src="imagens/virtus-spam-call-removebg-preview.png" alt="Celular recebendo uma chamada de spam">
     </a>
-
-
+  </main>
 
   <footer>
     <p>Feito para transformar pequenas dificuldades em grandes facilidades.</p>
   </footer>
+
 <script>
   (function () {
     var cb = document.querySelector('.tema input');
