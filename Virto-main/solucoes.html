@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Lista de todas as soluções práticas para o seu dia a dia.">
+  <title>Virto — Todas as Soluções</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="solucoesstyle.css">
+  <link rel="icon" href="imagens/icon.png" type="icon/png">
+</head>
+<body>
+
+  <header class="topo">
+    <a href="index.html"><img class="logo" src="imagens/logo-virto.png" alt="Virto"></a>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="sobre.html">sobre</a>
+    </nav>
+    <label class="tema" title="Tema claro/escuro">
+      <input type="checkbox" aria-label="Ativar tema escuro">
+      <span class="icone"><img src="imagens/lua.png" alt=""></span>
+    </label>
+  </header>
+
+  <main class="container-solucoes">
+    <div class="topo-pesquisa">
+      <div class="busca-geral">
+        <span class="icone"><img src="imagens/lupa.png" alt=""></span>
+        <input type="search" placeholder="Pesquisar por um problema ou solução..." aria-label="Pesquisar soluções">
+      </div>
+    </div>
+
+    <div class="lista-caixas">
+      
+      <!-- Caixa 1: Spam -->
+      <a href="spam.html" class="caixa-solucao">
+        <div class="caixa-foto">
+          <img src="imagens/virtus-spam-call-removebg-preview.png" alt="Bloquear chamadas de spam">
+        </div>
+        <div class="caixa-conteudo">
+          <h3>Como bloquear chamadas de spam no celular?</h3>
+          <p>Evite ligações indesejadas com ajustes simples nas configurações do seu aparelho.</p>
+        </div>
+      </a>
+
+      <!-- Caixa 2: Senhas -->
+      <a href="senhas.html" class="caixa-solucao">
+        <div class="caixa-foto">
+          <img src="imagens/codificacao.png" alt="Organizar senhas">
+        </div>
+        <div class="caixa-conteudo">
+          <h3>Como criar senhas seguras e fáceis de lembrar?</h3>
+          <p>Proteja suas contas digitais sem precisar anotar senhas em papéis.</p>
+        </div>
+      </a>
+
+      <!-- Caixa 3: Espaço -->
+      <a href="espaco.html" class="caixa-solucao">
+        <div class="caixa-foto">
+          <img src="imagens/faisca.png" alt="Liberar espaço no celular">
+        </div>
+        <div class="caixa-conteudo">
+          <h3>Como liberar espaço de armazenamento no smartphone?</h3>
+          <p>Dicas rápidas para apagar arquivos ocultos e otimizar a memória do telefone.</p>
+        </div>
+      </a>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>Feito para transformar pequenas dificuldades em grandes facilidades.</p>
+  </footer>
+
+<script>
+  (function () {
+    var cb = document.querySelector('.tema input');
+    function aplicar() {
+      try { cb.checked = localStorage.getItem('tema') === 'escuro'; } catch (e) {}
+    }
+    aplicar();
+    window.addEventListener('pageshow', aplicar);
+    cb.addEventListener('change', function () {
+      try { localStorage.setItem('tema', cb.checked ? 'escuro' : 'claro'); } catch (e) {}
+    });
+  })();
+</script>
+</body>
+</html>
