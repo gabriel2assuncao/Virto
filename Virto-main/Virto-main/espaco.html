@@ -1,69 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Virto — Como liberar espaço no celular</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="solucoesstyle.css">
-  <link rel="icon" href="imagens/icon.png" type="icon/png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="basestyle.css">
+  <link rel="stylesheet" href="artigostyle.css">
+  <link rel="icon" href="imagens/icon.png" type="image/png">
 </head>
+
 <body>
 
   <header class="topo">
-    <a href="index.html"><img class="logo" src="imagens/logo-virto.png" alt="Virto"></a>
-    <nav>
+    <a class="logo-link" href="index.html" aria-label="Virto — Início"><img class="logo" src="imagens/logo-virto.png"
+        alt="Virto"></a>
+    <nav aria-label="Navegação principal">
       <a href="index.html">Início</a>
-      <a href="solucoes.html">soluções</a>
       <a href="sobre.html">Sobre</a>
     </nav>
-  
   </header>
 
   <main class="container-solucoes">
     <article class="detalhe-artigo">
-      <a href="solucoes.html" class="voltar">← Voltar para todas as soluções</a>
-      
+      <a href="solucoes.html" class="voltar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M19 12H5M12 19l-7-7 7-7" />
+        </svg>Voltar para todas as soluções</a>
+
       <h1>Como liberar espaço de armazenamento no smartphone?</h1>
-      <p class="subtitulo-artigo">Dicas rápidas para apagar arquivos ocultos, limpar aplicativos pesados e recuperar a memória do telefone.</p>
-      
+      <p class="subtitulo-artigo">Dicas rápidas para apagar arquivos ocultos, limpar aplicativos pesados e recuperar a
+        memória do telefone.</p>
+
       <hr class="divisor">
 
       <h2>1. Limpe o cache dos aplicativos</h2>
-      <p>Aplicativos como redes sociais e navegadores acumulam arquivos temporários (cache) que ocupam gigabytes desnecessários.</p>
+      <p>Aplicativos como redes sociais e navegadores acumulam arquivos temporários (cache) que ocupam gigabytes
+        desnecessários.</p>
       <ul>
-        <li>No Android: Vá em <strong>Configurações > Aplicativos</strong>, escolha o app desejado e clique em <strong>Limpar Cache</strong>.</li>
+        <li>No Android: Vá em <strong>Configurações > Aplicativos</strong>, escolha o app desejado e clique em
+          <strong>Limpar Cache</strong>.
+        </li>
       </ul>
 
       <h2>2. Gerencie o WhatsApp e Telegram</h2>
       <p>O envio automático de fotos, vídeos e áudios costuma ser o maior vilão do espaço interno.</p>
       <ul>
-        <li>Abra o WhatsApp, vá em <strong>Configurações > Armazenamento e dados > Gerenciar armazenamento</strong> e apague os arquivos grandes ou encaminhados com frequência.</li>
+        <li>Abra o WhatsApp, vá em <strong>Configurações > Armazenamento e dados > Gerenciar armazenamento</strong> e
+          apague os arquivos grandes ou encaminhados com frequência.</li>
       </ul>
 
       <h2>3. Faça backup na nuvem</h2>
-      <p>Transfira suas fotos e vídeos antigos para o Google Fotos, iCloud ou OneDrive e delete as cópias locais do aparelho.</p>
+      <p>Transfira suas fotos e vídeos antigos para o Google Fotos, iCloud ou OneDrive e delete as cópias locais do
+        aparelho.</p>
+      <nav class="nav-artigo" aria-label="Navegação entre soluções">
+        <a class="botao-nav anterior" href="senhas.html"><small>← Anterior</small><strong>Senhas seguras e fáceis de
+            lembrar</strong></a>
+        <a class="botao-nav proximo" href="solucoes.html"><small>Voltar →</small><strong>Todas as soluções</strong></a>
+      </nav>
     </article>
   </main>
 
-  <footer>
+  <footer class="rodape">
     <p>Feito para transformar pequenas dificuldades em grandes facilidades.</p>
   </footer>
-
-<script>
-  (function () {
-    var cb = document.querySelector('.tema input');
-    function aplicar() {
-      try { cb.checked = localStorage.getItem('tema') === 'escuro'; } catch (e) {}
-    }
-    aplicar();
-    window.addEventListener('pageshow', aplicar);
-    cb.addEventListener('change', function () {
-      try { localStorage.setItem('tema', cb.checked ? 'escuro' : 'claro'); } catch (e) {}
-    });
-  })();
-</script>
 </body>
+
 </html>
