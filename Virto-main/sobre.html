@@ -1,10 +1,17 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Soluções, ferramentas e ideias para facilitar o seu dia a dia de um jeito simples.">
-  <title>Virto — Sobre</title>
+
+  <meta
+    name="description"
+    content="Conheça o VIRTO: um projeto de estudantes que transforma problemas do cotidiano em soluções com tecnologia."
+  >
+
+  <title>Sobre — VIRTO</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Manrope:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -12,12 +19,21 @@
   <link rel="stylesheet" href="sobrestyle.css">
   
 </head>
+
 <body>
 
+  <!-- CABEÇALHO -->
   <header class="topo">
-    <a href="index.html"><img class="logo" src="imagens/logo-virto.png" alt="Virto"></a>
 
-    <nav>
+    <a class="marca" href="index.html" aria-label="VIRTO - Início">
+      <img
+        class="logo"
+        src="imagens/logo-virto.png"
+        alt="VIRTO"
+      >
+    </a>
+
+    <nav aria-label="Navegação principal">
       <a href="index.html">Início</a>
       <a class="ativo" href="sobre.html">Sobre</a>
     </nav>
@@ -26,21 +42,189 @@
   </header>
 
 
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main>
+
+    <section class="sobre" id="sobre" aria-labelledby="sobre-titulo">
+
+      <div class="sobre-conteudo">
+
+        <!-- INTRODUÇÃO -->
+        <div class="sobre-intro">
+
+          <p class="etiqueta-sobre">QUEM SOMOS</p>
+
+          <h1 id="sobre-titulo">
+            A tecnologia pode transformar problemas
+            do dia a dia em <span>soluções simples.</span>
+          </h1>
+
+          <p class="sobre-descricao">
+            Somos uma equipe de estudantes do Centro Educa Mais
+            Estefânia Rosa da Silva, escola pública de São Luís
+            do Maranhão. Nosso projeto surgiu durante a preparação
+            para a Feira de Profissões da escola, a partir de uma ideia:
+            observar situações do cotidiano que poderiam ser resolvidas
+            ou simplificadas com o uso da tecnologia.
+          </p>
+
+        </div>
 
 
-<script>
-  (function () {
-    var cb = document.querySelector('.tema input');
-    function aplicar() {
-      try { cb.checked = localStorage.getItem('tema') === 'escuro'; } catch (e) {}
-    }
-    aplicar();
-    window.addEventListener('pageshow', aplicar);
-    cb.addEventListener('change', function () {
-      try { localStorage.setItem('tema', cb.checked ? 'escuro' : 'claro'); } catch (e) {}
-    });
-  })();
+        <!-- PROPÓSITO -->
+        <div class="sobre-proposito">
 
-</script>
+          <h2>Tudo começa observando.</h2>
+
+          <p>
+            Acreditamos que muitos problemas, mesmo os mais comuns,
+            podem encontrar soluções quando olhamos para eles de
+            uma maneira diferente. Por isso, identificamos necessidades
+            reais e buscamos alternativas que tornem essas experiências
+            mais simples.
+          </p>
+
+        </div>
+
+
+        <!-- CAMINHOS DO VIRTO -->
+        <div class="sobre-caminhos">
+
+          <article class="caminho caminho-desenvolvemos">
+
+            <span class="caminho-numero">01</span>
+
+            <div class="caminho-icone" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <rect
+                  x="3" y="4" width="18" height="16" rx="2"
+                  stroke="currentColor" stroke-width="1.7"
+                />
+                <path
+                  d="m8 10-2 2 2 2M16 10l2 2-2 2M13.5 9l-3 6"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+
+            <h2>Desenvolvemos</h2>
+
+            <p>
+              Criamos nossos próprios sistemas, páginas e ferramentas
+              digitais para resolver problemas que identificamos.
+            </p>
+
+          </article>
+
+
+          <article class="caminho caminho-exploramos">
+
+            <span class="caminho-numero">02</span>
+
+            <div class="caminho-icone" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle
+                  cx="10.8" cy="10.8" r="6.8"
+                  stroke="currentColor" stroke-width="1.7"
+                />
+                <path
+                  d="m16 16 5 5M8 11h5M10.5 8.5v5"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+
+            <h2>Exploramos</h2>
+
+            <p>
+              Quando já existem alternativas, pesquisamos, testamos
+              e apresentamos ferramentas que podem ajudar.
+            </p>
+
+          </article>
+
+        </div>
+
+
+        <!-- ENCERRAMENTO -->
+        <div class="sobre-final">
+
+          <p class="sobre-final-etiqueta">NOSSO PROPÓSITO</p>
+
+          <h2>
+            É aí que entra o <span>VIRTO.</span>
+          </h2>
+
+          <p class="sobre-final-descricao">
+            Um espaço para reunir ideias, ferramentas e soluções
+            que tornam o cotidiano mais simples.
+          </p>
+
+          <p class="sobre-final-complemento">
+            Não queremos apenas anunciar produtos ou indicar aplicativos.
+            Queremos explorar possibilidades e mostrar como a tecnologia
+            pode ser útil na prática.
+          </p>
+
+          <div class="sobre-assinatura">
+            <strong>Pequenas mudanças.</strong>
+            <strong>Grandes facilidades.</strong>
+          </div>
+
+          <span class="sobre-slogan">
+           Pense diferente. Torne isso simples.
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <p>
+      <strong>VIRTO.</strong>
+      Pequenas mudanças. Grandes facilidades.
+    </p>
+  </footer>
+
+
+  <!-- CONTROLE DO TEMA -->
+  <script>
+    (function () {
+      const controle = document.querySelector('.tema input');
+
+      function aplicarTema() {
+        try {
+          controle.checked = localStorage.getItem('tema') === 'escuro';
+        } catch (erro) {
+          controle.checked = false;
+        }
+      }
+
+      aplicarTema();
+
+      controle.addEventListener('change', function () {
+        try {
+          localStorage.setItem(
+            'tema',
+            controle.checked ? 'escuro' : 'claro'
+          );
+        } catch (erro) {
+          // O tema continua funcionando durante esta página.
+        }
+      });
+    })();
+  </script>
+
 </body>
 </html>
