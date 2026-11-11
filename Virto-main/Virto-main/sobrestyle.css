@@ -1,4 +1,3 @@
-
 /* =========================================
    VIRTO — PÁGINA SOBRE
 ========================================= */
@@ -34,20 +33,9 @@ body:has(.tema input:checked) {
   --sobre-card-escuro: #292929;
 }
 
-<<<<<<< HEAD:Virto-main/sobrestyle.css
-* { box-sizing: border-box; }
-html, body { height: 100%; margin: 0; overflow: hidden; /* Mantém a primeira tela estática sem scroll */ }
-body { background: var(--fundo); color: var(--texto); font: 16px/1.4 var(--corpo); display: flex; flex-direction: column; justify-content: flex-start; }
-a { color: inherit; text-decoration: none; }
-img { max-width: 100%; }
-h1, h2 { margin: 0; font-family: var(--titulo); letter-spacing: -.04em; }
-em { font-style: normal; color: var(--roxo); }
-:focus-visible { outline: 3px solid var(--roxo); outline-offset: 3px; }
-=======
 body:has(.tema input:checked) .logo {
   filter: invert(1);
 }
->>>>>>> 3994d4d (Salvando meus ajustes locais):sobrestyle.css
 
 /* RESET */
 
