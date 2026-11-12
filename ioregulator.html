@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Virto — I/O Regulator: organizar saídas e retornos em sala</title>
+  <meta name="description" content="I/O Regulator: protótipo para organizar o registro de saídas e retornos de alunos durante a aula.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="basestyle.css">
+  <link rel="stylesheet" href="ioregulator.css">
+  <link rel="icon" href="imagens/icon.png" type="image/png">
+</head>
+
+<body>
+
+  <header class="topo">
+    <a class="logo-link" href="index.html" aria-label="Virto — Início"><img class="logo" src="imagens/logo-virto.png"
+        alt="Virto"></a>
+    <nav aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+    </nav>
+  </header>
+
+  <main class="container-solucoes io">
+    <a href="solucoes.html" class="voltar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M19 12H5M12 19l-7-7 7-7" />
+      </svg>Voltar para todas as soluções</a>
+
+    <!-- 1. Hero -->
+    <section class="io-hero" aria-labelledby="io-titulo">
+      <div class="io-hero-texto">
+        <p class="io-tag">Educação · Protótipo em desenvolvimento</p>
+        <h1 id="io-titulo">Menos interrupções. Mais foco na aula.</h1>
+        <p class="io-lead">O I/O Regulator é uma proposta para organizar o registro de saídas e retornos de alunos
+          durante a aula, para o professor seguir ensinando.</p>
+        <div class="io-botoes">
+          <a class="io-btn io-btn-principal" href="#dispositivo">Conheça o protótipo</a>
+          <a class="io-btn io-btn-sec" href="#como-funciona">Como funciona</a>
+        </div>
+      </div>
+      <figure class="io-hero-img">
+        <img src="imagens/io-regulator-conceito.jpg" width="568" height="522"
+          alt="Conceito do dispositivo: tela LCD com a mensagem Digite a matrícula, teclado numérico, botões verde e vermelho, controle com seta e áreas em braile.">
+        <figcaption><span class="io-selo io-selo-conceito">Conceito do dispositivo</span></figcaption>
+      </figure>
+    </section>
+
+    <!-- 2. Problema e proposta -->
+    <section class="io-sec" aria-labelledby="io-problema">
+      <h2 id="io-problema">Uma aula pode ser interrompida</h2>
+      <div class="io-duo">
+        <div class="io-cartao">
+          <h3>No dia a dia</h3>
+          <p>Quando alguém sai da sala, a aula é interrompida para autorizar, anotar ou lembrar quem saiu e quando voltou.</p>
+        </div>
+        <div class="io-cartao io-cartao-dest">
+          <h3>A proposta</h3>
+          <p>Um dispositivo simples em que o aluno registra a própria saída e o retorno, para facilitar essa tarefa
+            para o professor.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Como funciona -->
+    <section class="io-sec" id="como-funciona" aria-labelledby="io-como">
+      <h2 id="io-como">Como funciona, em três passos</h2>
+      <p class="io-nota">Este é o fluxo proposto para o dispositivo.</p>
+      <ol class="io-passos">
+        <li class="io-passo">
+          <span class="io-ico io-ico-azul" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="5" width="18" height="14" rx="2" />
+              <path d="M7 9h.01M11 9h.01M15 9h.01M7 13h.01M11 13h.01M15 13h.01M8 16h8" />
+            </svg></span>
+          <h3>O aluno informa a matrícula</h3>
+          <p>Ao sair, digita a matrícula no teclado.</p>
+          <span class="io-estado">Digitando</span>
+        </li>
+        <li class="io-passo">
+          <span class="io-ico io-ico-verde" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M8 12.5l3 3 5-6" />
+            </svg></span>
+          <h3>O dispositivo registra</h3>
+          <p>Anota a saída. Ao voltar, o aluno informa a matrícula de novo e o retorno é registrado.</p>
+          <span class="io-estado">Registrado</span>
+        </li>
+        <li class="io-passo">
+          <span class="io-ico io-ico-ambar" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 3h12M6 21h12M7 3c0 5 5 6 5 9s-5 4-5 9M17 3c0 5-5 6-5 9s5 4 5 9" />
+            </svg></span>
+          <h3>O tempo fora é calculado</h3>
+          <p>A partir dos dois horários, conforme a lógica proposta.</p>
+          <span class="io-estado">Tempo fora</span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 4. Dispositivo -->
+    <section class="io-sec" id="dispositivo" aria-labelledby="io-disp">
+      <h2 id="io-disp">Conheça o dispositivo</h2>
+      <p class="io-nota">Toque nos pontos da imagem para ver cada parte do conceito.</p>
+      <div class="io-disp">
+        <div class="io-mapa">
+          <img src="imagens/io-regulator-conceito.jpg" width="568" height="522"
+            alt="Conceito do dispositivo, com pontos numerados sobre cada parte.">
+          <button class="io-pin" style="left:49%;top:25%" data-t="Tela LCD"
+            data-d="No conceito, a tela mostra a mensagem “Digite a matrícula”, com traços para os dígitos."
+            aria-label="Tela LCD">1</button>
+          <button class="io-pin" style="left:70%;top:67%" data-t="Teclado numérico"
+            data-d="Teclas de 0 a 9 para digitar a matrícula, mais três teclas: Apagar, Cancela e Confirma."
+            aria-label="Teclado numérico">2</button>
+          <button class="io-pin" style="left:18%;top:50%" data-t="Botão verde"
+            data-d="Aparece no conceito, com uma barra de luz verde ao lado. Sua função ainda será detalhada."
+            aria-label="Botão verde">3</button>
+          <button class="io-pin" style="left:18%;top:67%" data-t="Botão vermelho"
+            data-d="Aparece no conceito, com uma barra de luz vermelha ao lado. Sua função ainda será detalhada."
+            aria-label="Botão vermelho">4</button>
+          <button class="io-pin" style="left:18%;top:85%" data-t="Controle com seta"
+            data-d="Controle adicional mostrado no conceito, com uma seta amarela. Sua função ainda será detalhada."
+            aria-label="Controle com seta">5</button>
+          <button class="io-pin" style="left:47%;top:83%" data-t="Barras luminosas"
+            data-d="Indicadores de luz ao lado dos controles: verde, vermelho e multicolorido. O significado de cada cor ainda será detalhado."
+            aria-label="Barras luminosas">6</button>
+          <button class="io-pin" style="left:36%;top:54%" data-t="Braile"
+            data-d="O conceito inclui áreas em braile ao lado dos controles, como recurso de acessibilidade."
+            aria-label="Braile">7</button>
+        </div>
+        <div class="io-painel" aria-live="polite">
+          <span class="io-selo io-selo-conceito">Conceito do dispositivo</span>
+          <h3 id="io-pt">Escolha um ponto</h3>
+          <p id="io-pd">Cada número na imagem abre uma explicação curta.</p>
+        </div>
+      </div>
+
+      <div class="io-proto">
+        <figure>
+          <img src="imagens/io-regulator-prototipo.jpg" width="516" height="624" loading="lazy"
+            alt="Protótipo real montado sobre uma caixa azul, com placa Arduino, protoboard, fios, LEDs, botões verdes e teclado numérico.">
+        </figure>
+        <div>
+          <span class="io-selo io-selo-real">Protótipo real</span>
+          <h3>A primeira montagem</h3>
+          <p>Feita com Arduino, protoboard, fios, LEDs, botões e teclado numérico para testar a ideia. O dispositivo compacto
+            ao lado é um conceito, ainda em desenvolvimento.</p>
+          <p class="io-origem">O projeto nasceu na Liga Jovem.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Benefícios -->
+    <section class="io-sec" aria-labelledby="io-ben">
+      <h2 id="io-ben">O que buscamos</h2>
+      <ul class="io-ben">
+        <li class="io-cartao"><h3>Continuidade da aula</h3><p>Menos pausas para controlar quem sai e quem volta.</p></li>
+        <li class="io-cartao"><h3>Registro organizado</h3><p>Saídas e retornos anotados de forma padronizada.</p></li>
+        <li class="io-cartao"><h3>Autonomia do aluno</h3><p>Quem precisa sair faz o próprio registro.</p></li>
+      </ul>
+    </section>
+
+    <!-- 6. Destaque -->
+    <section class="io-destaque" aria-labelledby="io-dest">
+      <h2 id="io-dest">Organizar não é impedir.</h2>
+      <p>O I/O Regulator não proíbe nem barra a saída. Ele busca registrar e organizar esse fluxo, para que o aluno
+        possa sair e o professor possa continuar ensinando.</p>
+    </section>
+
+    <!-- 7. FAQ -->
+    <section class="io-sec" aria-labelledby="io-faq">
+      <h2 id="io-faq">Perguntas frequentes</h2>
+      <div class="io-faq">
+        <details><summary>Ele impede o aluno de sair?</summary>
+          <p>Não. O objetivo é organizar o registro, não proibir.</p></details>
+        <details><summary>Como o aluno usa?</summary>
+          <p>Digita a matrícula ao sair e informa de novo ao retornar.</p></details>
+        <details><summary>O dispositivo do conceito já existe?</summary>
+          <p>Ainda não. O que existe hoje é o protótipo real; o dispositivo compacto é um conceito em desenvolvimento.
+          </p></details>
+        <details><summary>Onde ficam guardados os dados? Há painel ou relatórios?</summary>
+          <p>Essa parte ainda não está definida. Quando houver novidades, elas serão divulgadas aqui.</p></details>
+        <details><summary>Em que estágio está o projeto?</summary>
+          <p>Protótipo e conceito em desenvolvimento.</p></details>
+      </div>
+    </section>
+
+    <!-- 8. Chamada final -->
+    <section class="io-final" aria-labelledby="io-fim">
+      <h2 id="io-fim">Qual problema você quer resolver?</h2>
+      <p>O I/O Regulator é um exemplo de como a tecnologia pode simplificar o cotidiano. Veja outras soluções do
+        Virto.</p>
+      <a class="io-btn io-btn-principal" href="solucoes.html">Ver todas as soluções</a>
+    </section>
+    <nav class="nav-artigo" aria-label="Navegação entre soluções">
+      <a class="botao-nav anterior" href="spam.html"><small>← Anterior</small><strong>Bloquear chamadas de spam</strong></a>
+      <a class="botao-nav proximo" href="espaco.html"><small>Próxima solução →</small><strong>Liberar espaço no celular</strong></a>
+    </nav>
+  </main>
+
+  <footer class="rodape">
+    <p>Feito para transformar pequenas dificuldades em grandes facilidades.</p>
+  </footer>
+
+  <script>
+    (function () {
+      var t = document.getElementById('io-pt'), d = document.getElementById('io-pd');
+      var pins = document.querySelectorAll('.io-pin');
+      pins.forEach(function (p) {
+        p.addEventListener('click', function () {
+          pins.forEach(function (o) { o.classList.remove('on'); o.removeAttribute('aria-current'); });
+          p.classList.add('on'); p.setAttribute('aria-current', 'true');
+          t.textContent = p.dataset.t; d.textContent = p.dataset.d;
+        });
+      });
+      var ol = document.querySelector('.io-passos');
+      if ('IntersectionObserver' in window && ol) {
+        new IntersectionObserver(function (e, o) {
+          if (e[0].isIntersecting) { ol.classList.add('anima'); o.disconnect(); }
+        }, { threshold: .4 }).observe(ol);
+      }
+    })();
+  </script>
+</body>
+
+</html>
