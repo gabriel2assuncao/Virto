@@ -1,0 +1,313 @@
+/* ==========================================================================
+   VIRTO — estilos exclusivos de spam.html
+   ========================================================================== */
+
+/* Botões Voltar / Avançar */
+.voltar { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 28px; padding: 9px 18px 9px 14px; background: var(--superficie); border: 1px solid var(--linha); border-radius: 999px; box-shadow: var(--sombra); font-size: 14px; font-weight: 700; transition: transform .2s, border-color .2s, color .2s, box-shadow .2s; }
+.voltar svg { width: 18px; height: 18px; flex: none; }
+.voltar:hover { color: var(--roxo); border-color: var(--roxo); box-shadow: 0 0 0 4px var(--roxo-bg), var(--sombra); transform: translateX(-3px); }
+.nav-artigo { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 48px; }
+.botao-nav { display: flex; flex-direction: column; gap: 4px; padding: 16px 20px; background: var(--superficie); border: 1px solid var(--linha); border-radius: var(--raio); box-shadow: var(--sombra); transition: transform .2s, border-color .2s, box-shadow .2s; }
+.botao-nav small { color: var(--roxo); font-size: 13px; font-weight: 700; }
+.botao-nav strong { font-family: var(--titulo); font-size: 16px; line-height: 1.3; letter-spacing: -.02em; }
+.botao-nav.proximo { grid-column: 2; text-align: right; }
+.botao-nav:hover { border-color: var(--roxo); box-shadow: 0 0 0 4px var(--roxo-bg), var(--sombra-hover); transform: translateY(-2px); }
+
+/* Tipografia do artigo */
+.detalhe-artigo h1 { font-size: clamp(28px, 4.5vw, 38px); line-height: 1.18; margin-bottom: 14px; }
+.detalhe-artigo h2 { margin: 36px 0 12px; font-size: 24px; }
+
+.subtitulo-artigo { font-size: 18px; line-height: 1.5; color: var(--suave); }
+.hero-artigo { margin-bottom: 32px; }
+.badge-status { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 18px; padding: 6px 14px; border-radius: 999px; background: var(--roxo-bg); border: 1px solid var(--roxo-borda); color: var(--roxo); font-size: 13px; font-weight: 700; }
+.ponto-status { width: 8px; height: 8px; border-radius: 50%; background: var(--roxo); }
+
+.card-alerta, .callout-resultado { display: flex; gap: 16px; padding: 20px; border-radius: var(--raio); }
+.card-alerta { margin-bottom: 28px; background: #FFF6DD; border: 1px solid #F0D88A; color: #6B4700; }
+.card-alerta h3 { margin-bottom: 4px; font-size: 17px; }
+.card-alerta p, .callout-resultado p { margin: 0; font-size: 15px; }
+.alerta-icone, .callout-icone { font-size: 24px; line-height: 1; }
+
+.card-solucao { margin-bottom: 28px; padding: 28px; background: var(--superficie); border: 1px solid var(--linha); border-top: 4px solid var(--roxo); border-radius: 20px; box-shadow: var(--sombra); }
+.android-border { border-top-color: #22A65A; }
+.truecaller-border { border-top-color: var(--roxo); }
+.ios-border { border-top-color: #6B665E; }
+.card-cabecalho { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-bottom: 12px; }
+.card-solucao h2 { margin: 0; font-size: 22px; line-height: 1.2; }
+.tag-plataforma { padding: 4px 10px; border-radius: 8px; font-size: 13px; font-weight: 700; }
+.tag-android { background: #DDF5E6; color: #166534; }
+.tag-reforco { background: var(--roxo-bg); color: var(--roxo); }
+.tag-ios { background: #ECE9E3; color: #3B3833; }
+.descricao-secao { margin-bottom: 20px; color: var(--suave); }
+.passos-container { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
+.passo-item { display: flex; align-items: flex-start; gap: 14px; padding: 14px 16px; background: var(--fundo); border: 1px solid var(--linha); border-radius: 14px; }
+.passo-item p { margin: 0; font-size: 15px; }
+.highlight-passo { background: var(--roxo-bg); border-color: var(--roxo-borda); }
+.passo-numero { display: grid; place-items: center; flex: none; width: 28px; height: 28px; border-radius: 50%; background: #22A65A; color: #fff; font-size: 13px; font-weight: 800; }
+.passo-numero.azul { background: var(--roxo); }
+.callout-resultado strong { display: block; margin-bottom: 2px; }
+.alerta-amarelo { background: #FFF6DD; border: 1px solid #F0D88A; color: #6B4700; }
+.alerta-azul { background: var(--roxo-bg); border: 1px solid var(--roxo-borda); }
+.grid-ios { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.box-ios-info { padding: 20px; background: var(--fundo); border: 1px solid var(--linha); border-radius: 14px; }
+.box-ios-info p { font-size: 15px; color: var(--suave); }
+.ios-info-titulo { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+.ios-info-titulo h3 { font-size: 17px; }
+.aviso-silenciar { margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--linha); font-size: 14px; color: var(--suave); }
+.card-dica-anatel { padding: 28px; background: var(--roxo-bg); border: 1px solid var(--roxo-borda); border-radius: 20px; }
+.dica-header { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
+.icone-dica { font-size: 32px; line-height: 1; }
+.dica-header h3 { font-size: 20px; line-height: 1.2; }
+.dica-header p, .dica-corpo p { margin: 0; color: var(--suave); }
+
+@media (max-width: 640px) {
+  .card-solucao, .card-dica-anatel { padding: 20px; }
+  .card-alerta { flex-direction: column; gap: 8px; }
+  .grid-ios, .nav-artigo { grid-template-columns: 1fr; }
+  .botao-nav.proximo { grid-column: 1; text-align: left; }
+}
+
+/* =========================================
+   VIRTO — ACESSIBILIDADE E LEITURA
+   ========================================= */
+
+/* Texto geral */
+.detalhe-artigo {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/*scrow suavizado*/
+html {
+  scroll-behavior: smooth;
+}
+
+/* Botão voltar */
+.voltar {
+  padding: 8px 10px 8px 10px;
+  font-size: 17px;
+}
+
+/* Título principal */
+.detalhe-artigo h1 {
+  font-size: clamp(34px, 4.5vw, 44px);
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+/* Títulos das seções */
+.detalhe-artigo h2 {
+  font-size: 28px;
+  line-height: 1.4;
+  margin: 42px 0 18px;
+}
+
+/* Subtítulo */
+.subtitulo-artigo {
+  font-size: 21px;
+  line-height: 1.8;
+}
+
+/* Espaçamento do cabeçalho */
+.hero-artigo {
+  margin-bottom: 42px;
+}
+
+.badge-status {
+  padding: 4px 10px;
+  font-size: 15px;
+  margin-bottom: 22px;
+}
+
+/* Cards */
+.card-alerta,
+.callout-resultado {
+  gap: 20px;
+  padding: 18px;
+  margin-bottom: 36px;
+}
+
+.card-alerta h3 {
+  font-size: 21px;
+  margin-bottom: 8px;
+}
+
+.card-alerta p,
+.callout-resultado p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* Soluções */
+.card-solucao {
+  padding: 30px;
+  margin-bottom: 36px;
+  border-radius: 22px;
+}
+
+.card-cabecalho {
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.card-solucao h2 {
+  font-size: 27px;
+}
+
+.tag-plataforma {
+  padding: 4px 10px;
+  font-size: 15px;
+}
+
+.descricao-secao {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 26px;
+}
+
+/* Passos */
+.passos-container {
+  gap: 16px;
+  margin-bottom: 26px;
+}
+
+.passo-item {
+  gap: 18px;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.passo-item p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.passo-numero {
+  width: 34px;
+  height: 34px;
+  font-size: 16px;
+}
+
+/* Informações do iPhone */
+.grid-ios {
+  gap: 22px;
+}
+
+.box-ios-info {
+  padding: 26px;
+}
+
+.ios-info-titulo {
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.ios-info-titulo h3 {
+  font-size: 20px;
+}
+
+.box-ios-info p {
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.aviso-silenciar {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-top: 18px;
+  padding-top: 16px;
+}
+
+/* Dica Anatel */
+.card-dica-anatel {
+  padding: 36px;
+}
+
+.dica-header {
+  gap: 20px;
+  margin-bottom: 18px;
+}
+
+.dica-header h3 {
+  font-size: 24px;
+}
+
+.dica-header p,
+.dica-corpo p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* Navegação inferior */
+.nav-artigo {
+  gap: 18px;
+  margin-top: 56px;
+}
+
+.botao-nav {
+  padding: 22px;
+}
+
+.botao-nav small {
+  font-size: 15px;
+}
+
+.botao-nav strong {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 640px) {
+  .detalhe-artigo {
+    font-size: 17px;
+  }
+
+  .detalhe-artigo h1 {
+    font-size: 32px;
+  }
+
+  .detalhe-artigo h2,
+  .card-solucao h2 {
+    font-size: 24px;
+  }
+
+  .subtitulo-artigo {
+    font-size: 18px;
+  }
+
+  .card-solucao,
+  .card-dica-anatel {
+    padding: 24px;
+  }
+
+  .card-alerta,
+  .callout-resultado {
+    padding: 22px;
+  }
+
+  .passo-item {
+    padding: 18px;
+  }
+
+  .passo-item p,
+  .card-alerta p,
+  .callout-resultado p,
+  .dica-header p,
+  .dica-corpo p {
+    font-size: 17px;
+  }
+
+  .box-ios-info {
+    padding: 20px;
+  }
+
+  .nav-artigo {
+    gap: 12px;
+  }
+
+  .botao-nav {
+    padding: 18px;
+  }
+}
+

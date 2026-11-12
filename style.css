@@ -1,0 +1,329 @@
+/* ==========================================================================
+   VIRTO — página inicial (index.html)
+   ========================================================================== */
+
+/* Evita rolagem horizontal causada por elementos decorativos fora da tela. */
+html,
+body {
+  overflow-x: clip;
+}
+
+/* Botão principal */
+.botao-todas-solucoes {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 15px 28px;
+  border-radius: 999px;
+  background: var(--roxo);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 10px 24px -10px rgba(104, 68, 237, .7);
+  transition: transform .2s, box-shadow .2s;
+}
+
+.botao-todas-solucoes:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 0 5px var(--roxo-bg), 0 14px 28px -10px rgba(104, 68, 237, .8);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: center;
+  gap: 32px;
+  padding: 56px 0 40px;
+}
+
+.hero-texto {
+  position: relative;
+}
+
+.faiscas {
+  position: absolute;
+  width: 48px;
+  left: -40px;
+  top: -30px;
+}
+
+.hero-texto h1 {
+  margin-bottom: 20px;
+  font-size: clamp(38px, 5vw, 76px);
+  line-height: .98;
+}
+
+.hero-texto h1 em {
+  display: inline-block;
+  padding-bottom: .1em;
+  background: url(imagens/sublinhado.svg) bottom / 100% .22em no-repeat;
+}
+
+.hero-texto p {
+  margin: 0 0 26px;
+  font-size: 18px;
+  line-height: 1.45;
+}
+
+.hero-arte {
+  position: relative;
+  aspect-ratio: 1 / .75;
+  width: 100%;
+  max-width: 440px;
+  justify-self: start;
+  margin-left: 6%;
+}
+
+.mancha {
+  position: absolute;
+  inset: 8% 14% 0 4%;
+  background: var(--roxo);
+  border-radius: 45% 20% 40% 25%;
+  transform: rotate(-9deg);
+}
+
+.computador {
+  position: absolute;
+  left: 4%;
+  top: 2%;
+  width: 78%;
+  transform: rotate(-4deg);
+  filter: drop-shadow(4px 4px 0 var(--fundo)) drop-shadow(-4px -4px 0 var(--fundo));
+}
+
+.coroa {
+  position: absolute;
+  width: 10%;
+  left: 52%;
+  top: -9%;
+  transform: rotate(8deg);
+}
+
+.xadrez {
+  position: absolute;
+  width: 6%;
+  left: -2%;
+  top: 40%;
+}
+
+.nota {
+  position: absolute;
+  right: -24%;
+  top: 15%;
+  margin: 0 !important;
+  font: 600 clamp(18px, 2vw, 28px)/1 var(--mao) !important;
+  transform: rotate(-8deg);
+}
+
+.nota img {
+  display: block;
+  width: 70%;
+  margin-top: 4px;
+}
+
+.destaque {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr .9fr;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 56px;
+  padding: 28px 32px;
+  background: var(--superficie);
+  border: 1px solid var(--linha);
+  border-radius: 24px;
+  box-shadow: var(--sombra);
+  transition: transform .2s, border-color .2s, box-shadow .2s;
+}
+
+.destaque:hover {
+  transform: translateY(-3px);
+  border-color: var(--roxo);
+  box-shadow: 0 0 0 5px var(--roxo-bg), var(--sombra-hover);
+}
+
+.etiqueta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: var(--roxo);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.destaque h2 {
+  margin-bottom: 12px;
+  font-size: clamp(24px, 2.6vw, 38px);
+  line-height: 1.1;
+}
+
+.ver {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--roxo);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.ver .icone {
+  transition: transform .2s;
+}
+
+.destaque:hover .ver .icone {
+  transform: translateX(5px);
+}
+
+.destaque-desc {
+  align-self: stretch;
+  margin: 0;
+  padding: 12px 0 0 24px;
+  border-left: 1.5px solid var(--linha);
+  max-width: 28ch;
+  font-size: 15px;
+}
+
+.destaque-desc img {
+  display: block;
+  width: 70px;
+  margin-top: 10px;
+}
+
+.celular {
+  align-self: end;
+  width: 85%;
+  justify-self: center;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 36px 0 28px;
+  }
+
+  .faiscas {
+    left: -8px;
+    top: 10px;
+    width: 36px;
+  }
+
+  .hero-arte {
+    max-width: 320px;
+    margin: 0 auto;
+    justify-self: center;
+  }
+
+  .nota {
+    right: -8%;
+  }
+
+  .destaque {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 22px;
+  }
+
+  .destaque-desc {
+    padding: 0 0 0 16px;
+  }
+
+  .celular {
+    max-width: 260px;
+  }
+}
+
+@media (max-width: 640px) {
+  .botao-todas-solucoes {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* AJUSTE PARA A PÁGINA INICIAL CABER NA TELA */
+@media (min-width: 801px) {
+  html, body {
+    height: 100%;
+    min-height: 100%;
+    overflow: hidden;
+  }
+
+  body {
+    min-height: 100vh;
+  }
+
+  main {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .hero {
+    flex: 1;
+    min-height: 0;
+    padding: clamp(10px, 2vh, 20px) 0;
+    gap: 20px;
+  }
+
+  .hero-texto h1 {
+    font-size: clamp(36px, 4vw, 60px);
+    margin-bottom: 12px;
+  }
+
+  .hero-texto p {
+    font-size: 15px;
+    margin-bottom: 14px;
+  }
+
+  .botao-todas-solucoes {
+    padding: 12px 22px;
+    font-size: 14px;
+  }
+
+  .hero-arte {
+    max-width: 350px;
+  }
+
+  .nota {
+    font-size: clamp(16px, 1.7vw, 23px) !important;
+  }
+
+  .destaque {
+    margin-bottom: 12px;
+    padding: 16px 22px;
+    gap: 20px;
+  }
+
+  .destaque h2 {
+    font-size: clamp(22px, 2.2vw, 32px);
+    margin-bottom: 8px;
+  }
+
+  .etiqueta {
+    margin-bottom: 8px;
+  }
+
+  .destaque-desc {
+    padding-top: 10px;
+    font-size: 13px;
+  }
+
+  .destaque-desc img {
+    width: 55px;
+  }
+
+  .celular {
+    width: auto;
+    max-width: 100%;
+    max-height: 145px;
+    object-fit: contain;
+  }
+
+  footer {
+    padding: 9px 4%;
+  }
+}

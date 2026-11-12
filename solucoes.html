@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Lista de todas as soluções práticas para o seu dia a dia.">
+  <title>Virto — Todas as Soluções</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="basestyle.css">
+  <link rel="stylesheet" href="solucoesstyle.css">
+  <link rel="icon" href="imagens/icon.png" type="image/png">
+</head>
+
+<body>
+
+  <header class="topo">
+    <a class="logo-link" href="index.html" aria-label="Virto — Início"><img class="logo" src="imagens/logo-virto.png"
+        alt="Virto"></a>
+    <nav aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+    </nav>
+  </header>
+
+  <main class="container-solucoes">
+    <div class="topo-pesquisa">
+      <div class="busca-geral">
+        <span class="icone"><img src="imagens/lupa.png" alt=""></span>
+        <input type="search" placeholder="Pesquisar por um problema ou solução..." aria-label="Pesquisar soluções">
+      </div>
+    </div>
+
+    <div class="lista-caixas">
+
+      <!-- Caixa 1: Spam -->
+      <a href="spam.html" class="caixa-solucao">
+        <div class="caixa-foto">
+          <img src="imagens/virtus-spam-call-removebg-preview.png" alt="Bloquear chamadas de spam">
+        </div>
+        <div class="caixa-conteudo">
+          <h3>Como bloquear chamadas de spam no celular?</h3>
+          <p>Evite ligações indesejadas com ajustes simples nas configurações do seu aparelho.</p>
+        </div>
+      </a>
+
+      <!-- Caixa 2: Senhas -->
+      <a href="senhas.html" class="caixa-solucao">
+        <div class="caixa-foto">
+          <img src="imagens/codificacao.png" alt="Organizar senhas">
+        </div>
+        <div class="caixa-conteudo">
+          <h3>Como criar senhas seguras e fáceis de lembrar?</h3>
+          <p>Proteja suas contas digitais sem precisar anotar senhas em papéis.</p>
+        </div>
+      </a>
+
+      <!-- Caixa 3: Espaço -->
+      <a href="espaco.html" class="caixa-solucao">
+        <div class="caixa-foto">
+          <img src="imagens/faisca.png" alt="Liberar espaço no celular">
+        </div>
+        <div class="caixa-conteudo">
+          <h3>Como liberar espaço de armazenamento no smartphone?</h3>
+          <p>Dicas rápidas para apagar arquivos ocultos e otimizar a memória do telefone.</p>
+        </div>
+      </a>
+
+      <!-- Caixa 4: Memoriar -->
+      <a href="Sistema funerário/login.html" class="caixa-solucao">
+        <div class="caixa-foto">
+          <img src="Sistema funerário/Imagens/logotipo.png" alt="Memoriar">
+        </div>
+        <div class="caixa-conteudo">
+          <h3>Como organizar a gestão de uma funerária?</h3>
+          <p>Conheça o Memoriar, sistema onde as memórias são vivas</p>
+        </div>
+      </a>
+    </div>
+    <p class="sem-resultado" hidden>Nenhuma solução encontrada. Tente outra palavra.</p>
+  </main>
+
+  <footer class="rodape">
+    <p>Feito para transformar pequenas dificuldades em grandes facilidades.</p>
+  </footer>
+  <script>
+    (function () {
+      var campo = document.querySelector('.busca-geral input');
+      var caixas = document.querySelectorAll('.caixa-solucao');
+      var vazio = document.querySelector('.sem-resultado');
+      function limpar(t) { return t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); }
+      campo.addEventListener('input', function () {
+        var q = limpar(campo.value.trim()), n = 0;
+        caixas.forEach(function (c) {
+          var ok = limpar(c.textContent).indexOf(q) !== -1;
+          c.hidden = !ok; if (ok) n++;
+        });
+        vazio.hidden = n > 0;
+      });
+    })();
+  </script>
+</body>
+
+</html>

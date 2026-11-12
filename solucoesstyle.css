@@ -1,0 +1,21 @@
+/* ==========================================================================
+   VIRTO — lista de soluções (solucoes.html)
+   ========================================================================== */
+
+.busca-geral { display: flex; align-items: center; gap: 14px; height: 56px; margin-bottom: 28px; padding: 5px 22px; background: var(--superficie); border: 1px solid var(--linha); border-radius: 999px; box-shadow: var(--sombra); transition: border-color .2s, box-shadow .2s; }
+.busca-geral:focus-within { border-color: var(--roxo); box-shadow: 0 0 0 4px var(--roxo-bg); }
+.busca-geral input { flex: 1; min-width: 0; border: 0; outline: 0; background: none; color: inherit; font: inherit; }
+.lista-caixas { display: flex; flex-direction: column; gap: 16px; }
+.caixa-solucao { display: flex; align-items: center; gap: 20px; padding: 16px 20px; background: var(--superficie); border: 1px solid var(--linha); border-radius: var(--raio); box-shadow: var(--sombra); transition: transform .2s, border-color .2s, box-shadow .2s; }
+.caixa-solucao:hover { transform: translateY(-2px); border-color: var(--roxo); box-shadow: 0 0 0 4px var(--roxo-bg), var(--sombra-hover); }
+.caixa-foto { display: grid; place-items: center; flex: none; width: 72px; height: 72px; padding: 8px; border-radius: 14px; background: var(--roxo-bg); }
+.caixa-foto img { width: 100%; height: 100%; object-fit: contain; }
+.caixa-conteudo h3 { margin-bottom: 4px; font-size: 18px; line-height: 1.25; }
+.caixa-conteudo p { margin: 0; font-size: 14px; color: var(--suave); }
+.sem-resultado { margin: 24px 0 0; text-align: center; color: var(--suave); }
+
+@media (max-width: 640px) {
+  .caixa-solucao { gap: 14px; padding: 14px; }
+  .caixa-foto { width: 56px; height: 56px; }
+  .caixa-conteudo h3 { font-size: 16px; }
+}
