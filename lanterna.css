@@ -73,7 +73,7 @@
   border: 0;
 }
 
-/* Desktop: rodapé baixo, para a página inicial caber na tela sem rolagem */
+/* Desktop: mesmo rodapé baixo em todas as páginas (igual à página inicial) */
 @media (min-width: 801px) {
   .logo-lanterna { --altura: clamp(56px, 9vh, 80px); --raio-luz: 90px; }
 }
