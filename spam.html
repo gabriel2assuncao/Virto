@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Como bloquear chamadas de spam, telemarketing e golpes no celular usando só recursos gratuitos. Testado na prática.">
   <title>Virto — Como bloquear chamadas de spam no celular</title>
 
-  <!-- Tipografia Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -20,7 +20,23 @@
 
 <body>
 
-  <!-- Header / Topo -->
+  <!-- Ícones reutilizáveis -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-fone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+      <symbol id="i-escudo" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.7 8.9a1 1 0 0 1-.6 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1.2 1.2 0 0 1 1.6 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="i-alerta" viewBox="0 0 24 24"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></symbol>
+      <symbol id="i-ok" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+      <symbol id="i-ideia" viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5M9 18h6M10 22h4"/></symbol>
+      <symbol id="i-correio" viewBox="0 0 24 24"><circle cx="6" cy="12" r="4"/><circle cx="18" cy="12" r="4"/><path d="M6 16h12"/></symbol>
+      <symbol id="i-atualizar" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.8 9.8 0 0 1 6.7 2.7L21 8M21 3v5h-5M21 12a9 9 0 0 1-9 9 9.8 9.8 0 0 1-6.7-2.7L3 16M8 16H3v5"/></symbol>
+      <symbol id="i-cel" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M12 18h.01"/></symbol>
+      <symbol id="i-cartao" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></symbol>
+      <symbol id="i-proibido" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/></symbol>
+      <symbol id="i-relogio" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    </defs>
+  </svg>
+
   <header class="topo">
     <a class="logo-link" href="index.html" aria-label="Virto — Início"><img class="logo" src="imagens/logo-virto.png"
         alt="Virto"></a>
@@ -30,182 +46,312 @@
     </nav>
   </header>
 
-  <!-- Conteúdo Principal -->
-  <main class="container-solucoes">
-    <article class="detalhe-artigo">
+  <main class="container-solucoes sp">
 
-      <!-- Navegação de volta -->
-      <a href="solucoes.html" class="voltar">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M19 12H5M12 19l-7-7 7-7" />
-        </svg>
-        Voltar para todas as soluções
-      </a>
+    <a href="solucoes.html" class="voltar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M19 12H5M12 19l-7-7 7-7" />
+      </svg>Voltar para todas as soluções</a>
 
-      <!-- Hero Header -->
-      <header class="hero-artigo">
-        <div class="badge-status">
-          <span class="ponto-status"></span>
-          Testado e Aprovado na Prática
-        </div>
-        <h1>Diga adeus às ligações de spam, telemarketing e golpes.</h1>
-        <p class="subtitulo-artigo">
-          Testamos na prática o que realmente funciona (e o que é promessa vazia) para limpar a rotina do seu celular de
-          vez.
-        </p>
-      </header>
-
-      <!-- Card de Alerta Inicial -->
-      <div class="card-alerta">
-        <div class="alerta-icone">⚠️</div>
-        <div class="alerta-conteudo">
-          <h3>Antes de configurar</h3>
-          <p>Considere sua rotina: se você aguarda entregas de aplicativos, chamadas de médicos, escola dos filhos ou
-            contatos profissionais, o bloqueio estrito de desconhecidos pode impedir esses contatos diretos.</p>
+    <!-- HERO -->
+    <section class="sp-hero">
+      <div class="sp-hero-texto">
+        <span class="sp-badge"><span class="sp-ponto"></span>Testado na prática · grátis</span>
+        <h1>Diga adeus às ligações de spam, telemarketing e golpes</h1>
+        <p class="sp-sub">Testamos o que realmente funciona (e o que é promessa vazia) para limpar a rotina do seu
+          celular, usando só recursos gratuitos.</p>
+        <div class="sp-cta">
+          <a class="sp-btn sp-btn-principal" href="#escolha">Escolher meu celular</a>
+          <a class="sp-btn sp-btn-sec" href="#resumo">Ver o resumo</a>
         </div>
       </div>
 
-      <!-- Seção 1: Android Nativo -->
-      <section class="card-solucao android-border">
-        <div class="card-cabecalho">
-          <span class="tag-plataforma tag-android">Android</span>
-          <h2>1. Proteção nativa no Android</h2>
+      <div class="sp-cena" aria-hidden="true">
+        <img class="sp-adesivo" src="imagens/virtus-spam-call-removebg-preview.png" alt="">
+        <div class="sp-aparelho">
+          <div class="sp-tela">
+            <span class="sp-avatar">?</span>
+            <strong>Número desconhecido</strong>
+            <small>Possível spam</small>
+            <div class="sp-botoes"><span class="sp-rec">Recusar</span><span class="sp-atd">Atender</span></div>
+            <span class="sp-carimbo">Spam bloqueado</span>
+          </div>
         </div>
-        <p class="descricao-secao">O Android possui uma ferramenta padrão integrada ao aplicativo do telefone que ajuda
-          a identificar e barrar chamadas comerciais de grande porte:</p>
+      </div>
+    </section>
 
-        <div class="passos-container">
-          <div class="passo-item">
-            <span class="passo-numero">1</span>
-            <p>Abra o aplicativo nativo de <strong>Telefone</strong> do seu smartphone.</p>
-          </div>
-          <div class="passo-item">
-            <span class="passo-numero">2</span>
-            <p>Toque nos <strong>três pontos</strong> no canto superior direito e selecione
-              <strong>Configurações</strong>.</p>
-          </div>
-          <div class="passo-item">
-            <span class="passo-numero">3</span>
-            <p>Acesse a opção <strong>Identificador de chamada e spam</strong> (ou <em>Proteção contra spam</em>).</p>
-          </div>
-          <div class="passo-item">
-            <span class="passo-numero">4</span>
-            <p>Ative as chaves <strong>Ver identificador de chamada e spam</strong> e <strong>Bloquear chamadas
-                indesejadas e de spam</strong>.</p>
-          </div>
+    <!-- ALERTA -->
+    <aside class="sp-alerta" aria-labelledby="t-alerta">
+      <svg class="sp-ic" aria-hidden="true">
+        <use href="#i-alerta" />
+      </svg>
+      <div>
+        <h2 id="t-alerta">Antes de configurar</h2>
+        <p>Considere sua rotina: o bloqueio estrito de desconhecidos pode impedir contatos que você quer receber.</p>
+        <ul class="sp-chips" aria-label="Contatos que podem ser afetados">
+          <li>📦 Entregas de aplicativos</li>
+          <li>🩺 Chamadas de médicos</li>
+          <li>🏫 Escola</li>
+          <li>💼 Contatos profissionais</li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- ESCOLHA DO CELULAR -->
+    <section class="sp-secao" id="escolha" aria-labelledby="t-escolha">
+      <h2 id="t-escolha">Qual é o seu celular?</h2>
+      <p class="sp-intro">Escolha abaixo e a página mostra só o que serve para você.</p>
+      <div class="sp-seletor" role="group" aria-label="Filtrar por sistema">
+        <button type="button" class="sp-opcao" data-filtro="android" aria-pressed="false">
+          <svg class="sp-ic" aria-hidden="true"><use href="#i-cel" /></svg>Android</button>
+        <button type="button" class="sp-opcao" data-filtro="ios" aria-pressed="false">
+          <svg class="sp-ic" aria-hidden="true"><use href="#i-cel" /></svg>iPhone (iOS)</button>
+        <button type="button" class="sp-opcao" data-filtro="todos" aria-pressed="true">
+          <svg class="sp-ic" aria-hidden="true"><use href="#i-cel" /></svg>Mostrar tudo</button>
+      </div>
+    </section>
+
+    <!-- ANDROID NATIVO -->
+    <section class="sp-bloco sp-android" data-plat="android" aria-labelledby="t-android">
+      <div class="sp-cab">
+        <span class="sp-tag sp-tag-android">Android</span>
+        <span class="sp-tag sp-tag-gratis">Grátis</span>
+        <h2 id="t-android">1. Proteção nativa no Android</h2>
+      </div>
+      <p class="sp-desc">O Android tem uma ferramenta padrão, integrada ao app do telefone, que ajuda a identificar e
+        barrar chamadas comerciais de grande porte.</p>
+
+      <div class="sp-duas">
+        <div>
+          <ol class="sp-passos" data-grupo="android">
+            <li><label><input type="checkbox"><span class="sp-marca"><svg aria-hidden="true"><use href="#i-ok" /></svg></span>
+                <span>Abra o app nativo de <strong>Telefone</strong> do seu smartphone.</span></label></li>
+            <li><label><input type="checkbox"><span class="sp-marca"><svg aria-hidden="true"><use href="#i-ok" /></svg></span>
+                <span>Toque nos <strong>três pontos</strong> no canto superior direito e escolha
+                  <strong>Configurações</strong>.</span></label></li>
+            <li><label><input type="checkbox"><span class="sp-marca"><svg aria-hidden="true"><use href="#i-ok" /></svg></span>
+                <span>Abra <strong>Identificador de chamada e spam</strong> (ou <em>Proteção contra spam</em>).</span></label></li>
+            <li><label><input type="checkbox"><span class="sp-marca"><svg aria-hidden="true"><use href="#i-ok" /></svg></span>
+                <span>Ative <strong>Ver identificador de chamada e spam</strong> e <strong>Bloquear chamadas
+                    indesejadas e de spam</strong>.</span></label></li>
+          </ol>
+          <div class="sp-progresso" data-para="android"><div class="sp-barra"><span></span></div><small>0 de 4 passos
+              feitos</small></div>
         </div>
 
-        <div class="callout-resultado alerta-amarelo">
-          <span class="callout-icone">💡</span>
-          <div>
-            <strong>Resultado do teste Virto:</strong>
-            <p>Embora reduza bastante o volume diário, no nosso teste prático o filtro nativo sozinho ainda deixou
-              passar algumas chamadas insistentes.</p>
-          </div>
+        <!-- Tela de exemplo -->
+        <div class="sp-mini" aria-label="Exemplo da tela de configurações">
+          <div class="sp-mini-topo">Identificador de chamada e spam</div>
+          <div class="sp-mini-linha"><span>Ver identificador de chamada e spam</span><button type="button" class="sp-chave"
+              role="switch" aria-checked="false" aria-label="Ver identificador de chamada e spam"></button></div>
+          <div class="sp-mini-linha"><span>Bloquear chamadas indesejadas e de spam</span><button type="button"
+              class="sp-chave" role="switch" aria-checked="false" aria-label="Bloquear chamadas indesejadas e de spam"></button></div>
+          <small>Toque nas chaves para ver como fica.</small>
         </div>
-      </section>
+      </div>
 
-      <!-- Seção 2: Truecaller Gratuito -->
-      <section class="card-solucao truecaller-border">
-        <div class="card-cabecalho">
-          <span class="tag-plataforma tag-reforco">Reforço Gratuito</span>
-          <h2>2. O "Pulo do Gato" com o Truecaller (Android)</h2>
-        </div>
-        <p class="descricao-secao">Para barrar o que passa pelo filtro padrão sem precisar pagar por planos premium,
-          utilizamos o aplicativo Truecaller configurado no modo gratuito:</p>
+      <div class="sp-nota sp-nota-amarela">
+        <svg class="sp-ic" aria-hidden="true"><use href="#i-ideia" /></svg>
+        <div><strong>Resultado do teste Virto</strong>
+          <p>Reduz bastante o volume diário, mas no nosso teste o filtro nativo sozinho ainda deixou passar algumas
+            chamadas insistentes.</p></div>
+      </div>
+    </section>
 
-        <div class="passos-container">
-          <div class="passo-item">
-            <span class="passo-numero azul">1</span>
-            <p>Baixe e instale o <strong>Truecaller</strong> diretamente da Google Play Store.</p>
-          </div>
-          <div class="passo-item">
-            <span class="passo-numero azul">2</span>
-            <p>Ao abrir o app, defina o Truecaller como o seu <strong>ID de chamada e spam padrão</strong> do sistema.
-            </p>
-          </div>
-          <div class="passo-item">
-            <span class="passo-numero azul">3</span>
-            <p>Selecione o nível de <strong>Proteção Básica</strong> (gratuita).</p>
-          </div>
-          <div class="passo-item highlight-passo">
-            <span class="passo-numero azul">4</span>
-            <p><strong>Passo essencial:</strong> Acesse as configurações de proteção do app periodicamente para
-              <strong>atualizar a lista de proteção offline</strong> manualmente.</p>
-          </div>
-        </div>
+    <!-- TRUECALLER -->
+    <section class="sp-bloco sp-true" data-plat="android" aria-labelledby="t-true">
+      <div class="sp-cab">
+        <span class="sp-tag sp-tag-reforco">Reforço</span>
+        <span class="sp-tag sp-tag-gratis">Grátis (modo básico)</span>
+        <h2 id="t-true">2. O pulo do gato: Truecaller no Android</h2>
+      </div>
+      <p class="sp-desc">Para barrar o que passa pelo filtro padrão sem pagar por plano premium, usamos o Truecaller no
+        modo gratuito.</p>
 
-        <div class="callout-resultado alerta-azul">
-          <span class="callout-icone">⚡</span>
-          <div>
-            <strong>Por que atualizar a lista offline?</strong>
-            <p>Como a versão gratuita não atualiza o banco de dados em segundo plano automaticamente, fazer essa
-              atualização manual garante que novos números de spam sejam bloqueados na hora.</p>
-          </div>
-        </div>
-      </section>
+      <ol class="sp-passos" data-grupo="true">
+        <li><label><input type="checkbox"><span class="sp-marca"><svg aria-hidden="true"><use href="#i-ok" /></svg></span>
+            <span>Baixe e instale o <strong>Truecaller</strong> pela Google Play Store.</span></label></li>
+        <li><label><input type="checkbox"><span class="sp-marca"><svg aria-hidden="true"><use href="#i-ok" /></svg></span>
+            <span>Ao abrir o app, defina o Truecaller como seu <strong>ID de chamada e spam padrão</strong> do
+              sistema.</span></label></li>
+        <li><label><input type="checkbox"><span class="sp-marca"><svg aria-hidden="true"><use href="#i-ok" /></svg></span>
+            <span>Selecione o nível de <strong>Proteção Básica</strong> (gratuita).</span></label></li>
+        <li class="sp-destaque"><label><input type="checkbox"><span class="sp-marca"><svg aria-hidden="true"><use href="#i-ok" /></svg></span>
+            <span><strong>Passo essencial:</strong> abra as configurações de proteção de tempos em tempos e
+              <strong>atualize a lista de proteção offline</strong> manualmente.</span></label></li>
+      </ol>
+      <div class="sp-progresso" data-para="true"><div class="sp-barra"><span></span></div><small>0 de 4 passos
+          feitos</small></div>
 
-      <!-- Seção 3: iPhone / iOS -->
-      <section class="card-solucao ios-border">
-        <div class="card-cabecalho">
-          <span class="tag-plataforma tag-ios">iOS (iPhone)</span>
-          <h2>3. Como funciona no iPhone (iOS)</h2>
-        </div>
-        <p class="descricao-secao">No ecossistema da Apple, o comportamento do sistema e dos aplicativos possui regras
-          específicas:</p>
+      <div class="sp-nota sp-nota-roxa">
+        <svg class="sp-ic" aria-hidden="true"><use href="#i-atualizar" /></svg>
+        <div><strong>Por que atualizar a lista offline?</strong>
+          <p>A versão gratuita não atualiza o banco de dados em segundo plano. Fazendo a atualização manual, números
+            novos de spam são bloqueados na hora.</p></div>
+      </div>
+    </section>
 
-        <div class="grid-ios">
-          <div class="box-ios-info">
-            <div class="ios-info-titulo">
-              <span class="icone-ios">📲</span>
-              <h3>Silenciar Desconhecidos (Nativo)</h3>
-            </div>
-            <p>Em <em>Ajustes > Telefone > Silenciar Desconhecidos</em>, você pode enviar chamadas fora da sua agenda
-              direto para o correio de voz.</p>
-            <div class="aviso-silenciar">
-              <strong>⚠️ Atenção:</strong> Silenciar não é o mesmo que bloquear. A chamada ainda tocará em segundo plano
-              e pode deixar recado.
-            </div>
-          </div>
+    <!-- iOS -->
+    <section class="sp-bloco sp-ios" data-plat="ios" aria-labelledby="t-ios">
+      <div class="sp-cab">
+        <span class="sp-tag sp-tag-ios">iPhone (iOS)</span>
+        <h2 id="t-ios">3. Como funciona no iPhone</h2>
+      </div>
+      <p class="sp-desc">No ecossistema da Apple, o sistema e os aplicativos seguem regras próprias.</p>
 
-          <div class="box-ios-info">
-            <div class="ios-info-titulo">
-              <span class="icone-ios">💳</span>
-              <h3>Truecaller no iOS</h3>
-            </div>
-            <p>Diferente do Android, a proteção de bloqueio automático de spam pelo Truecaller no iPhone faz parte
-              exclusivamente do plano <strong>Premium (pago)</strong>.</p>
-          </div>
-        </div>
-      </section>
+      <div class="sp-grade">
+        <article class="sp-info">
+          <div class="sp-info-topo"><svg class="sp-ic" aria-hidden="true"><use href="#i-correio" /></svg>
+            <h3>Silenciar desconhecidos</h3><span class="sp-tag sp-tag-gratis">Grátis</span></div>
+          <p>Em <em>Ajustes › Telefone › Silenciar Desconhecidos</em>, chamadas de números fora da sua agenda vão direto
+            para o correio de voz.</p>
 
-      <!-- Dica Extra Anatel -->
-      <section class="card-dica-anatel">
-        <div class="dica-header">
-          <span class="icone-dica">💡</span>
-          <div>
-            <h3>Dica Definitiva: Cadastro no "Não Me Perturbe"</h3>
-            <p>Bloqueie o telemarketing direto na fonte de forma gratuita.</p>
+          <div class="sp-fluxo" aria-label="O que acontece com a chamada">
+            <span>📞 Número desconhecido</span><i aria-hidden="true">→</i><span>🔕 Não toca</span><i
+              aria-hidden="true">→</i><span>📼 Correio de voz</span>
           </div>
+          <p class="sp-aviso"><strong>Atenção:</strong> silenciar não é o mesmo que bloquear. A chamada ainda é
+            registrada e pode deixar recado.</p>
+        </article>
+
+        <article class="sp-info">
+          <div class="sp-info-topo"><svg class="sp-ic" aria-hidden="true"><use href="#i-cartao" /></svg>
+            <h3>Truecaller no iOS</h3><span class="sp-tag sp-tag-pago">Pago</span></div>
+          <p>Diferente do Android, o bloqueio automático de spam do Truecaller no iPhone faz parte exclusivamente do plano
+            <strong>Premium (pago)</strong>.</p>
+          <p class="sp-aviso">Se o foco é gastar zero, no iPhone fique com o silenciar desconhecidos e o cadastro
+            abaixo.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- NÃO ME PERTURBE -->
+    <section class="sp-bloco sp-anatel" aria-labelledby="t-anatel">
+      <div class="sp-cab">
+        <span class="sp-tag sp-tag-gratis">Grátis</span>
+        <span class="sp-tag sp-tag-geral">Android e iPhone</span>
+      </div>
+      <div class="sp-anatel-corpo">
+        <svg class="sp-ic sp-ic-grande" aria-hidden="true"><use href="#i-escudo" /></svg>
+        <div>
+          <h2 id="t-anatel">Dica definitiva: cadastro no “Não Me Perturbe”</h2>
+          <p>Bloqueie o telemarketing direto na fonte, de forma gratuita. Cadastre seu número na plataforma oficial
+            <strong>Não Me Perturbe</strong>, mantida pela Anatel e pelas operadoras.</p>
+          <p class="sp-prazo"><svg class="sp-ic" aria-hidden="true"><use href="#i-relogio" /></svg>O cadastro bloqueia
+            chamadas de telemarketing de empresas de telecomunicações e instituições financeiras em até 30 dias.</p>
         </div>
-        <div class="dica-corpo">
-          <p>Você pode cadastrar seu número gratuitamente na plataforma oficial <strong>Não Me Perturbe</strong>
-            (mantida pela Anatel e operadoras). O cadastro bloqueia chamadas de telemarketing de empresas de
-            telecomunicações e instituições financeiras em até 30 dias.</p>
-        </div>
-      </section>
-      <nav class="nav-artigo" aria-label="Navegação entre soluções">
-        <a class="botao-nav anterior" href="solucoes.html"><small>← Voltar</small><strong>Todas as soluções</strong></a>
-        <a class="botao-nav proximo" href="ioregulator.html"><small>Próxima solução →</small><strong>Organizar saídas e retornos
-            dos alunos em aula</strong></a>
-      </nav>
-    </article>
+      </div>
+    </section>
+
+    <!-- RESUMO -->
+    <section class="sp-secao" id="resumo" aria-labelledby="t-resumo">
+      <h2 id="t-resumo">Resumo: o que cada solução faz e custa</h2>
+      <div class="sp-tabela" role="table" aria-label="Comparação das soluções">
+        <div class="sp-linha sp-linha-cab" role="row"><span role="columnheader">Solução</span><span
+            role="columnheader">Custo</span><span role="columnheader">O que faz</span></div>
+        <div class="sp-linha" role="row"><span role="cell"><strong>Proteção nativa</strong> (Android)</span><span
+            role="cell"><b class="sp-tag sp-tag-gratis">Grátis</b></span><span role="cell">Reduz o volume, mas deixou
+            passar chamadas insistentes.</span></div>
+        <div class="sp-linha" role="row"><span role="cell"><strong>Truecaller</strong> (Android)</span><span
+            role="cell"><b class="sp-tag sp-tag-gratis">Grátis</b></span><span role="cell">Reforça o filtro. Exige
+            atualizar a lista offline à mão.</span></div>
+        <div class="sp-linha" role="row"><span role="cell"><strong>Silenciar desconhecidos</strong> (iPhone)</span><span
+            role="cell"><b class="sp-tag sp-tag-gratis">Grátis</b></span><span role="cell">Manda para o correio de
+            voz. Não bloqueia.</span></div>
+        <div class="sp-linha" role="row"><span role="cell"><strong>Truecaller</strong> (iPhone)</span><span
+            role="cell"><b class="sp-tag sp-tag-pago">Pago</b></span><span role="cell">Bloqueio automático só no
+            plano Premium.</span></div>
+        <div class="sp-linha" role="row"><span role="cell"><strong>Não Me Perturbe</strong></span><span
+            role="cell"><b class="sp-tag sp-tag-gratis">Grátis</b></span><span role="cell">Corta telemarketing de
+            telecom e financeiras em até 30 dias.</span></div>
+      </div>
+      <p class="sp-combo"><strong>Combo grátis no Android:</strong> proteção nativa + Truecaller no modo básico +
+        Não Me Perturbe. <strong>No iPhone:</strong> silenciar desconhecidos + Não Me Perturbe.</p>
+    </section>
+
+    <!-- PERGUNTAS -->
+    <section class="sp-secao" aria-labelledby="t-faq">
+      <h2 id="t-faq">Dúvidas rápidas</h2>
+      <div class="sp-faq">
+        <details>
+          <summary>Silenciar é o mesmo que bloquear?</summary>
+          <p>Não. No iPhone, silenciar só impede que a chamada toque: ela vai para o correio de voz e pode deixar
+            recado.</p>
+        </details>
+        <details>
+          <summary>Preciso pagar para usar o Truecaller?</summary>
+          <p>No Android, não: a Proteção Básica é gratuita. No iPhone, o bloqueio automático de spam é do plano
+            Premium, que é pago.</p>
+        </details>
+        <details>
+          <summary>Por que ainda recebo spam depois de ativar o filtro?</summary>
+          <p>No nosso teste, o filtro nativo sozinho deixou passar algumas chamadas insistentes. Por isso o reforço
+            com o Truecaller e o cadastro no Não Me Perturbe.</p>
+        </details>
+        <details>
+          <summary>O Não Me Perturbe bloqueia qualquer ligação?</summary>
+          <p>Ele atua sobre telemarketing de empresas de telecomunicações e instituições financeiras, em até 30 dias
+            após o cadastro. Por isso vale combinar com os filtros do celular.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- MAIS TESTES -->
+    <section class="sp-final">
+      <h2>Quer ver mais testes de outras soluções?</h2>
+      <p>Acompanhe o @gassuno para ver novos testes reais, feitos na prática.</p>
+      <div class="sp-cta">
+        <a class="sp-btn sp-btn-principal"
+          href="https://www.instagram.com/gassuno?utm_source=ig_web_button_share_sheet&amp;vrfl=ZDNlZDc0MzIxNw=="
+          target="_blank" rel="noopener">Seguir no Instagram</a>
+        <a class="sp-btn sp-btn-sec" href="https://www.youtube.com/@gassuno" target="_blank" rel="noopener">Ver no
+          YouTube</a>
+      </div>
+    </section>
+
+    <nav class="nav-artigo" aria-label="Navegação entre soluções">
+      <a class="botao-nav anterior" href="solucoes.html"><small>← Voltar</small><strong>Todas as soluções</strong></a>
+      <a class="botao-nav proximo" href="ioregulator.html"><small>Próxima solução →</small><strong>Organizar saídas e
+          retornos dos alunos em aula</strong></a>
+    </nav>
   </main>
 
-  <!-- Rodapé -->
   <footer class="rodape">
     <p>Feito para transformar pequenas dificuldades em grandes facilidades.</p>
   </footer>
+
+  <script>
+    (function () {
+      // Filtro por sistema
+      var botoes = document.querySelectorAll('.sp-opcao');
+      var blocos = document.querySelectorAll('[data-plat]');
+      function filtrar(f) {
+        blocos.forEach(function (b) { b.hidden = f !== 'todos' && b.dataset.plat !== f; });
+        botoes.forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.filtro === f ? 'true' : 'false'); });
+      }
+      botoes.forEach(function (b) { b.addEventListener('click', function () { filtrar(b.dataset.filtro); }); });
+
+      // Progresso dos passos
+      document.querySelectorAll('.sp-passos').forEach(function (lista) {
+        var caixas = lista.querySelectorAll('input[type=checkbox]');
+        var prog = document.querySelector('.sp-progresso[data-para="' + lista.dataset.grupo + '"]');
+        function atualizar() {
+          var n = lista.querySelectorAll('input:checked').length;
+          prog.querySelector('span').style.width = (n / caixas.length * 100) + '%';
+          prog.querySelector('small').textContent = n === caixas.length ? 'Tudo pronto!' : n + ' de ' + caixas.length + ' passos feitos';
+          prog.classList.toggle('sp-completo', n === caixas.length);
+        }
+        caixas.forEach(function (c) { c.addEventListener('change', atualizar); });
+      });
+
+      // Chaves da tela de exemplo
+      document.querySelectorAll('.sp-chave').forEach(function (c) {
+        c.addEventListener('click', function () {
+          c.setAttribute('aria-checked', c.getAttribute('aria-checked') === 'true' ? 'false' : 'true');
+        });
+      });
+    })();
+  </script>
 </body>
 
 </html>

@@ -289,16 +289,12 @@ body {
   }
 }
 
-/* AJUSTE PARA A PÁGINA INICIAL CABER NA TELA */
+/* PÁGINA INICIAL ESTÁTICA NO DESKTOP (cabe na tela, sem rolagem)
+   Os tamanhos usam "vh" para o conteúdo respirar em qualquer altura de tela. */
 @media (min-width: 801px) {
   html, body {
-    height: 100%;
-    min-height: 100%;
+    height: 100dvh;
     overflow: hidden;
-  }
-
-  body {
-    min-height: 100vh;
   }
 
   main {
@@ -310,20 +306,20 @@ body {
   }
 
   .hero {
-    flex: 1;
+    flex: 0 1 auto;
     min-height: 0;
-    padding: clamp(10px, 2vh, 20px) 0;
-    gap: 20px;
+    padding: clamp(8px, 2vh, 24px) 0;
+    gap: 24px;
   }
 
   .hero-texto h1 {
-    font-size: clamp(36px, 4vw, 60px);
-    margin-bottom: 12px;
+    font-size: clamp(30px, 7.6vh, 60px);
+    margin-bottom: clamp(8px, 1.8vh, 16px);
   }
 
   .hero-texto p {
-    font-size: 15px;
-    margin-bottom: 14px;
+    font-size: clamp(13px, 2.3vh, 16px);
+    margin-bottom: clamp(10px, 2vh, 18px);
   }
 
   .botao-todas-solucoes {
@@ -332,7 +328,7 @@ body {
   }
 
   .hero-arte {
-    max-width: 350px;
+    max-width: min(350px, 46vh);
   }
 
   .nota {
@@ -340,13 +336,14 @@ body {
   }
 
   .destaque {
-    margin-bottom: 12px;
-    padding: 16px 22px;
-    gap: 20px;
+    grid-template-columns: 1.4fr 1fr .6fr;
+    margin-bottom: clamp(10px, 2.4vh, 24px);
+    padding: clamp(12px, 2.2vh, 20px) 24px;
+    gap: 24px;
   }
 
   .destaque h2 {
-    font-size: clamp(22px, 2.2vw, 32px);
+    font-size: clamp(20px, 3.8vh, 30px);
     margin-bottom: 8px;
   }
 
@@ -356,7 +353,7 @@ body {
 
   .destaque-desc {
     padding-top: 10px;
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .destaque-desc img {
@@ -366,11 +363,7 @@ body {
   .celular {
     width: auto;
     max-width: 100%;
-    max-height: 145px;
+    max-height: clamp(80px, 16vh, 140px);
     object-fit: contain;
-  }
-
-  footer {
-    padding: 9px 4%;
   }
 }

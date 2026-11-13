@@ -13,6 +13,7 @@
     rel="stylesheet">
   <link rel="stylesheet" href="basestyle.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="lanterna.css">
   <link rel="icon" href="imagens/icon.png" type="image/png">
 </head>
 <body>
@@ -63,9 +64,17 @@
     </a>
   </main>
 
-  <footer class="rodape">
-    <p>Feito para transformar pequenas dificuldades em grandes facilidades.</p>
+  <footer class="rodape rodape-lanterna">
+    <p class="so-leitor">Feito para transformar pequenas dificuldades em grandes facilidades.</p>
+    <div class="logo-lanterna" data-fontes="imagens/teste.png,Imagens/teste.png,imagens/logo-virto.png">
+      <img src="imagens/teste.png" alt="Virto" class="logo-escura">
+      <div class="luz" aria-hidden="true">
+        <img src="imagens/teste.png" alt="" class="logo-clara">
+      </div>
+    </div>
   </footer>
+
+  <script src="lanterna.js"></script>
 </body>
 
 </html>
