@@ -68,7 +68,7 @@ body {
   position: relative;
   aspect-ratio: 1 / .75;
   width: 100%;
-  max-width: 440px;
+  max-width: 700px;
   justify-self: start;
   margin-left: 6%;
 }
@@ -78,18 +78,19 @@ body {
   inset: 8% 14% 0 4%;
   background: var(--roxo);
   border-radius: 45% 20% 40% 25%;
-  transform: rotate(-9deg);
+  width: 100%;
+  height: 100%;
+  left: -28%;
 }
 
 .computador {
   position: absolute;
-  left: 4%;
-  top: 2%;
-  width: 78%;
-  transform: rotate(-4deg);
-  filter: drop-shadow(4px 4px 0 var(--fundo)) drop-shadow(-4px -4px 0 var(--fundo));
+  left: -15%;
+  top: 1%;
+  width: 70%;
+  transform: rotate(9deg);
+  filter: none;
 }
-
 .coroa {
   position: absolute;
   width: 10%;
@@ -107,18 +108,16 @@ body {
 
 .nota {
   position: absolute;
-  right: -24%;
+  right: -110px;
   top: 15%;
-  margin: 0 !important;
-  font: 600 clamp(18px, 2vw, 28px)/1 var(--mao) !important;
-  transform: rotate(-8deg);
+  
+  font-family: var(--mao);
+  font-weight: 800;
+  font-size: 300px;
+  line-height: 1.1;
 }
 
-.nota img {
-  display: block;
-  width: 70%;
-  margin-top: 4px;
-}
+
 
 .destaque {
   display: grid;
@@ -195,6 +194,54 @@ body {
   align-self: end;
   width: 85%;
   justify-self: center;
+}
+.spotlight {
+  position: relative;
+  width: 100%;
+  min-height: 350px;
+  background: #111;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.texto-base,
+.texto-luz {
+  position: absolute;
+  margin: 0;
+  font-size: clamp(100px, 25vw, 400px);
+  font-weight: 900;
+  line-height: 0.85;
+  white-space: nowrap;
+  letter-spacing: -0.06em;
+}
+
+.texto-base {
+  color: #292929;
+}
+
+.texto-luz {
+  color: #fff;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  mask-image: radial-gradient(
+    circle 180px at var(--x, 50%) var(--y, 50%),
+    black 0%,
+    transparent 100%
+  );
+
+  -webkit-mask-image: radial-gradient(
+    circle 180px at var(--x, 50%) var(--y, 50%),
+    black 0%,
+    transparent 100%
+  );
 }
 
 @media (max-width: 800px) {
@@ -289,7 +336,7 @@ body {
   }
 
   .nota {
-    font-size: clamp(16px, 1.7vw, 23px) !important;
+    font-size: clamp(40px, 1.7vw, 70px) !important;
   }
 
   .destaque {
