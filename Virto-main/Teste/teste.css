@@ -1,0 +1,77 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+}
+
+.logo-lanterna {
+  --x: 50%;
+  --y: 50%;
+
+  position: relative;
+  width: 100%;
+  min-height: 350px;
+  background: #000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  cursor: none;
+}
+
+.logo-escura,
+.logo-clara {
+  display: block;
+  width: min(85%, 1000px);
+  height: auto;
+  object-fit: contain;
+}
+
+/* Logo quase invisível */
+.logo-escura {
+  filter: brightness(0) invert(0.065);
+}
+
+/* Camada iluminada */
+.luz {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  pointer-events: none;
+
+  -webkit-mask-image: radial-gradient(
+    circle 125px at var(--x) var(--y),
+    black 0%,
+    black 35%,
+    transparent 100%
+  );
+
+  mask-image: radial-gradient(
+    circle 125px at var(--x) var(--y),
+    black 0%,
+    black 35%,
+    transparent 100%
+  );
+
+  transition: opacity 0.3s;
+}
+
+.logo-clara {
+  filter: brightness(0) invert(1);
+}
+
+.logo-lanterna:hover .luz {
+  opacity: 1;
+}
