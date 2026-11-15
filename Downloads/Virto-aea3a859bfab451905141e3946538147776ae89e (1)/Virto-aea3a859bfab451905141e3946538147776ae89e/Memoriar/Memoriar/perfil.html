@@ -1,0 +1,1213 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Memoriar | Meu Perfil</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="Imagens/logo.png" type="image/x-icon">
+</head>
+
+<body class="pagina-inicio pagina-conta">
+
+  <!-- CABEÇALHO -->
+  <header class="cabecalho">
+    <div class="cabecalho-conteudo">
+
+      <a href="index.html" class="logo-inicio">
+        <img src="Imagens/logotipo.png" alt="Memoriar">
+      </a>
+
+      <div class="usuario">
+        <div class="usuario-texto">
+          <strong id="saudacaoConta">Olá, Ana!</strong>
+          <span>Minha conta</span>
+        </div>
+        <div class="usuario-avatar" id="avatarCabecalho">A</div>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- CONTEÚDO -->
+  <main class="conta-container">
+
+    <!-- INTRODUÇÃO -->
+    <section class="conta-introducao">
+
+      <h1>Meu perfil</h1>
+
+      <p>
+        Gerencie suas informações pessoais,
+        acompanhe seu plano funerário e consulte
+        os dependentes vinculados à sua conta.
+      </p>
+    </section>
+
+
+    <!-- IDENTIFICAÇÃO -->
+    <section class="conta-card conta-identificacao">
+
+      <div class="conta-identificacao-dados">
+
+        <div class="conta-avatar" id="avatarPrincipal">
+          A
+        </div>
+
+        <div class="conta-identificacao-texto">
+          <span class="conta-identificacao-label">
+            TITULAR DO PLANO
+          </span>
+
+          <h2 id="nomeTitular">Ana Oliveira</h2>
+
+          <p>
+            Responsável pelo contrato funerário
+            e pelos dependentes cadastrados.
+          </p>
+
+          <span class="conta-situacao">
+            <span></span>
+            Plano ativo
+          </span>
+        </div>
+
+      </div>
+
+      <div class="conta-identificacao-acoes">
+        <button type="button"
+                class="conta-botao-editar"
+                id="editarTitular">
+          Editar meus dados
+        </button>
+      </div>
+
+    </section>
+
+
+    <!-- DADOS PESSOAIS -->
+    <section class="conta-card conta-dados">
+
+      <div class="conta-card-topo">
+        <div>
+          <h2>Dados da titular</h2>
+        </div>
+      </div>
+
+      <div class="conta-dados-grid">
+
+        <div class="conta-dado">
+          <span>Nome completo</span>
+          <strong id="visualNome">Ana Oliveira</strong>
+        </div>
+
+        <div class="conta-dado">
+          <span>E-mail</span>
+          <strong id="visualEmail">
+            ana.oliveira@exemplo.com
+          </strong>
+        </div>
+
+        <div class="conta-dado">
+          <span>Telefone</span>
+          <strong id="visualTelefone">
+            (98) 99999-0000
+          </strong>
+        </div>
+
+        <div class="conta-dado">
+          <span>Data de nascimento</span>
+          <strong id="visualNascimento">
+            10/05/1975
+          </strong>
+        </div>
+
+        <div class="conta-dado">
+          <span>Identificação do contrato</span>
+          <strong>MEM-PL-2026-001</strong>
+        </div>
+
+        <div class="conta-dado">
+          <span>Situação cadastral</span>
+          <strong>Ativo</strong>
+        </div>
+
+      </div>
+
+      <p class="conta-nota">
+        Obs.: Para alterações contratuais ou documentos
+        oficiais, entre em contato com a funerária.
+      </p>
+
+    </section>
+
+
+    <!-- PLANO CONTRATADO -->
+    <section class="conta-card conta-plano">
+
+      <div class="conta-card-topo">
+        <div>
+          <h2>Plano contratado</h2>
+        </div>
+
+        <span class="conta-etiqueta-plano">
+          OURO
+        </span>
+      </div>
+
+      <p class="conta-plano-descricao">
+        Cobertura funerária e cemiterial para
+        a titular e os dependentes elegíveis,
+        conforme as condições do contrato.
+      </p>
+
+      <div class="conta-plano-grid">
+
+        <div>
+          <span>Plano</span>
+          <strong>Ouro</strong>
+        </div>
+
+        <div>
+          <span>Mensalidade ilustrativa</span>
+          <strong>R$ 159,90</strong>
+        </div>
+
+        <div>
+          <span>Limite de dependentes</span>
+          <strong>10 pessoas</strong>
+        </div>
+
+        <div>
+          <span>Serviço cemiterial</span>
+          <strong>Jazigo de até 3 lugares</strong>
+        </div>
+
+      </div>
+
+      <a href="planos.html" class="conta-link-plano">
+        Consultar benefícios do plano
+      </a>
+
+    </section>
+
+
+    <!-- DEPENDENTES -->
+    <section class="conta-dependentes" id="dependentes">
+
+      <div class="conta-dependentes-cabecalho">
+
+        <div>
+
+          <h2>Meus dependentes</h2>
+
+          <p>
+            Gerencie as pessoas beneficiárias
+            vinculadas ao seu plano funerário.
+          </p>
+        </div>
+
+        <button type="button"
+                class="conta-botao-adicionar"
+                id="adicionarDependente">
+          <span>+</span>
+          Adicionar dependente
+        </button>
+
+      </div>
+
+
+      <!-- CONTADOR -->
+      <div class="conta-resumo-dependentes">
+
+        <div class="conta-resumo-topo">
+          <div>
+            <span>Dependentes cadastrados</span>
+            <strong id="contadorDependentes">
+              3 de 10
+            </strong>
+          </div>
+
+          <div class="conta-vagas">
+            <span>Vagas disponíveis</span>
+            <strong id="vagasDisponiveis">7</strong>
+          </div>
+        </div>
+
+        <div class="conta-barra">
+          <div class="conta-barra-progresso"
+               id="barraDependentes"
+               style="width:30%">
+          </div>
+        </div>
+
+        <p>
+          O Plano Ouro permite cadastrar até
+          10 dependentes além da titular.
+        </p>
+
+      </div>
+
+
+      <!-- LISTA DINÂMICA -->
+      <div class="conta-lista-dependentes"
+           id="listaDependentes">
+      </div>
+
+
+      <!-- NENHUM DEPENDENTE -->
+      <div class="conta-sem-dependentes"
+           id="semDependentes"
+           hidden>
+
+        <h3>Nenhum dependente cadastrado</h3>
+
+        <p>
+          Utilize o botão acima para adicionar
+          a primeira pessoa beneficiária.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ORIENTAÇÃO -->
+    <section class="conta-informacao">
+
+      <div class="informacao-icone">i</div>
+
+      <div>
+        <h3>Como funciona a inclusão de dependentes?</h3>
+
+        <p>
+          Os dependentes são beneficiários
+          vinculados ao contrato da titular.
+          A inclusão efetiva depende das regras
+          do plano e da aprovação da funerária.
+          Os cadastros desta demonstração
+          não geram cobertura contratual real.
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+
+  <!-- MENU INFERIOR COM IMAGENS -->
+  <nav class="home-menu-inferior" aria-label="Menu principal">
+
+    <div class="home-menu-conteudo">
+
+      <a href="index.html" class="home-menu-item">
+        <img src="Imagens/homepreto.png" alt="">
+        <span>Principal</span>
+      </a>
+
+      <a href="planos.html" class="home-menu-item">
+        <img src="Imagens/cartaopreto.png" alt="">
+        <span>Planos</span>
+      </a>
+
+      <a href="produtos.html" class="home-menu-item">
+        <img src="Imagens/sacolapreta.png" alt="">
+        <span>Produtos</span>
+      </a>
+
+      <a href="perfil.html"
+         class="home-menu-item ativo">
+        <img src="Imagens/usuarioazul.png" alt="">
+        <span>Perfil</span>
+      </a>
+
+    </div>
+
+  </nav>
+
+
+  <!-- MODAL: ADICIONAR / EDITAR DEPENDENTE -->
+  <div class="conta-modal-overlay"
+       id="modalDependente"
+       aria-hidden="true">
+
+    <div class="conta-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="tituloModalDependente">
+
+      <button type="button"
+              class="conta-modal-fechar"
+              id="fecharDependente"
+              aria-label="Fechar">
+        &times;
+      </button>
+
+      <h2 id="tituloModalDependente">
+        Adicionar dependente
+      </h2>
+
+      <p>
+        Preencha as informações básicas
+        da pessoa beneficiária.
+      </p>
+
+      <form id="formDependente">
+
+        <div class="conta-campo">
+          <label for="depNome">Nome completo</label>
+          <input type="text"
+                 id="depNome"
+                 maxlength="100"
+                 placeholder="Nome do dependente"
+                 autocomplete="off"
+                 required>
+        </div>
+
+        <div class="conta-campos-duplos">
+
+          <div class="conta-campo">
+            <label for="depNascimento">
+              Data de nascimento
+            </label>
+
+            <input type="date"
+                   id="depNascimento"
+                   required>
+          </div>
+
+          <div class="conta-campo">
+            <label for="depVinculo">
+              Parentesco ou vínculo
+            </label>
+
+            <select id="depVinculo" required>
+              <option value="">Selecionar</option>
+              <option value="Filho(a)">Filho(a)</option>
+              <option value="Cônjuge">Cônjuge</option>
+              <option value="Pai/Mãe">Pai/Mãe</option>
+              <option value="Irmão(ã)">Irmão(ã)</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+
+        </div>
+
+        <p class="conta-modal-observacao">
+          Os vínculos permitidos e os critérios
+          de elegibilidade deverão ser definidos
+          pela funerária responsável.
+        </p>
+
+        <div class="conta-modal-acoes">
+
+          <button type="button"
+                  class="conta-botao-cancelar"
+                  id="cancelarDependente">
+            Cancelar
+          </button>
+
+          <button type="submit"
+                  class="conta-botao-salvar">
+            Salvar dependente
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+
+  <!-- MODAL: EDITAR TITULAR -->
+  <div class="conta-modal-overlay"
+       id="modalTitular"
+       aria-hidden="true">
+
+    <div class="conta-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="tituloModalTitular">
+
+      <button type="button"
+              class="conta-modal-fechar"
+              id="fecharTitular"
+              aria-label="Fechar">
+        &times;
+      </button>
+
+      <h2 id="tituloModalTitular">
+        Editar meus dados
+      </h2>
+
+      <p>
+        Atualize suas informações de contato
+        nesta versão demonstrativa.
+      </p>
+
+      <form id="formTitular">
+
+        <div class="conta-campo">
+          <label for="titularNome">Nome completo</label>
+          <input type="text"
+                 id="titularNome"
+                 maxlength="100"
+                 required>
+        </div>
+
+        <div class="conta-campo">
+          <label for="titularEmail">E-mail</label>
+          <input type="email"
+                 id="titularEmail"
+                 required>
+        </div>
+
+        <div class="conta-campo">
+          <label for="titularTelefone">Telefone</label>
+          <input type="tel"
+                 id="titularTelefone"
+                 maxlength="20"
+                 required>
+        </div>
+
+        <div class="conta-campo">
+          <label for="titularNascimento">
+            Data de nascimento
+          </label>
+          <input type="date"
+                 id="titularNascimento"
+                 required>
+        </div>
+
+        <div class="conta-modal-acoes">
+
+          <button type="button"
+                  class="conta-botao-cancelar"
+                  id="cancelarTitular">
+            Cancelar
+          </button>
+
+          <button type="submit"
+                  class="conta-botao-salvar">
+            Salvar alterações
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+
+  <!-- JAVASCRIPT -->
+  <script>
+
+    /* ======================================
+       DADOS DEMONSTRATIVOS
+    ====================================== */
+
+    const CHAVE_TITULAR = "memoriar_demo_titular";
+    const CHAVE_DEPENDENTES = "memoriar_demo_dependentes";
+    const LIMITE_DEPENDENTES = 10;
+
+    const titularPadrao = {
+      nome: "Ana Oliveira",
+      email: "ana.oliveira@exemplo.com",
+      telefone: "(98) 99999-0000",
+      nascimento: "1975-05-10"
+    };
+
+    const dependentesPadrao = [
+      {
+        id: 1,
+        nome: "Lucas Oliveira",
+        nascimento: "2000-04-12",
+        vinculo: "Filho(a)"
+      },
+      {
+        id: 2,
+        nome: "Carolina Oliveira",
+        nascimento: "2003-09-20",
+        vinculo: "Filho(a)"
+      },
+      {
+        id: 3,
+        nome: "Beatriz Oliveira",
+        nascimento: "1980-02-18",
+        vinculo: "Irmão(ã)"
+      }
+    ];
+
+
+    /* ======================================
+       ARMAZENAMENTO LOCAL
+    ====================================== */
+
+    function lerDados(chave, padrao) {
+      try {
+        const valor = localStorage.getItem(chave);
+        return valor === null
+          ? structuredClone(padrao)
+          : JSON.parse(valor);
+      } catch (erro) {
+        return structuredClone(padrao);
+      }
+    }
+
+    let titular = lerDados(
+      CHAVE_TITULAR,
+      titularPadrao
+    );
+
+    let dependentes = lerDados(
+      CHAVE_DEPENDENTES,
+      dependentesPadrao
+    );
+
+    if (!titular || typeof titular !== "object"
+        || Array.isArray(titular)) {
+      titular = structuredClone(titularPadrao);
+    }
+
+    if (!Array.isArray(dependentes)) {
+      dependentes = structuredClone(dependentesPadrao);
+    }
+
+    function salvarDados() {
+      try {
+        localStorage.setItem(
+          CHAVE_TITULAR,
+          JSON.stringify(titular)
+        );
+
+        localStorage.setItem(
+          CHAVE_DEPENDENTES,
+          JSON.stringify(dependentes)
+        );
+      } catch (erro) {
+        alert(
+          "O navegador não permitiu salvar os dados. " +
+          "As alterações ficarão apenas nesta sessão."
+        );
+      }
+    }
+
+
+    /* ======================================
+       UTILITÁRIOS
+    ====================================== */
+
+    function formatarData(valor) {
+      if (!valor) return "Não informado";
+
+      const partes = valor.split("-");
+
+      if (partes.length !== 3) {
+        return "Não informado";
+      }
+
+      return partes[2] + "/" +
+             partes[1] + "/" +
+             partes[0];
+    }
+
+    function inicialNome(nome) {
+      return (nome.trim().charAt(0) || "A")
+        .toUpperCase();
+    }
+
+    function criarElemento(tag, classe, texto) {
+      const el = document.createElement(tag);
+
+      if (classe) {
+        el.className = classe;
+      }
+
+      if (texto !== undefined) {
+        el.textContent = texto;
+      }
+
+      return el;
+    }
+
+
+    /* ======================================
+       ATUALIZAR TITULAR
+    ====================================== */
+
+    function atualizarTitular() {
+
+      const nome = titular.nome.trim();
+      const primeiroNome = nome.split(/\s+/)[0];
+
+      document.getElementById("nomeTitular")
+        .textContent = nome;
+
+      document.getElementById("visualNome")
+        .textContent = nome;
+
+      document.getElementById("visualEmail")
+        .textContent = titular.email;
+
+      document.getElementById("visualTelefone")
+        .textContent = titular.telefone;
+
+      document.getElementById("visualNascimento")
+        .textContent = formatarData(titular.nascimento);
+
+      document.getElementById("saudacaoConta")
+        .textContent = "Olá, " + primeiroNome + "!";
+
+      document.getElementById("avatarPrincipal")
+        .textContent = inicialNome(nome);
+
+      document.getElementById("avatarCabecalho")
+        .textContent = inicialNome(nome);
+    }
+
+
+    /* ======================================
+       RENDERIZAR DEPENDENTES
+    ====================================== */
+
+    const listaDependentes =
+      document.getElementById("listaDependentes");
+
+    const contadorDependentes =
+      document.getElementById("contadorDependentes");
+
+    const vagasDisponiveis =
+      document.getElementById("vagasDisponiveis");
+
+    const barraDependentes =
+      document.getElementById("barraDependentes");
+
+    const semDependentes =
+      document.getElementById("semDependentes");
+
+    const adicionarDependente =
+      document.getElementById("adicionarDependente");
+
+    function renderizarDependentes() {
+
+      listaDependentes.replaceChildren();
+
+      const quantidade = dependentes.length;
+      const vagas = Math.max(
+        0,
+        LIMITE_DEPENDENTES - quantidade
+      );
+
+      contadorDependentes.textContent =
+        quantidade + " de " + LIMITE_DEPENDENTES;
+
+      vagasDisponiveis.textContent = vagas;
+
+      barraDependentes.style.width =
+        Math.min(
+          100,
+          (quantidade / LIMITE_DEPENDENTES) * 100
+        ) + "%";
+
+      adicionarDependente.disabled =
+        quantidade >= LIMITE_DEPENDENTES;
+
+      adicionarDependente.title =
+        vagas === 0
+          ? "Limite de dependentes atingido"
+          : "Adicionar dependente";
+
+      semDependentes.hidden = quantidade !== 0;
+
+      dependentes.forEach(function(dep) {
+
+        const card = criarElemento(
+          "article",
+          "conta-dependente-card"
+        );
+
+        const avatar = criarElemento(
+          "div",
+          "conta-dependente-avatar",
+          inicialNome(dep.nome)
+        );
+
+        const info = criarElemento(
+          "div",
+          "conta-dependente-info"
+        );
+
+        info.appendChild(
+          criarElemento(
+            "span",
+            "conta-dependente-vinculo",
+            dep.vinculo
+          )
+        );
+
+        info.appendChild(
+          criarElemento(
+            "h3",
+            "",
+            dep.nome
+          )
+        );
+
+        info.appendChild(
+          criarElemento(
+            "p",
+            "",
+            "Nascimento: " + formatarData(dep.nascimento)
+          )
+        );
+
+        const acoes = criarElemento(
+          "div",
+          "conta-dependente-acoes"
+        );
+
+        const editar = criarElemento(
+          "button",
+          "conta-acao-editar",
+          "Editar"
+        );
+
+        editar.type = "button";
+        editar.dataset.acao = "editar";
+        editar.dataset.id = String(dep.id);
+        editar.setAttribute(
+          "aria-label",
+          "Editar " + dep.nome
+        );
+
+        const excluir = criarElemento(
+          "button",
+          "conta-acao-excluir",
+          "Remover"
+        );
+
+        excluir.type = "button";
+        excluir.dataset.acao = "excluir";
+        excluir.dataset.id = String(dep.id);
+        excluir.setAttribute(
+          "aria-label",
+          "Remover " + dep.nome
+        );
+
+        acoes.append(editar, excluir);
+        card.append(avatar, info, acoes);
+
+        listaDependentes.appendChild(card);
+      });
+    }
+
+
+    /* ======================================
+       MODAIS
+    ====================================== */
+
+    const modalDependente =
+      document.getElementById("modalDependente");
+
+    const modalTitular =
+      document.getElementById("modalTitular");
+
+    const formDependente =
+      document.getElementById("formDependente");
+
+    const formTitular =
+      document.getElementById("formTitular");
+
+    let dependenteEditando = null;
+    let botaoAnterior = null;
+
+    function abrirModal(modal, botao) {
+      botaoAnterior = botao || document.activeElement;
+
+      modal.classList.add("ativo");
+      modal.setAttribute("aria-hidden", "false");
+
+      document.body.classList.add(
+        "conta-modal-aberto"
+      );
+
+      const primeiroCampo =
+        modal.querySelector("input");
+
+      if (primeiroCampo) {
+        primeiroCampo.focus();
+      }
+    }
+
+    function fecharModal(modal) {
+      modal.classList.remove("ativo");
+      modal.setAttribute("aria-hidden", "true");
+
+      document.body.classList.remove(
+        "conta-modal-aberto"
+      );
+
+      if (botaoAnterior &&
+          document.contains(botaoAnterior)) {
+        botaoAnterior.focus();
+      } else {
+        adicionarDependente.focus();
+      }
+    }
+
+
+    /* ======================================
+       ADICIONAR DEPENDENTE
+    ====================================== */
+
+    adicionarDependente.addEventListener(
+      "click",
+      function() {
+
+        if (dependentes.length >= LIMITE_DEPENDENTES) {
+          return;
+        }
+
+        dependenteEditando = null;
+
+        formDependente.reset();
+
+        document.getElementById(
+          "tituloModalDependente"
+        ).textContent = "Adicionar dependente";
+
+        abrirModal(modalDependente, this);
+      }
+    );
+
+
+    /* ======================================
+       EDITAR OU EXCLUIR DEPENDENTE
+    ====================================== */
+
+    listaDependentes.addEventListener(
+      "click",
+      function(evento) {
+
+        const botao = evento.target.closest(
+          "button[data-acao]"
+        );
+
+        if (!botao) return;
+
+        const id = Number(botao.dataset.id);
+
+        const dep = dependentes.find(
+          item => item.id === id
+        );
+
+        if (!dep) return;
+
+        if (botao.dataset.acao === "editar") {
+
+          dependenteEditando = id;
+
+          document.getElementById(
+            "tituloModalDependente"
+          ).textContent = "Editar dependente";
+
+          document.getElementById("depNome")
+            .value = dep.nome;
+
+          document.getElementById("depNascimento")
+            .value = dep.nascimento;
+
+          document.getElementById("depVinculo")
+            .value = dep.vinculo;
+
+          abrirModal(modalDependente, botao);
+
+        } else if (
+          botao.dataset.acao === "excluir"
+        ) {
+
+          const confirmar = confirm(
+            "Deseja remover " + dep.nome +
+            " da lista demonstrativa de dependentes?"
+          );
+
+          if (!confirmar) return;
+
+          dependentes = dependentes.filter(
+            item => item.id !== id
+          );
+
+          salvarDados();
+          renderizarDependentes();
+
+          adicionarDependente.focus();
+        }
+      }
+    );
+
+
+    /* ======================================
+       SALVAR DEPENDENTE
+    ====================================== */
+
+    formDependente.addEventListener(
+      "submit",
+      function(evento) {
+
+        evento.preventDefault();
+
+        const nome = document.getElementById(
+          "depNome"
+        ).value.trim();
+
+        const nascimento = document.getElementById(
+          "depNascimento"
+        ).value;
+
+        const vinculo = document.getElementById(
+          "depVinculo"
+        ).value;
+
+        const hoje = new Date()
+          .toISOString()
+          .slice(0, 10);
+
+        if (!nome || !nascimento || !vinculo) {
+          alert("Preencha todos os campos.");
+          return;
+        }
+
+        if (nascimento > hoje) {
+          alert(
+            "A data de nascimento não pode " +
+            "ser futura."
+          );
+          return;
+        }
+
+        if (dependenteEditando !== null) {
+
+          const dep = dependentes.find(
+            item => item.id === dependenteEditando
+          );
+
+          if (!dep) return;
+
+          dep.nome = nome;
+          dep.nascimento = nascimento;
+          dep.vinculo = vinculo;
+
+        } else {
+
+          if (dependentes.length >= LIMITE_DEPENDENTES) {
+            alert(
+              "O Plano Ouro permite até " +
+              LIMITE_DEPENDENTES + " dependentes."
+            );
+            return;
+          }
+
+          const novoId = dependentes.reduce(
+            (maior, dep) =>
+              Math.max(maior, Number(dep.id) || 0),
+            0
+          ) + 1;
+
+          dependentes.push({
+            id: novoId,
+            nome: nome,
+            nascimento: nascimento,
+            vinculo: vinculo
+          });
+
+        }
+
+        salvarDados();
+        renderizarDependentes();
+        fecharModal(modalDependente);
+      }
+    );
+
+
+    /* ======================================
+       EDITAR TITULAR
+    ====================================== */
+
+    document.getElementById("editarTitular")
+      .addEventListener("click", function() {
+
+        document.getElementById("titularNome")
+          .value = titular.nome;
+
+        document.getElementById("titularEmail")
+          .value = titular.email;
+
+        document.getElementById("titularTelefone")
+          .value = titular.telefone;
+
+        document.getElementById("titularNascimento")
+          .value = titular.nascimento;
+
+        abrirModal(modalTitular, this);
+      });
+
+
+    formTitular.addEventListener(
+      "submit",
+      function(evento) {
+
+        evento.preventDefault();
+
+        const nome = document.getElementById(
+          "titularNome"
+        ).value.trim();
+
+        const email = document.getElementById(
+          "titularEmail"
+        ).value.trim();
+
+        const telefone = document.getElementById(
+          "titularTelefone"
+        ).value.trim();
+
+        const nascimento = document.getElementById(
+          "titularNascimento"
+        ).value;
+
+        const hoje = new Date()
+          .toISOString()
+          .slice(0, 10);
+
+        if (!nome || !email ||
+            !telefone || !nascimento) {
+          alert("Preencha todos os campos.");
+          return;
+        }
+
+        if (nascimento > hoje) {
+          alert("A data de nascimento é inválida.");
+          return;
+        }
+
+        titular = {
+          nome: nome,
+          email: email,
+          telefone: telefone,
+          nascimento: nascimento
+        };
+
+        salvarDados();
+        atualizarTitular();
+        fecharModal(modalTitular);
+      }
+    );
+
+
+    /* ======================================
+       FECHAR MODAIS
+    ====================================== */
+
+    document.getElementById("fecharDependente")
+      .addEventListener("click", () =>
+        fecharModal(modalDependente)
+      );
+
+    document.getElementById("cancelarDependente")
+      .addEventListener("click", () =>
+        fecharModal(modalDependente)
+      );
+
+    document.getElementById("fecharTitular")
+      .addEventListener("click", () =>
+        fecharModal(modalTitular)
+      );
+
+    document.getElementById("cancelarTitular")
+      .addEventListener("click", () =>
+        fecharModal(modalTitular)
+      );
+
+
+    [modalDependente, modalTitular].forEach(
+      function(modal) {
+
+        modal.addEventListener(
+          "click",
+          function(evento) {
+            if (evento.target === modal) {
+              fecharModal(modal);
+            }
+          }
+        );
+      }
+    );
+
+
+    document.addEventListener(
+      "keydown",
+      function(evento) {
+
+        const modalAtivo = document.querySelector(
+          ".conta-modal-overlay.ativo"
+        );
+
+        if (!modalAtivo) return;
+
+        if (evento.key === "Escape") {
+          fecharModal(modalAtivo);
+        }
+
+        if (evento.key === "Tab") {
+
+          const controles = Array.from(
+            modalAtivo.querySelectorAll(
+              "button:not([disabled]), " +
+              "input:not([disabled]), " +
+              "select:not([disabled])"
+            )
+          ).filter(
+            el => el.offsetParent !== null
+          );
+
+          if (!controles.length) return;
+
+          const primeiro = controles[0];
+          const ultimo = controles[controles.length - 1];
+
+          if (evento.shiftKey &&
+              document.activeElement === primeiro) {
+            evento.preventDefault();
+            ultimo.focus();
+
+          } else if (!evento.shiftKey &&
+                     document.activeElement === ultimo) {
+            evento.preventDefault();
+            primeiro.focus();
+          }
+        }
+      }
+    );
+
+
+    /* INICIALIZAR PÁGINA */
+
+    atualizarTitular();
+    renderizarDependentes();
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,561 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memoriar | Início</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="Imagens/logo.png" type="image/x-icon">
+</head>
+
+<body class="pagina-inicio">
+
+  <!-- CABEÇALHO -->
+  <header class="cabecalho">
+    <div class="cabecalho-conteudo">
+      <a href="index.html" class="logo-inicio">
+        <img src="Imagens/logotipo.png" alt="Logo Memoriar">
+      </a>
+
+      <div class="usuario">
+        <div class="usuario-texto">
+          <strong>Olá, Ana!</strong>
+          <span>Minha conta</span>
+        </div>
+        <div class="usuario-avatar">A</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="conteudo-inicio">
+
+    <!-- SEÇÃO DE FAMILIARES -->
+    <section class="secao-familiares">
+      <div class="titulo-secao">
+        <div>
+          <h2>Minhas memórias</h2>
+        </div>
+
+        <button class="botao-adicionar" id="abrirModal">
+          <span class="icone-mais">+</span>
+          Adicionar pessoa
+        </button>
+      </div>
+
+      <!-- CARDS DOS CADASTRADOS -->
+      <div class="lista-familiares">
+
+        <!-- FAMILIAR 1 -->
+        <article class="card-familiar">
+          <div class="card-topo">
+            <span class="etiqueta-vinculo">
+              Marido
+            </span>
+          </div>
+
+          <div class="card-informacoes">
+            <h3>José Antônio da Silva</h3>
+            <p class="card-descricao">
+              Uma história de amor, carinho e
+              lembranças que permanecem.
+            </p>
+
+            <div class="card-datas">
+              <div class="data-item">
+                <span>Nascimento</span>
+                <strong>15/03/1945</strong>
+              </div>
+
+              <div class="data-item">
+                <span>Falecimento</span>
+                <strong>22/08/2023</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-rodape">
+            <span class="localizacao">
+              Setor A · Quadra 03
+            </span>
+            <a href="perfil1.html" class="botao-perfil">
+              Ver memorial
+            </a>
+          </div>
+        </article>
+
+        <!-- FAMILIAR 2 -->
+        <article class="card-familiar">
+          <div class="card-topo">
+            <span class="etiqueta-vinculo">
+              Amiga
+            </span>
+          </div>
+
+          <div class="card-informacoes">
+            <h3>Maria de Lourdes Oliveira</h3>
+            <p class="card-descricao">
+              Sua presença continua viva em cada
+              lembrança compartilhada.
+            </p>
+
+            <div class="card-datas">
+              <div class="data-item">
+                <span>Nascimento</span>
+                <strong>08/11/1952</strong>
+              </div>
+
+              <div class="data-item">
+                <span>Falecimento</span>
+                <strong>14/02/2024</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-rodape">
+            <span class="localizacao">
+              Setor B · Quadra 07
+            </span>
+            <a href="perfil2.html" class="botao-perfil">
+              Ver memorial
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- INFORMAÇÕES -->
+    <section class="informacao-acesso">
+      <div class="informacao-icone">i</div>
+      <div>
+        <h3>Como adicionar uma pessoa?</h3>
+        <p>
+          Solicite o código de vinculação à agência
+          funerária responsável. Com ele, você poderá
+          acessar as informações e documentos
+          disponibilizados para sua conta.
+        </p>
+      </div>
+    </section>
+
+    <section class="home-servicos">
+      <div class="home-titulo-secao">
+        <div>
+          <h2>Meu plano</h2>
+          <p>
+            Consulte seu plano e os beneficiários
+            vinculados à sua conta.
+          </p>
+        </div>
+      </div>
+
+      <div class="home-grid-servicos">
+        <!-- RESUMO DO PLANO -->
+        <article class="home-card-plano">
+          <div class="home-plano-topo">
+            <span class="home-plano-status">
+              Ativo
+            </span>
+          </div>
+
+          <h3>Plano Ouro</h3>
+
+          <p class="home-plano-descricao">
+            Cobertura de serviços funerários e
+            cemiteriais para o titular e seus
+            dependentes, conforme as condições
+            contratadas.
+          </p>
+
+          <div class="home-plano-detalhes">
+            <div>
+              <span>Serviços</span>
+              <strong>Velório e cemitério</strong>
+            </div>
+
+            <div>
+              <span>Capacidade</span>
+              <strong>Até 3 lugares</strong>
+            </div>
+
+          </div>
+          <center>
+            <button
+            class="home-link-plano"
+          ><a href="planos.html">Conhecer meu plano</a>
+          </button>
+          
+          </center>
+        </article>
+
+        <!-- DEPENDENTES -->
+        <article class="home-card-dependentes">
+
+          <div class="home-dependentes-topo">
+            <div>
+              <h3>Meus dependentes</h3>
+            </div>
+          </div>
+
+          <p class="home-dependentes-descricao">
+            Pessoas vinculadas ao plano funerário
+            do titular.
+          </p>
+
+          <div class="home-titular">
+            <span>Titular do plano</span>
+            <strong>Ana de Oliveira Silva</strong>
+          </div>
+
+          <div class="home-contador">
+            <div>
+              <strong>3 de 10</strong>
+              <span>dependentes cadastrados</span>
+            </div>
+
+            <span class="home-contador-limite">
+              7 vagas disponíveis
+            </span>
+          </div>
+
+          <div class="home-progresso">
+            <div class="home-progresso-preenchido"></div>
+          </div>
+
+          <center>
+            <a href="perfil.html#dependentes"
+            class="home-botao-dependentes"
+          >
+            Gerenciar dependentes
+          </a>
+          </center>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================
+         NOVO: PRODUTOS E SERVIÇOS
+    ===================================== -->
+    <section class="home-produtos">
+
+      <div class="home-produtos-conteudo">
+
+
+        <h2>Um cuidado em cada detalhe</h2>
+
+        <p>
+          Conheça opções de flores, arranjos,
+          placas memoriais e outros produtos
+          para homenagens e conservação.
+        </p>
+
+        <a href="produtos.html"
+          class="home-botao-produtos"
+          type="button"
+          data-futuro="Produtos"
+        >
+          Conhecer produtos
+        </a>
+      </div>
+
+      <div class="home-produtos-decoracao" aria-hidden="true">
+        <img src="Imagens/flores.png" alt="">
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- ====================================
+       NOVO: MENU INFERIOR
+  ===================================== -->
+  <nav class="home-menu-inferior" aria-label="Menu principal">
+
+    <div class="home-menu-conteudo">
+
+      <a
+        href="index.html"
+        class="home-menu-item ativo"
+        aria-current="page"
+      >
+        <img src="Imagens/homeazul.png" alt="">
+        <span>Principal</span>
+      </a>
+      <a href="planos.html"
+        class="home-menu-item"
+      >
+        <img src="Imagens/cartaopreto.png" alt="">
+        <span>Planos</span>
+      </a>
+      <a href="produtos.html"
+        type="button"
+        class="home-menu-item"
+      >
+        <img src="Imagens/sacolapreta.png" alt="">
+        <span>Produtos</span>
+      </a>
+      
+
+      <a
+      href="perfil.html"
+        class="home-menu-item"
+      >
+        <img src="Imagens/usuariopreto.png" alt="">
+        <span>Perfil</span>
+    </a>
+
+    </div>
+
+  </nav>
+
+
+  <!-- MODAL ORIGINAL PARA ADICIONAR PESSOA -->
+  <div class="modal-overlay" id="modalAdicionar">
+
+    <div class="modal-conteudo">
+
+      <button class="fechar-modal" id="fecharModal" aria-label="Fechar">
+        &times;
+      </button>
+
+      <h2>Adicionar uma memória</h2>
+
+      <p>
+        Digite abaixo o código de vinculação
+        fornecido pela agência funerária de seu ente querido.
+      </p>
+
+      <form id="formCodigo">
+
+        <label for="codigo">Código de vinculação</label>
+
+        <input
+          type="text"
+          id="codigo"
+          placeholder="Ex.: MEM-2026-046"
+          autocomplete="off"
+          required
+        >
+
+        <button type="submit" class="botao-confirmar">
+          Vincular pessoa
+        </button>
+
+      </form>
+
+      <span class="modal-ajuda">
+        Não possui um código? Entre em contato
+        com sua agência funerária.
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <!-- ====================================
+       NOVO: AVISO DE PÁGINA FUTURA
+  ===================================== -->
+  <div class="home-aviso-overlay" id="avisoFuturo"
+       aria-hidden="true">
+
+    <div class="home-aviso-caixa"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="homeAvisoTitulo">
+
+      <button
+        class="home-aviso-fechar"
+        id="fecharAviso"
+        aria-label="Fechar"
+        type="button"
+      >
+        &times;
+      </button>
+
+      <div class="home-aviso-icone">✦</div>
+
+      <h2 id="homeAvisoTitulo">
+        Em desenvolvimento
+      </h2>
+
+      <p id="homeAvisoDescricao">
+        Em breve, esta funcionalidade estará
+        disponível no Memoriar.
+      </p>
+
+      <button
+        class="home-aviso-botao"
+        id="entendiAviso"
+        type="button"
+      >
+        Entendi
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- JAVASCRIPT ORIGINAL DO MODAL -->
+  <script>
+
+    const modal = document.getElementById("modalAdicionar");
+    const abrirModal = document.getElementById("abrirModal");
+    const fecharModal = document.getElementById("fecharModal");
+    const formCodigo = document.getElementById("formCodigo");
+    const campoCodigo = document.getElementById("codigo");
+
+    function abrirJanela() {
+      modal.classList.add("ativo");
+      campoCodigo.focus();
+    }
+
+    function fecharJanela() {
+      modal.classList.remove("ativo");
+      formCodigo.reset();
+    }
+
+    abrirModal.addEventListener("click", abrirJanela);
+
+    fecharModal.addEventListener("click", fecharJanela);
+
+    modal.addEventListener("click", function(evento) {
+      if (evento.target === modal) {
+        fecharJanela();
+      }
+    });
+
+    document.addEventListener("keydown", function(evento) {
+      if (evento.key === "Escape") {
+        fecharJanela();
+      }
+    });
+
+    formCodigo.addEventListener("submit", function(evento) {
+      evento.preventDefault();
+
+      const codigo = campoCodigo.value.trim();
+
+      if (codigo !== "") {
+        alert(
+          "Código informado: " + codigo +
+          "\n\nA validação será implementada futuramente."
+        );
+        fecharJanela();
+      }
+    });
+
+  </script>
+
+
+  <!-- NOVO JAVASCRIPT: NAVEGAÇÃO FUTURA -->
+  <script>
+
+    const avisoFuturo =
+      document.getElementById("avisoFuturo");
+
+    const avisoTitulo =
+      document.getElementById("homeAvisoTitulo");
+
+    const avisoDescricao =
+      document.getElementById("homeAvisoDescricao");
+
+    const fecharAviso =
+      document.getElementById("fecharAviso");
+
+    const entendiAviso =
+      document.getElementById("entendiAviso");
+
+    const botoesFuturos =
+      document.querySelectorAll("[data-futuro]");
+
+    let ultimoBotao = null;
+
+    function abrirAviso(nome, botao) {
+      ultimoBotao = botao;
+
+      avisoTitulo.textContent = nome;
+
+      avisoDescricao.textContent =
+        "A área de " + nome.toLowerCase() +
+        " está em desenvolvimento. Em breve, " +
+        "você poderá acessar essa funcionalidade.";
+
+      avisoFuturo.classList.add("ativo");
+      avisoFuturo.setAttribute("aria-hidden", "false");
+
+      fecharAviso.focus();
+    }
+
+    function fecharJanelaAviso() {
+      avisoFuturo.classList.remove("ativo");
+      avisoFuturo.setAttribute("aria-hidden", "true");
+
+      if (ultimoBotao) {
+        ultimoBotao.focus();
+      }
+    }
+
+    botoesFuturos.forEach(function(botao) {
+      botao.addEventListener("click", function() {
+        abrirAviso(botao.dataset.futuro, botao);
+      });
+    });
+
+    fecharAviso.addEventListener(
+      "click",
+      fecharJanelaAviso
+    );
+
+    entendiAviso.addEventListener(
+      "click",
+      fecharJanelaAviso
+    );
+
+    avisoFuturo.addEventListener("click", function(evento) {
+      if (evento.target === avisoFuturo) {
+        fecharJanelaAviso();
+      }
+    });
+
+    document.addEventListener("keydown", function(evento) {
+      if (
+        evento.key === "Escape" &&
+        avisoFuturo.classList.contains("ativo")
+      ) {
+        fecharJanelaAviso();
+      }
+
+      if (
+        evento.key === "Tab" &&
+        avisoFuturo.classList.contains("ativo")
+      ) {
+        const controles = [fecharAviso, entendiAviso];
+        const atual = controles.indexOf(document.activeElement);
+
+        if (evento.shiftKey && atual === 0) {
+          evento.preventDefault();
+          entendiAviso.focus();
+        } else if (!evento.shiftKey && atual === 1) {
+          evento.preventDefault();
+          fecharAviso.focus();
+        }
+      }
+    });
+
+  </script>
+
+</body>
+</html>
