@@ -47,15 +47,48 @@
       </div>
     </section>
 
-    <a class="destaque" id="explorar" href="spam.html">
-      <div class="destaque-texto">
-        <span class="etiqueta"> Em destaque</span>
-        <h2>Como bloquear chamadas de <em>spam</em> no celular?</h2>
+    <section class="destaque-area" id="explorar" aria-label="Soluções em destaque">
+      <div class="carrossel" role="group" aria-roledescription="carrossel">
+        <a class="destaque slide ativo" href="spam.html">
+          <div class="destaque-texto">
+            <span class="etiqueta">Em destaque</span>
+            <h2>Como bloquear chamadas de <em>spam</em> no celular?</h2>
+          </div>
+          <p class="destaque-desc">Evite ligações indesejadas com algumas configurações simples no seu celular.</p>
+          <img class="celular" src="imagens/virtus-spam-call-removebg-preview.png" alt="Celular recebendo uma chamada de spam">
+        </a>
+        <a class="destaque slide" href="ioregulator.html">
+          <div class="destaque-texto">
+            <span class="etiqueta">Em destaque</span>
+            <h2>Como organizar as <em>saídas</em> e retornos dos alunos?</h2>
+          </div>
+          <p class="destaque-desc">Conheça o I/O Regulator, protótipo para reduzir interrupções e manter o foco na aula.</p>
+          <img class="celular" src="imagens/io-regulator-conceito.jpg" alt="Conceito do dispositivo I/O Regulator">
+        </a>
+        <a class="destaque slide" href="geminilm.html">
+          <div class="destaque-texto">
+            <span class="etiqueta">Em destaque</span>
+            <h2>Como organizar os <em>estudos</em> com IA, de graça?</h2>
+          </div>
+          <p class="destaque-desc">Junte seu material, peça um plano e estude com foco usando só ferramentas gratuitas.</p>
+          <img class="celular" src="imagens/icon-geminilm.webp" alt="GEMINILM, estudos organizados">
+        </a>
+        <a class="destaque slide" href="Memoriar/Memoriar/login.html">
+          <div class="destaque-texto">
+            <span class="etiqueta">Em destaque</span>
+            <h2>Como organizar a gestão de uma <em>funerária</em>?</h2>
+          </div>
+          <p class="destaque-desc">Conheça o Memoriar, sistema onde as memórias são vivas.</p>
+          <img class="celular" src="Sistema funerário/Imagens/logotipo.png" alt="Logotipo do Memoriar">
+        </a>
       </div>
-      <p class="destaque-desc">Evite ligações indesejadas com algumas configurações simples no seu celular.</p>
-      <img class="celular" src="imagens/virtus-spam-call-removebg-preview.png"
-        alt="Celular recebendo uma chamada de spam">
-    </a>
+      <div class="carrossel-bolinhas" role="group" aria-label="Escolher destaque">
+        <button type="button" class="bolinha ativa" aria-label="Mostrar: Bloquear chamadas de spam" aria-current="true"></button>
+        <button type="button" class="bolinha" aria-label="Mostrar: Organizar saídas e retornos dos alunos" aria-current="false"></button>
+        <button type="button" class="bolinha" aria-label="Mostrar: Organizar os estudos com IA" aria-current="false"></button>
+        <button type="button" class="bolinha" aria-label="Mostrar: Gestão de uma funerária" aria-current="false"></button>
+      </div>
+    </section>
   </main>
 
   <footer class="rodape rodape-lanterna">
@@ -68,6 +101,7 @@
     </div>
   </footer>
 
+  <script src="carrossel.js"></script>
   <script src="lanterna.js"></script>
 </body>
 

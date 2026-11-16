@@ -102,7 +102,6 @@ body {
   grid-template-columns: 1.1fr 1fr .9fr;
   align-items: center;
   gap: 30px;
-  margin-bottom: 200px;
   padding: 28px 32px;
   background: var(--superficie);
   border: 1px solid var(--linha);
@@ -173,6 +172,79 @@ body {
   width: 85%;
   justify-self: center;
 }
+
+/* ---------- Carrossel de destaques ---------- */
+.destaque-area {
+  margin-bottom: 200px;
+}
+
+/* Todos os cards ficam empilhados no mesmo lugar; a altura é a do maior,
+   então a página não "pula" quando um destaque troca de outro. */
+.carrossel {
+  display: grid;
+}
+
+.carrossel .slide {
+  grid-area: 1 / 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .6s ease, visibility 0s linear .6s, transform .2s, border-color .2s, box-shadow .2s;
+}
+
+.carrossel .slide.ativo {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .6s ease, visibility 0s, transform .2s, border-color .2s, box-shadow .2s;
+}
+
+.carrossel-bolinhas {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  margin-top: 4px;
+}
+
+.bolinha {
+  width: 24px;
+  height: 20px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.bolinha::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--linha);
+  border: 1px solid var(--suave);
+  transition: width .25s, background .25s, border-color .25s;
+}
+
+.bolinha:hover::before {
+  border-color: var(--roxo);
+}
+
+.bolinha.ativa::before {
+  width: 24px;
+  background: var(--roxo);
+  border-color: var(--roxo);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carrossel .slide,
+  .carrossel .slide.ativo,
+  .bolinha::before {
+    transition: none;
+  }
+}
+
 .spotlight {
   position: relative;
   width: 100%;
@@ -265,6 +337,10 @@ body {
    Os tamanhos usam "vh" e os limites máximos são altos, para o conteúdo
    crescer e ocupar a tela inteira (ex.: ao apertar F11). */
 @media (min-width: 1000px) {
+  .destaque-area {
+    margin-bottom: clamp(4px, 1.2vh, 24px);
+  }
+
   html, body {
     height: 100dvh;
     overflow: hidden;
@@ -316,8 +392,7 @@ body {
 
   .destaque {
     grid-template-columns: 1.4fr 1fr .6fr;
-    margin-bottom: clamp(10px, 3vh, 40px);
-    padding: clamp(12px, 3vh, 36px) clamp(24px, 2.4vw, 40px);
+    padding: clamp(10px, 2.2vh, 30px) clamp(24px, 2.4vw, 40px);
     gap: clamp(24px, 2.4vw, 40px);
   }
 
@@ -345,13 +420,17 @@ body {
     justify-self: center;
     width: auto;
     max-width: 100%;
-    max-height: clamp(80px, 21vh, 240px);
+    max-height: clamp(60px, 15vh, 200px);
     object-fit: contain;
   }
 }
 
 /* RESPONSIVO (celular e tablet, até 999px): página rola normalmente e nada se sobrepõe */
 @media (max-width: 999px) {
+  .destaque-area {
+    margin-bottom: 48px;
+  }
+
   html, body {
     height: auto;
     overflow-y: visible;
@@ -403,7 +482,6 @@ body {
   .destaque {
     grid-template-columns: minmax(0, 1fr);
     gap: 20px;
-    margin-bottom: 48px;
     padding: 22px;
   }
 
