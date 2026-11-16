@@ -24,7 +24,7 @@ html { scroll-behavior: smooth; }
 .io h1, .io h2, .io h3 { font-family: var(--titulo); }
 .io h1 { margin: 0 0 16px; font-size: clamp(32px, 5vw, 46px); line-height: 1.12; letter-spacing: -.03em; }
 .io h2 { margin: 0 0 10px; font-size: clamp(32px, 5vw, 46px); line-height: 1.25; letter-spacing: -.02em; }
-.io h3 { margin: 0 0 8px; font-size: 46px; line-height: 1.3; letter-spacing: -.02em; }
+.io h3 { margin: 0 0 8px; font-size: clamp(20px, 3vw, 26px); line-height: 1.3; letter-spacing: -.02em; }
 .io-sec { margin: 0 0 56px; }
 .io-nota { margin: 0 0 22px; color: var(--suave); font-size: 19.5px; }
 

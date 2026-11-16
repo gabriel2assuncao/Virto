@@ -39,13 +39,6 @@ body {
   position: relative;
 }
 
-.faiscas {
-  position: absolute;
-  width: 48px;
-  left: -40px;
-  top: -30px;
-}
-
 .hero-texto h1 {
   margin-bottom: 20px;
   font-size: clamp(38px, 5vw, 76px);
@@ -55,7 +48,7 @@ body {
 .hero-texto h1 em {
   display: inline-block;
   padding-bottom: .1em;
-  background: url(imagens/sublinhado.svg) bottom / 100% .22em no-repeat;
+  background: url(#) bottom / 100% .22em no-repeat;
 }
 
 .hero-texto p {
@@ -91,21 +84,6 @@ body {
   transform: rotate(9deg);
   filter: none;
 }
-.coroa {
-  position: absolute;
-  width: 10%;
-  left: 52%;
-  top: -9%;
-  transform: rotate(8deg);
-}
-
-.xadrez {
-  position: absolute;
-  width: 6%;
-  left: -2%;
-  top: 40%;
-}
-
 .nota {
   position: absolute;
   right: clamp(-110px, calc(-110px + (1366px - 100vw) * .26), 10px);
@@ -249,12 +227,6 @@ body {
     grid-template-columns: 1fr;
     gap: 24px;
     padding: 36px 0 28px;
-  }
-
-  .faiscas {
-    left: -8px;
-    top: 10px;
-    width: 36px;
   }
 
   .hero-arte {
