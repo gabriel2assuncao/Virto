@@ -1,0 +1,1090 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Memoriar | Produtos</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="Imagens/logo.png" type="image/x-icon">
+</head>
+
+<body class="pagina-inicio pagina-produtos">
+
+  <!-- CABEÇALHO ORIGINAL -->
+  <header class="cabecalho">
+    <div class="cabecalho-conteudo">
+
+      <a href="index.html" class="logo-inicio">
+        <img src="Imagens/logotipo.png" alt="Logo Memoriar">
+      </a>
+
+      <div class="usuario">
+        <div class="usuario-texto">
+          <strong>Olá, Ana!</strong>
+          <span>Minha conta</span>
+        </div>
+        <div class="usuario-avatar">A</div>
+      </div>
+
+    </div>
+  </header>
+
+
+  <main class="produtos-container">
+
+    <!-- CATÁLOGO -->
+    <section class="produtos-catalogo" id="catalogo">
+
+      <div class="produtos-catalogo-titulo">
+        <div>
+
+          <h2>Produtos e homenagens</h2>
+
+          <p>
+            Encontre o que você procura
+            entre nossos produtos e serviços.
+          </p>
+        </div>
+      </div>
+
+
+      <!-- PESQUISA -->
+      <div class="produtos-pesquisa">
+
+        <label for="buscarProduto" class="produtos-busca">
+
+          <img src="Imagens/buscar.png" alt="">
+
+          <input
+            type="search"
+            id="buscarProduto"
+            placeholder="Pesquisar produtos ou serviços..."
+            autocomplete="off"
+          >
+
+        </label>
+
+      </div>
+
+
+      <!-- FILTROS -->
+      <div class="produtos-filtros"
+           role="group"
+           aria-label="Categorias de produtos">
+
+        <button class="produtos-filtro ativo"
+                type="button" data-filtro="todos"
+                aria-pressed="true">
+          Todos
+        </button>
+
+        <button class="produtos-filtro"
+                type="button" data-filtro="flores"
+                aria-pressed="false">
+          Flores
+        </button>
+
+        <button class="produtos-filtro"
+                type="button" data-filtro="memoriais"
+                aria-pressed="false">
+          Memoriais
+        </button>
+
+        <button class="produtos-filtro"
+                type="button" data-filtro="acessorios"
+                aria-pressed="false">
+          Acessórios
+        </button>
+
+        <button class="produtos-filtro"
+                type="button" data-filtro="servicos"
+                aria-pressed="false">
+          Serviços
+        </button>
+
+      </div>
+
+
+      <!-- GRID DOS PRODUTOS -->
+      <div class="produtos-grid" id="gridProdutos">
+
+        <!-- PRODUTO 1 -->
+        <article class="produto-card"
+                 data-categoria="flores"
+                 data-nome="coroa de flores tradicional"
+                 data-id="1">
+
+          <div class="produto-imagem">
+            <img src="Imagens/coroa.jpg"
+                 alt="Coroa de flores tradicional"
+                 loading="lazy"
+                 onerror="this.style.display='none'">
+
+            <span class="produto-etiqueta">Flores</span>
+          </div>
+
+          <div class="produto-conteudo">
+            <h3>Coroa de Flores Tradicional</h3>
+
+            <p>
+              Composição floral para homenagens
+              e cerimônias de despedida.
+            </p>
+
+            <div class="produto-rodape">
+              <div class="produto-preco">
+                <span>A partir de</span>
+                <strong>R$ 304,90</strong>
+              </div>
+
+              <button type="button"
+                      class="produto-botao"
+                      data-produto="1">
+                Detalhes
+              </button>
+            </div>
+          </div>
+
+        </article>
+
+
+        <!-- PRODUTO 2 -->
+        <article class="produto-card"
+                 data-categoria="flores"
+                 data-nome="arranjo floral homenagem"
+                 data-id="2">
+
+          <div class="produto-imagem">
+            <img src="Imagens/arranjo.jpg"
+                 alt="Arranjo floral para homenagem"
+                 loading="lazy"
+                 onerror="this.style.display='none'">
+
+            <span class="produto-etiqueta">Flores</span>
+          </div>
+
+          <div class="produto-conteudo">
+            <h3>Arranjo Floral Memorial</h3>
+
+            <p>
+              Flores naturais para ornamentação
+              de ambientes de homenagem.
+            </p>
+
+            <div class="produto-rodape">
+              <div class="produto-preco">
+                <span>A partir de</span>
+                <strong>R$ 49,90</strong>
+              </div>
+
+              <button type="button"
+                      class="produto-botao"
+                      data-produto="2">
+                Detalhes
+              </button>
+            </div>
+          </div>
+
+        </article>
+
+
+        <!-- PRODUTO 3 -->
+        <article class="produto-card"
+                 data-categoria="flores"
+                 data-nome="buque flores brancas"
+                 data-id="3">
+
+          <div class="produto-imagem">
+            <img src="Imagens/buquebranco.webp"
+                 alt="Buquê de flores brancas"
+                 loading="lazy"
+                 onerror="this.style.display='none'">
+
+            <span class="produto-etiqueta">Flores</span>
+          </div>
+
+          <div class="produto-conteudo">
+            <h3>Buquê de Flores Brancas</h3>
+
+            <p>
+              Homenagem delicada com flores
+              selecionadas e acabamento especial.
+            </p>
+
+            <div class="produto-rodape">
+              <div class="produto-preco">
+                <span>A partir de</span>
+                <strong>R$ 104,90</strong>
+              </div>
+
+              <button type="button"
+                      class="produto-botao"
+                      data-produto="3">
+                Detalhes
+              </button>
+            </div>
+          </div>
+
+        </article>
+
+
+        <!-- PRODUTO 4 -->
+        <article class="produto-card"
+                 data-categoria="memoriais"
+                 data-nome="fotografia retrato porcelana lapide"
+                 data-id="4">
+
+          <div class="produto-imagem">
+            <img src="Imagens/fotografia.jpeg"
+                 alt="Fotografia memorial em porcelana"
+                 loading="lazy"
+                 onerror="this.style.display='none'">
+
+            <span class="produto-etiqueta">Memoriais</span>
+          </div>
+
+          <div class="produto-conteudo">
+            <h3>Fotografia em Porcelana</h3>
+
+            <p>
+              Retrato personalizado para
+              identificação e homenagem na lápide.
+            </p>
+
+            <div class="produto-rodape">
+              <div class="produto-preco">
+                <span>A partir de</span>
+                <strong>R$ 89,90</strong>
+              </div>
+
+              <button type="button"
+                      class="produto-botao"
+                      data-produto="4">
+                Detalhes
+              </button>
+            </div>
+          </div>
+
+        </article>
+
+
+        <!-- PRODUTO 5 -->
+        <article class="produto-card"
+                 data-categoria="memoriais"
+                 data-nome="placa memorial alumínio lapide"
+                 data-id="5">
+
+          <div class="produto-imagem">
+            <img src="Imagens/placa.webp"
+                 alt="Placa memorial de alumínio"
+                 loading="lazy"
+                 onerror="this.style.display='none'">
+
+            <span class="produto-etiqueta">Memoriais</span>
+          </div>
+
+          <div class="produto-conteudo">
+            <h3>Placa Memorial em Alumínio</h3>
+
+            <p>
+              Placa personalizada com nome,
+              datas e mensagem de homenagem.
+            </p>
+
+            <div class="produto-rodape">
+              <div class="produto-preco">
+                <span>A partir de</span>
+                <strong>R$ 89,90</strong>
+              </div>
+
+              <button type="button"
+                      class="produto-botao"
+                      data-produto="5">
+                Detalhes
+              </button>
+            </div>
+          </div>
+
+        </article>
+
+
+        <!-- PRODUTO 6 -->
+        <article class="produto-card"
+                 data-categoria="acessorios"
+                 data-nome="vaso decorativo jazigo lapide"
+                 data-id="6">
+
+          <div class="produto-imagem">
+            <img src="Imagens/vaso.jpg"
+                 alt="Vaso decorativo para jazigo"
+                 loading="lazy"
+                 onerror="this.style.display='none'">
+
+            <span class="produto-etiqueta">Acessórios</span>
+          </div>
+
+          <div class="produto-conteudo">
+            <h3>Vaso Decorativo para Jazigo</h3>
+
+            <p>
+              Acessório resistente para
+              arranjos e decoração memorial.
+            </p>
+
+            <div class="produto-rodape">
+              <div class="produto-preco">
+                <span>A partir de</span>
+                <strong>R$ 79,90</strong>
+              </div>
+
+              <button type="button"
+                      class="produto-botao"
+                      data-produto="6">
+                Detalhes
+              </button>
+            </div>
+          </div>
+
+        </article>
+
+
+        <!-- PRODUTO 7 -->
+        <article class="produto-card"
+                 data-categoria="servicos"
+                 data-nome="limpeza conservação lápide jazigo"
+                 data-id="7">
+
+          <div class="produto-imagem">
+            <img src="Imagens/manutencao.jpg"
+                 alt="Serviço de limpeza de lápide"
+                 loading="lazy"
+                 onerror="this.style.display='none'">
+
+            <span class="produto-etiqueta">Serviços</span>
+          </div>
+
+          <div class="produto-conteudo">
+            <h3>Limpeza e Conservação</h3>
+
+            <p>
+              Serviço básico de limpeza
+              e cuidados com a lápide.
+            </p>
+
+            <div class="produto-rodape">
+              <div class="produto-preco">
+                <span>A partir de</span>
+                <strong>R$ 159,90</strong>
+              </div>
+
+              <button type="button"
+                      class="produto-botao"
+                      data-produto="7">
+                Detalhes
+              </button>
+            </div>
+          </div>
+
+        </article>
+
+
+        <!-- PRODUTO 8 -->
+        <article class="produto-card"
+                 data-categoria="servicos"
+                 data-nome="reforma restauração jazigo lapide"
+                 data-id="8">
+
+          <div class="produto-imagem">
+            <img src="Imagens/reforma.jpeg"
+                 alt="Serviço de reforma e restauração de jazigo"
+                 loading="lazy"
+                 onerror="this.style.display='none'">
+
+            <span class="produto-etiqueta">Serviços</span>
+          </div>
+
+          <div class="produto-conteudo">
+            <h3>Reforma de Jazigo</h3>
+
+            <p>
+              Reparos e restauração conforme
+              avaliação e autorização.
+            </p>
+
+            <div class="produto-rodape">
+              <div class="produto-preco">
+                <span>Valor mediante</span>
+                <strong class="produto-sob-consulta">
+                  Orçamento
+                </strong>
+              </div>
+
+              <button type="button"
+                      class="produto-botao"
+                      data-produto="8">
+                Detalhes
+              </button>
+            </div>
+          </div>
+
+        </article>
+
+      </div>
+
+
+      <!-- RESULTADO VAZIO -->
+      <div class="produtos-vazio" id="produtosVazio" hidden>
+        <h3>Nenhum item encontrado</h3>
+        <p>
+          Tente pesquisar outra palavra
+          ou selecionar uma categoria diferente.
+        </p>
+        <button type="button" id="limparBusca">
+          Ver todos os produtos
+        </button>
+      </div>
+
+    </section>
+
+
+    <!-- INFORMAÇÃO SOBRE O PLANO -->
+    <section class="produtos-plano">
+
+      <div>
+
+        <h2>Você possui o Plano Ouro.</h2>
+
+        <p>
+          Alguns itens e serviços funerários podem
+          estar previstos no seu plano. Consulte
+          suas coberturas antes de solicitar
+          um produto adicional.
+        </p>
+      </div>
+
+      <a href="planos.html">
+        Consultar benefícios
+      </a>
+
+    </section>
+
+
+    <!-- INFORMAÇÃO FINAL -->
+    <section class="informacao-acesso produtos-informacao">
+
+      <div class="informacao-icone">i</div>
+
+      <div>
+        <h3>Como solicitar um produto?</h3>
+
+        <p>
+          Selecione o item desejado e consulte
+          seus detalhes. A solicitação deverá
+          ser confirmada pela funerária,
+          considerando disponibilidade,
+          personalização e condições de entrega.
+          Os preços apresentados são ilustrativos.
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- MENU INFERIOR COM IMG -->
+  <nav class="home-menu-inferior"
+       aria-label="Menu principal">
+
+    <div class="home-menu-conteudo">
+
+      <a href="index.html" class="home-menu-item">
+        <img src="Imagens/homepreto.png" alt="">
+        <span>Principal</span>
+      </a>
+
+      <a href="planos.html" class="home-menu-item">
+        <img src="Imagens/cartaopreto.png" alt="">
+        <span>Planos</span>
+      </a>
+
+      <a href="produtos.html"
+         class="home-menu-item ativo"
+         aria-current="page">
+
+        <img src="Imagens/sacolaazul.png" alt="">
+        <span>Produtos</span>
+      </a>
+
+      <a href="perfil.html"
+              class="home-menu-item">
+
+        <img src="Imagens/usuariopreto.png" alt="">
+        <span>Perfil</span>
+    </a>
+
+    </div>
+  </nav>
+
+
+  <!-- MODAL DE DETALHES -->
+  <div class="produtos-modal-overlay"
+       id="modalProduto"
+       aria-hidden="true">
+
+    <div class="produtos-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="produtoModalTitulo">
+
+      <button type="button"
+              class="produtos-modal-fechar"
+              id="fecharProduto"
+              aria-label="Fechar">
+        &times;
+      </button>
+
+      <span class="produtos-modal-categoria"
+            id="produtoModalCategoria">
+        Produto
+      </span>
+
+      <h2 id="produtoModalTitulo">
+        Detalhes do produto
+      </h2>
+
+      <p class="produtos-modal-descricao"
+         id="produtoModalDescricao">
+      </p>
+
+      <div class="produtos-modal-detalhes">
+        <h3>Informações do item</h3>
+        <ul id="produtoModalLista"></ul>
+      </div>
+
+      <div class="produtos-modal-valor">
+        <span>Valor demonstrativo</span>
+        <strong id="produtoModalPreco"></strong>
+      </div>
+
+      <!-- PERSONALIZAÇÃO -->
+      <div class="produtos-personalizacao">
+
+        <label for="produtoObservacao">
+          Observações ou personalização
+        </label>
+
+        <textarea
+          id="produtoObservacao"
+          rows="3"
+          maxlength="300"
+          placeholder="Ex.: mensagem, nome ou preferência de flores..."
+        ></textarea>
+
+        <small>
+          Preenchimento opcional. Não informe
+          dados pessoais reais neste protótipo.
+        </small>
+
+      </div>
+
+      <button type="button"
+              class="produtos-solicitar">
+        Solicitar este item
+      </button>
+
+    </div>
+  </div>
+
+
+  <!-- MODAL DE CONFIRMAÇÃO -->
+  <div class="produtos-modal-overlay"
+       id="modalConfirmacao"
+       aria-hidden="true">
+
+    <div class="produtos-modal produtos-modal-central"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="confirmacaoTitulo">
+
+      <button type="button"
+              class="produtos-modal-fechar"
+              id="fecharConfirmacao"
+              aria-label="Fechar">
+        &times;
+      </button>
+
+      <div class="produtos-confirmacao-icone">✦</div>
+
+      <h2 id="confirmacaoTitulo">
+        Solicitação demonstrativa
+      </h2>
+
+      <p id="confirmacaoTexto">
+        Funcionalidade em desenvolvimento.
+      </p>
+
+      <button type="button"
+              class="produtos-solicitar"
+              id="entendiConfirmacao">
+        Entendi
+      </button>
+
+    </div>
+  </div>
+
+
+  <!-- JAVASCRIPT -->
+  <script>
+
+    /* CATÁLOGO DE DADOS */
+
+    const catalogo = {
+
+      1: {
+        nome: "Coroa de Flores Tradicional",
+        categoria: "Flores",
+        preco: "R$ 304,90",
+        descricao:
+          "Coroa floral destinada a cerimônias de " +
+          "despedida, com composição de flores " +
+          "naturais e folhagens.",
+        detalhes: [
+          "Flores naturais conforme disponibilidade",
+          "Faixa com mensagem personalizada",
+          "Cores e tamanho sujeitos à confirmação",
+          "Entrega mediante agendamento"
+        ]
+      },
+
+      2: {
+        nome: "Arranjo Floral Memorial",
+        categoria: "Flores",
+        preco: "R$ 49,90",
+        descricao:
+          "Arranjo de flores para homenagens, " +
+          "cerimônias e espaços memoriais.",
+        detalhes: [
+          "Flores naturais e folhagens",
+          "Composição decorativa",
+          "Opções de cores sob consulta",
+          "Montagem mediante disponibilidade"
+        ]
+      },
+
+      3: {
+        nome: "Buquê de Flores Brancas",
+        categoria: "Flores",
+        preco: "R$ 104,90",
+        descricao:
+          "Buquê delicado com flores brancas " +
+          "para homenagens e demonstrações " +
+          "de carinho.",
+        detalhes: [
+          "Flores naturais selecionadas",
+          "Embalagem e acabamento decorativo",
+          "Possibilidade de cartão de homenagem",
+          "Composição conforme disponibilidade"
+        ]
+      },
+
+      4: {
+        nome: "Fotografia em Porcelana",
+        categoria: "Memoriais",
+        preco: "R$ 89,90",
+        descricao:
+          "Retrato personalizado em porcelana " +
+          "para identificação memorial.",
+        detalhes: [
+          "Modelo oval ou retangular",
+          "Produção a partir de fotografia enviada",
+          "Tamanho definido no pedido",
+          "Instalação sob consulta"
+        ]
+      },
+
+      5: {
+        nome: "Placa Memorial em Alumínio",
+        categoria: "Memoriais",
+        preco: "R$ 89,90",
+        descricao:
+          "Placa de identificação para jazigos " +
+          "com informações e mensagens " +
+          "personalizadas.",
+        detalhes: [
+          "Material: alumínio",
+          "Gravação de nome e datas",
+          "Mensagem personalizada sob consulta",
+          "Instalação mediante autorização"
+        ]
+      },
+
+      6: {
+        nome: "Vaso Decorativo para Jazigo",
+        categoria: "Acessórios",
+        preco: "R$ 79,90",
+        descricao:
+          "Vaso decorativo para composições " +
+          "florais em espaços memoriais.",
+        detalhes: [
+          "Modelo para uso externo",
+          "Opções de tamanho e acabamento",
+          "Instalação conforme regras do cemitério",
+          "Flores vendidas separadamente"
+        ]
+      },
+
+      7: {
+        nome: "Limpeza e Conservação",
+        categoria: "Serviços",
+        preco: "R$ 159,90",
+        descricao:
+          "Serviço básico de limpeza da lápide " +
+          "e conservação visual do jazigo.",
+        detalhes: [
+          "Avaliação preliminar da superfície",
+          "Limpeza compatível com o material",
+          "Registro da data do atendimento",
+          "Não inclui reparos estruturais"
+        ]
+      },
+
+      8: {
+        nome: "Reforma de Jazigo",
+        categoria: "Serviços",
+        preco: "Sob orçamento",
+        descricao:
+          "Serviço de reparo e restauração " +
+          "de jazigos e lápides, conforme " +
+          "as condições do local.",
+        detalhes: [
+          "Avaliação técnica prévia",
+          "Orçamento individual",
+          "Execução conforme autorização",
+          "Prazos e materiais definidos no orçamento"
+        ]
+      }
+
+    };
+
+
+    /* PESQUISA E FILTROS */
+
+    const busca = document.getElementById("buscarProduto");
+
+    const filtros =
+      document.querySelectorAll(".produtos-filtro");
+
+    const cards =
+      document.querySelectorAll(".produto-card");
+
+    const totalProdutos =
+      document.getElementById("totalProdutos");
+
+    const vazio =
+      document.getElementById("produtosVazio");
+
+    let categoriaAtiva = "todos";
+
+    function atualizarCatalogo() {
+
+      const termo = busca.value
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .trim();
+
+      let quantidade = 0;
+
+      cards.forEach(function(card) {
+
+        const categoria = card.dataset.categoria;
+
+        const nome = card.dataset.nome
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "");
+
+        const combinaCategoria =
+          categoriaAtiva === "todos" ||
+          categoriaAtiva === categoria;
+
+        const combinaNome = nome.includes(termo);
+
+        const mostrar =
+          combinaCategoria && combinaNome;
+
+        card.hidden = !mostrar;
+
+        if (mostrar) {
+          quantidade++;
+        }
+
+      });
+
+      totalProdutos.textContent =
+        quantidade + (quantidade === 1
+          ? " item encontrado"
+          : " itens encontrados");
+
+      vazio.hidden = quantidade !== 0;
+    }
+
+    busca.addEventListener("input", atualizarCatalogo);
+
+    filtros.forEach(function(botao) {
+
+      botao.addEventListener("click", function() {
+
+        categoriaAtiva = botao.dataset.filtro;
+
+        filtros.forEach(function(item) {
+          const ativo = item === botao;
+          item.classList.toggle("ativo", ativo);
+          item.setAttribute("aria-pressed", String(ativo));
+        });
+
+        atualizarCatalogo();
+
+      });
+
+    });
+
+    document.getElementById("limparBusca")
+      .addEventListener("click", function() {
+
+        busca.value = "";
+        categoriaAtiva = "todos";
+
+        filtros.forEach(function(item) {
+          const ativo =
+            item.dataset.filtro === "todos";
+          item.classList.toggle("ativo", ativo);
+          item.setAttribute("aria-pressed", String(ativo));
+        });
+
+        atualizarCatalogo();
+
+      });
+
+
+    /* MODAIS */
+
+    const modalProduto =
+      document.getElementById("modalProduto");
+
+    const modalConfirmacao =
+      document.getElementById("modalConfirmacao");
+
+    const tituloProduto =
+      document.getElementById("produtoModalTitulo");
+
+    const categoriaProduto =
+      document.getElementById("produtoModalCategoria");
+
+    const descricaoProduto =
+      document.getElementById("produtoModalDescricao");
+
+    const listaDetalhes =
+      document.getElementById("produtoModalLista");
+
+    const precoProduto =
+      document.getElementById("produtoModalPreco");
+
+    const observacao =
+      document.getElementById("produtoObservacao");
+
+    const confirmarTexto =
+      document.getElementById("confirmacaoTexto");
+
+    let produtoSelecionado = null;
+    let ultimoAcionador = null;
+    let focoAnterior = null;
+
+    function abrirModal(elemento) {
+      focoAnterior = document.activeElement;
+      elemento.classList.add("ativo");
+      elemento.setAttribute("aria-hidden", "false");
+      document.body.classList.add("produtos-modal-aberto");
+
+      const botaoFechar =
+        elemento.querySelector(".produtos-modal-fechar");
+
+      if (botaoFechar) botaoFechar.focus();
+    }
+
+    function fecharModal(elemento) {
+      elemento.classList.remove("ativo");
+      elemento.setAttribute("aria-hidden", "true");
+
+      if (!document.querySelector(
+        ".produtos-modal-overlay.ativo"
+      )) {
+        document.body.classList.remove(
+          "produtos-modal-aberto"
+        );
+      }
+
+      if (ultimoAcionador) {
+        ultimoAcionador.focus();
+      } else if (focoAnterior) {
+        focoAnterior.focus();
+      }
+    }
+
+    function mostrarDetalhes(id, botao) {
+
+      const produto = catalogo[id];
+
+      if (!produto) return;
+
+      produtoSelecionado = produto;
+      ultimoAcionador = botao;
+
+      tituloProduto.textContent = produto.nome;
+      categoriaProduto.textContent = produto.categoria;
+      descricaoProduto.textContent = produto.descricao;
+      precoProduto.textContent = produto.preco;
+
+      listaDetalhes.innerHTML = "";
+
+      produto.detalhes.forEach(function(detalhe) {
+
+        const item = document.createElement("li");
+        item.textContent = detalhe;
+        listaDetalhes.appendChild(item);
+
+      });
+
+      observacao.value = "";
+
+      abrirModal(modalProduto);
+    }
+
+    document.querySelectorAll(".produto-botao")
+      .forEach(function(botao) {
+
+        botao.addEventListener("click", function() {
+          mostrarDetalhes(botao.dataset.produto, botao);
+        });
+
+      });
+
+    document.getElementById("fecharProduto")
+      .addEventListener("click", function() {
+        fecharModal(modalProduto);
+      });
+
+    document.getElementById("solicitarProduto")
+      .addEventListener("click", function() {
+
+        if (!produtoSelecionado) return;
+
+        const nome = produtoSelecionado.nome;
+
+        fecharModal(modalProduto);
+
+        confirmarTexto.textContent =
+          "Você selecionou " + nome +
+          ". Esta é uma demonstração: " +
+          "nenhum pedido foi registrado e " +
+          "nenhum pagamento foi realizado. " +
+          "A solicitação será implementada " +
+          "futuramente.";
+
+        abrirModal(modalConfirmacao);
+      });
+
+    function fecharConfirmacao() {
+      fecharModal(modalConfirmacao);
+    }
+
+    document.getElementById("fecharConfirmacao")
+      .addEventListener("click", fecharConfirmacao);
+
+    document.getElementById("entendiConfirmacao")
+      .addEventListener("click", fecharConfirmacao);
+
+    document.getElementById("abrirPerfilFuturo")
+      .addEventListener("click", function() {
+
+        ultimoAcionador = this;
+
+        confirmarTexto.textContent =
+          "A área de Perfil da conta será " +
+          "desenvolvida nas próximas etapas " +
+          "do Memoriar.";
+
+        abrirModal(modalConfirmacao);
+      });
+
+
+    /* FECHAR AO CLICAR FORA OU ESCAPE */
+
+    [modalProduto, modalConfirmacao].forEach(
+      function(modal) {
+
+        modal.addEventListener("click", function(evento) {
+
+          if (evento.target === modal) {
+            fecharModal(modal);
+          }
+
+        });
+
+      }
+    );
+
+    document.addEventListener("keydown", function(evento) {
+
+      const ativo = document.querySelector(
+        ".produtos-modal-overlay.ativo"
+      );
+
+      if (!ativo) return;
+
+      if (evento.key === "Escape") {
+        fecharModal(ativo);
+      }
+
+      if (evento.key === "Tab") {
+        const controles = Array.from(
+          ativo.querySelectorAll(
+            "button:not([disabled]), textarea:not([disabled])"
+          )
+        ).filter(function(el) {
+          return el.offsetParent !== null;
+        });
+
+        if (!controles.length) return;
+
+        const primeiro = controles[0];
+        const ultimo = controles[controles.length - 1];
+
+        if (
+          evento.shiftKey &&
+          document.activeElement === primeiro
+        ) {
+          evento.preventDefault();
+          ultimo.focus();
+        } else if (
+          !evento.shiftKey &&
+          document.activeElement === ultimo
+        ) {
+          evento.preventDefault();
+          primeiro.focus();
+        }
+      }
+
+    });
+
+  </script>
+
+</body>
+</html>

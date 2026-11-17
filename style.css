@@ -8,25 +8,6 @@ body {
   overflow-x: clip;
 }
 
-/* Botão principal */
-.botao-todas-solucoes {
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  padding: 15px 28px;
-  border-radius: 999px;
-  background: var(--roxo);
-  color: #fff;
-  font-weight: 700;
-  box-shadow: 0 10px 24px -10px rgba(104, 68, 237, .7);
-  transition: transform .2s, box-shadow .2s;
-}
-
-.botao-todas-solucoes:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 0 5px var(--roxo-bg), 0 14px 28px -10px rgba(104, 68, 237, .8);
-}
-
 .hero {
   display: grid;
   grid-template-columns: 1.1fr .9fr;
@@ -329,7 +310,6 @@ body {
 @media (max-width: 640px) {
   .botao-todas-solucoes {
     width: 100%;
-    justify-content: center;
   }
 }
 
@@ -375,11 +355,6 @@ body {
   .hero-texto p {
     font-size: clamp(14px, 2.4vh, 24px);
     margin-bottom: clamp(10px, 2.4vh, 28px);
-  }
-
-  .botao-todas-solucoes {
-    padding: clamp(12px, 1.8vh, 18px) clamp(22px, 2.4vh, 30px);
-    font-size: 19.5px;
   }
 
   .hero-arte {
@@ -454,10 +429,6 @@ body {
 
   .hero-texto p {
     font-size: clamp(17px, 3.2vw, 22px);
-  }
-
-  .botao-todas-solucoes {
-    font-size: 19.5px;
   }
 
   /* Ilustração centralizada, com espaço reservado para o texto manuscrito embaixo */

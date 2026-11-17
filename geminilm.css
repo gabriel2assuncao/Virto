@@ -13,25 +13,10 @@
   line-height: 1.7;
 }
 
-/* Botão voltar (mesmo padrão do espaco.css) */
-.voltar { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 28px; padding: 9px 18px 9px 14px; background: var(--roxo); border: 1px solid var(--roxo); border-radius: 999px; box-shadow: var(--sombra); color: #fff; font-size: 19.5px; font-weight: 700; transition: transform .2s, border-color .2s, color .2s, box-shadow .2s, filter .2s; }
-.voltar svg { width: 18px; height: 18px; flex: none; }
-.voltar:hover { color: #fff; filter: brightness(.92); box-shadow: 0 0 0 4px var(--roxo-bg), var(--sombra); transform: translateX(-3px); }
 /* Navegação entre soluções (mesmo padrão do espaco.css) */
-.nav-artigo { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 48px; }
-.botao-nav { display: flex; flex-direction: column; gap: 4px; padding: 16px 20px; background: var(--superficie); border: 1px solid var(--linha); border-radius: var(--raio); box-shadow: var(--sombra); transition: transform .2s, border-color .2s, box-shadow .2s; }
-.botao-nav small { color: var(--roxo); font-size: 19.5px; font-weight: 700; }
-.botao-nav strong { font-family: var(--titulo); font-size: 18px; line-height: 1.5; letter-spacing: -.02em; }
-.botao-nav.proximo { grid-column: 2; text-align: right; }
-.botao-nav:hover { border-color: var(--roxo); box-shadow: 0 0 0 4px var(--roxo-bg), var(--sombra-hover); transform: translateY(-2px); }
 
 /* Botões */
-.gl-btn { display: inline-block; padding: 13px 22px; border: var(--gl-borda); border-radius: 12px; font-weight: 800; font-size: 19.5px; line-height: 1.2; box-shadow: 4px 4px 0 var(--gl-tinta); transition: transform .12s, box-shadow .12s; }
-.gl-btn:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--gl-tinta); }
-.gl-btn:active { transform: translate(4px, 4px); box-shadow: 0 0 0 var(--gl-tinta); }
 .gl-btn:focus-visible, .gl-copiar:focus-visible { outline: 3px solid var(--roxo); outline-offset: 3px; }
-.gl-btn-principal { background: var(--roxo); color: #fff; }
-.gl-btn-sec { background: var(--superficie); color: var(--gl-tinta); }
 
 /* Hero */
 .gl-hero { max-width: 760px; margin-bottom: 72px; }
@@ -77,8 +62,10 @@
 .gl-prompt { margin-bottom: 36px; background: var(--gl-tinta); border-radius: var(--raio); box-shadow: 5px 5px 0 var(--roxo); color: #f4f1ff; overflow: hidden; }
 .gl-prompt-topo { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 20px; border-bottom: 1px solid rgba(255, 255, 255, .15); }
 .gl-prompt-topo h3 { margin: 0; font-size: 23px; color: #fff; }
-.gl-copiar { padding: 8px 16px; background: var(--gl-amarelo); border: 0; border-radius: 8px; color: var(--gl-tinta); font: inherit; font-size: 19.5px; font-weight: 800; cursor: pointer; }
-.gl-copiar:hover { filter: brightness(.95); }
+/* Botão copiar: mesmo formato dos demais; sombra roxa para aparecer no fundo escuro */
+.gl-copiar { padding: 10px 18px; background: var(--gl-amarelo); border: var(--gl-borda); border-radius: 12px; box-shadow: 4px 4px 0 var(--roxo); color: var(--gl-tinta); font: inherit; font-size: 19.5px; font-weight: 800; line-height: 1.2; cursor: pointer; transition: transform .12s, box-shadow .12s; }
+.gl-copiar:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--roxo); }
+.gl-copiar:active { transform: translate(4px, 4px); box-shadow: 0 0 0 var(--roxo); }
 .gl-prompt pre { margin: 0; padding: 20px; overflow-x: auto; white-space: pre-wrap; font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: 17px; line-height: 1.65; }
 
 /* Semana de exemplo */
@@ -111,11 +98,8 @@
 }
 @media (max-width: 640px) {
   .gl { font-size: 17px; }
-  .nav-artigo { grid-template-columns: 1fr; }
-  .botao-nav.proximo { grid-column: 1; text-align: left; }
   .gl-linha { grid-template-columns: 52px 1fr 44px; padding: 10px 14px; font-size: 17px; }
   .gl-prompt-topo { flex-wrap: wrap; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .gl-btn { transition: none; }
 }

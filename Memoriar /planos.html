@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memoriar | Planos</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="Imagens/logo.png" type="image/x-icon">
+</head>
+
+<body class="pagina-inicio pagina-planos">
+
+  <!-- CABEÇALHO PADRÃO -->
+  <header class="cabecalho">
+    <div class="cabecalho-conteudo">
+
+      <a href="index.html" class="logo-inicio">
+        <img src="Imagens/logotipo.png" alt="Logo Memoriar">
+      </a>
+
+      <div class="usuario">
+        <div class="usuario-texto">
+          <strong>Olá, Ana!</strong>
+          <span>Minha conta</span>
+        </div>
+        <div class="usuario-avatar">A</div>
+      </div>
+
+    </div>
+  </header>
+
+
+  <main class="planos-container">
+
+    <!-- APRESENTAÇÃO -->
+    <section class="planos-apresentacao">
+
+      <h1>Planos pensados para cuidar de você e sua família.</h1>
+
+      <p>
+        Conheça as coberturas disponíveis e encontre
+        a opção adequada para sua família, com
+        assistência para velório, sepultamento
+        e serviços memoriais.
+      </p>
+
+      <!-- SELETOR DE PAGAMENTO -->
+      <div class="planos-pagamento">
+
+        <span>Forma de pagamento</span>
+
+        <div class="planos-seletor" role="group"
+             aria-label="Periodicidade do pagamento">
+
+          <button
+            type="button"
+            class="planos-periodo ativo"
+            data-periodo="mensal"
+            aria-pressed="true"
+          >
+            Mensal
+          </button>
+
+          <button
+            type="button"
+            class="planos-periodo"
+            data-periodo="anual"
+            aria-pressed="false"
+          >
+            Anual
+            <span>10% OFF</span>
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CARDS DOS PLANOS -->
+    <section class="planos-lista">
+
+      <!-- PLANO BRONZE -->
+      <article class="planos-card">
+
+        <h2 style="color: #CD7F32;">Plano Bronze</h2>
+
+        <p class="planos-descricao">
+          Proteção essencial e assistência
+          para os momentos mais importantes.
+        </p>
+
+        <div class="planos-valor">
+          <span class="planos-preco"
+                data-mensal="69,90"
+                data-anual="754,92">
+            R$ 69,90
+          </span>
+          <span class="planos-unidade">/mês</span>
+        </div>
+
+        <div class="planos-divisor"></div>
+
+        <div class="planos-beneficiarios">
+          <strong>Titular + 3 dependentes</strong>
+        </div>
+
+        <ul class="planos-beneficios">
+
+          <li>Atendimento funerário 24 horas</li>
+          <li>Urna funerária padrão</li>
+          <li>Sala de velório convencional</li>
+          <li>Kit café básico*</li>
+          <li>Preparação e higienização básica</li>
+          <li>Traslado de até 50 km</li>
+          <li>Orientação documental</li>
+
+        </ul>
+
+        <div class="planos-cemiterio">
+
+          <strong>Jazigo não incluso</strong>
+
+          <p>
+            Aquisição de jazigo e taxas
+            cemiteriais contratadas à parte.
+          </p>
+          <p>
+            * Café sem açúcar, café com leite sem açúcar, água quente, sanchês de chás de ervas
+          </p>
+        </div>
+
+        <a
+          href="#"
+          class="planos-botao"
+        >
+          Solicitar alteração
+      </a>
+
+      </article>
+
+
+      <!-- PLANO PRATA -->
+      <article class="planos-card planos-prata">
+
+        <h2 style="color: #C0C0C0;">Plano Prata</h2>
+
+        <p class="planos-descricao">
+          Mais conforto, assistência ampliada
+          e cobertura cemiterial para a família.
+        </p>
+
+        <div class="planos-valor">
+          <span class="planos-preco"
+                data-mensal="119,90"
+                data-anual="1.294,92">
+            R$ 99,90
+          </span>
+          <span class="planos-unidade">/mês</span>
+        </div>
+
+
+        <div class="planos-divisor"></div>
+
+        <div class="planos-beneficiarios">
+          <strong>Titular + 5 dependentes</strong>
+        </div>
+
+        <ul class="planos-beneficios">
+
+          <li>Todos os serviços básicos do Bronze</li>
+          <li>Urna funerária semiluxo</li>
+          <li>Sala de velório climatizada</li>
+          <li>Kit café completo*</li>
+          <li>Traslado de até 150 km</li>
+          <li>1 coroa de flores</li>
+          <li>Necromaquiagem básica</li>
+          <li>Apoio na organização da cerimônia</li>
+
+        </ul>
+
+        <div class="planos-cemiterio">
+
+          <strong>Jazigo de até 2 lugares</strong>
+
+          <p>
+            Direito de uso de jazigo com até
+            dois espaços, conforme disponibilidade
+            e condições do contrato.
+          </p>
+          <p>
+            * Todos os itens do bronze + suco de laranja ou maracuja (4L), refrigerante (4L), bolo M (25 fatias), mini sanduiches de patê de frango (30 unidades) 
+          </p>
+        </div>
+
+        <a
+          href="#"
+          class="planos-botao"
+        >
+          Solicitar alteração
+      </a>
+
+      </article>
+
+
+      <!-- PLANO OURO -->
+      <article class="planos-card planos-ouro">
+
+        <div class="planos-destaque">
+          SEU PLANO ATUAL
+        </div>
+
+        <h2 style="color: #FFD700;">Plano Ouro</h2>
+
+        <p class="planos-descricao">
+          Nossa cobertura mais completa e com
+          maior proteção para toda a família.
+        </p>
+
+        <div class="planos-valor">
+          <span class="planos-preco"
+                data-mensal="189,90"
+                data-anual="2.050,92">
+            R$ 159,90
+          </span>
+          <span class="planos-unidade">/mês</span>
+        </div>
+
+        <div class="planos-divisor"></div>
+
+        <div class="planos-beneficiarios">
+          <strong>Titular + 10 dependentes</strong>
+        </div>
+
+        <ul class="planos-beneficios">
+
+          <li>Todos os serviços básicos do Bronze</li>
+          <li>Urna funerária luxo</li>
+          <li>Sala climatizada privativa</li>
+          <li>Kit café especial*</li>
+          <li>Traslado de até 300 km</li>
+          <li>2 coroas de flores</li>
+          <li>Necromaquiagem completa</li>
+          <li>Tanatopraxia quando necessária</li>
+          <li>Assistência personalizada à família</li>
+        </ul>
+
+        <div class="planos-cemiterio">
+
+          <strong>Jazigo de até 3 lugares</strong>
+
+          <p>
+            Direito de uso de jazigo familiar
+            com até três espaços, conforme
+            disponibilidade e contrato.
+          </p>
+          <p>
+            * Todos os itens do prata + capuccino (2L) + salgadinhos (2 centos)
+          </p>
+        </div>
+
+        <a
+          href="#"
+          class="planos-botao planos-contratado"
+        >
+          Meu plano atual
+      </a>
+
+      </article>
+
+    </section>
+
+
+    <!-- PLANO DA ANA -->
+    <section class="planos-minha-conta">
+
+      <div class="planos-minha-conta-texto">
+
+        <h2>Você está no Plano Ouro.</h2>
+
+        <div class="planos-resumo-conta">
+
+          <div>
+            <span>Titular</span>
+            <strong>Ana Oliveira</strong>
+          </div>
+
+          <div>
+            <span>Dependentes</span>
+            <strong>3 de 10</strong>
+          </div>
+
+          <div>
+            <span>Situação</span>
+            <strong>Ativo</strong>
+          </div>
+
+        </div>
+
+        <a href="perfil.html#dependentes"
+          class="planos-botao-conta"
+        >
+          Gerenciar dependentes
+      </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- INFORMAÇÃO IMPORTANTE -->
+    <section class="planos-informacao">
+
+      <div class="informacao-icone">i</div>
+
+      <div>
+        <h3>Informações importantes sobre os planos</h3>
+
+        <p>
+          Os valores apresentados são ilustrativos.
+          Serviços, limites, carências, taxas,
+          regras de dependentes e condições de
+          utilização dos jazigos devem ser
+          especificados no contrato da funerária.
+          O plano não representa automaticamente
+          a propriedade de um jazigo.
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- MENU INFERIOR COM IMAGENS -->
+  <nav class="home-menu-inferior" aria-label="Menu principal">
+
+    <div class="home-menu-conteudo">
+
+      <a href="index.html" class="home-menu-item">
+        <img src="Imagens/homepreto.png" alt="">
+        <span>Principal</span>
+      </a>
+
+      <a href="planos.html"
+         class="home-menu-item ativo"
+         aria-current="page">
+        <img src="Imagens/cartaoazul.png" alt="">
+        <span>Planos</span>
+      </a>
+      <a href="produtos.html" type="button"
+              class="home-menu-item">
+        <img src="Imagens/sacolapreta.png" alt="">
+        <span>Produtos</span>
+      </a>
+
+      <a href="perfil.html"
+              class="home-menu-item">
+        <img src="Imagens/usuariopreto.png" alt="">
+        <span>Perfil</span>
+    </a>
+
+    </div>
+
+  </nav>
+
+
+  <!-- MODAL DE SOLICITAÇÃO -->
+  <div class="planos-modal-overlay"
+       id="modalPlanos"
+       aria-hidden="true">
+
+    <div class="planos-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="modalPlanosTitulo">
+
+      <button type="button"
+              class="planos-modal-fechar"
+              id="fecharModalPlanos"
+              aria-label="Fechar">
+        &times;
+      </button>
+
+
+      <h2 id="modalPlanosTitulo">
+        Alteração de plano
+      </h2>
+
+      <p id="modalPlanosTexto">
+        Esta funcionalidade será disponibilizada
+        futuramente.
+      </p>
+
+      <button type="button"
+              class="planos-modal-botao"
+              id="entendiPlanos">
+        Entendi
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- JAVASCRIPT -->
+  <script>
+
+    // ALTERNAR PREÇOS MENSAIS E ANUAIS
+
+    const botoesPeriodo =
+      document.querySelectorAll(".planos-periodo");
+
+    const precos =
+      document.querySelectorAll(".planos-preco");
+
+    const unidades =
+      document.querySelectorAll(".planos-unidade");
+
+    botoesPeriodo.forEach(function(botao) {
+
+      botao.addEventListener("click", function() {
+
+        const periodo = botao.dataset.periodo;
+
+        botoesPeriodo.forEach(function(item) {
+          const ativo = item === botao;
+          item.classList.toggle("ativo", ativo);
+          item.setAttribute("aria-pressed", String(ativo));
+        });
+
+        precos.forEach(function(preco) {
+
+          if (periodo === "anual") {
+            preco.textContent = "R$ " + preco.dataset.anual;
+          } else {
+            preco.textContent = "R$ " + preco.dataset.mensal;
+          }
+
+        });
+
+        unidades.forEach(function(unidade) {
+          unidade.textContent =
+            periodo === "anual" ? "/ano" : "/mês";
+        });
+
+      });
+
+    });
+
+
+    // MODAL DE FUNCIONALIDADES FUTURAS
+
+    const modalPlanos =
+      document.getElementById("modalPlanos");
+
+    const tituloModal =
+      document.getElementById("modalPlanosTitulo");
+
+    const textoModal =
+      document.getElementById("modalPlanosTexto");
+
+    const fecharModalPlanos =
+      document.getElementById("fecharModalPlanos");
+
+    const entendiPlanos =
+      document.getElementById("entendiPlanos");
+
+    let ultimoBotaoPlanos = null;
+
+    function abrirAvisoPlanos(titulo, mensagem, botao) {
+      ultimoBotaoPlanos = botao;
+      tituloModal.textContent = titulo;
+      textoModal.textContent = mensagem;
+
+      modalPlanos.classList.add("ativo");
+      modalPlanos.setAttribute("aria-hidden", "false");
+      fecharModalPlanos.focus();
+    }
+
+    function fecharAvisoPlanos() {
+      modalPlanos.classList.remove("ativo");
+      modalPlanos.setAttribute("aria-hidden", "true");
+
+      if (ultimoBotaoPlanos) {
+        ultimoBotaoPlanos.focus();
+      }
+    }
+
+    document.querySelectorAll(".planos-solicitar")
+      .forEach(function(botao) {
+
+        botao.addEventListener("click", function() {
+
+          abrirAvisoPlanos(
+            "Solicitar Plano " + botao.dataset.plano,
+
+            "Ana Oliveira já possui o Plano Ouro. " +
+            "Para alterar o plano contratado, " +
+            "será necessário solicitar atendimento " +
+            "à funerária responsável.",
+
+            botao
+          );
+
+        });
+
+      });
+
+    document.getElementById("gerenciarDependentes")
+      .addEventListener("click", function() {
+
+        abrirAvisoPlanos(
+          "Gerenciar dependentes",
+
+          "Em breve será possível consultar, " +
+          "adicionar e gerenciar os dependentes " +
+          "do plano funerário.",
+
+          this
+        );
+
+      });
+
+    document.querySelectorAll("[data-futuro]")
+      .forEach(function(botao) {
+
+        botao.addEventListener("click", function() {
+
+          const pagina = botao.dataset.futuro;
+
+          abrirAvisoPlanos(
+            pagina,
+            "A página de " + pagina.toLowerCase() +
+            " será desenvolvida nas próximas etapas " +
+            "do Memoriar.",
+            botao
+          );
+
+        });
+
+      });
+
+    fecharModalPlanos.addEventListener(
+      "click", fecharAvisoPlanos
+    );
+
+    entendiPlanos.addEventListener(
+      "click", fecharAvisoPlanos
+    );
+
+    modalPlanos.addEventListener("click", function(evento) {
+      if (evento.target === modalPlanos) {
+        fecharAvisoPlanos();
+      }
+    });
+
+    document.addEventListener("keydown", function(evento) {
+
+      if (
+        evento.key === "Escape" &&
+        modalPlanos.classList.contains("ativo")
+      ) {
+        fecharAvisoPlanos();
+      }
+
+      if (
+        evento.key === "Tab" &&
+        modalPlanos.classList.contains("ativo")
+      ) {
+
+        const controles = [
+          fecharModalPlanos,
+          entendiPlanos
+        ];
+
+        const atual =
+          controles.indexOf(document.activeElement);
+
+        if (evento.shiftKey && atual === 0) {
+          evento.preventDefault();
+          entendiPlanos.focus();
+
+        } else if (!evento.shiftKey && atual === 1) {
+          evento.preventDefault();
+          fecharModalPlanos.focus();
+        }
+
+      }
+
+    });
+
+  </script>
+
+</body>
+</html>

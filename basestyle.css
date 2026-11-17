@@ -17,6 +17,7 @@
   --titulo: "Space Grotesk", Arial, sans-serif;
   --corpo: "Manrope", Arial, sans-serif;
   --mao: "Caveat", cursive;
+  --tinta: #1d1733;
 }
 
 * { box-sizing: border-box; }
@@ -46,6 +47,27 @@ h1 em, h2 em { font-style: normal; color: var(--roxo); }
 .rodape { padding: 24px 4%; border-top: 1px solid var(--linha); font-size: 14px; color: var(--suave); }
 .rodape p { margin: 0; text-align: center; }
 
+/* ---------- Botões: padrão único (igual ao "Escolher meu celular" e "Ver o resumo" da página Spam) ---------- */
+.botao-todas-solucoes, .sp-btn, .io-btn, .gl-btn, .voltar, .botao-nav {
+  display: inline-block; padding: 13px 22px; border: 2px solid var(--tinta); border-radius: 12px;
+  font-size: 19.5px; font-weight: 800; line-height: 1.2; text-align: center; cursor: pointer;
+  box-shadow: 4px 4px 0 var(--tinta); transition: transform .12s, box-shadow .12s;
+}
+.botao-todas-solucoes:hover, .sp-btn:hover, .io-btn:hover, .gl-btn:hover, .voltar:hover, .botao-nav:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--tinta); }
+.botao-todas-solucoes:active, .sp-btn:active, .io-btn:active, .gl-btn:active, .voltar:active, .botao-nav:active { transform: translate(4px, 4px); box-shadow: 0 0 0 var(--tinta); }
+/* Roxo */
+.botao-todas-solucoes, .sp-btn-principal, .io-btn-principal, .gl-btn-principal, .voltar { background: var(--roxo); color: #fff; }
+/* Branco */
+.sp-btn-sec, .io-btn-sec, .gl-btn-sec, .botao-nav { background: var(--superficie); color: var(--tinta); }
+.voltar { margin-bottom: 28px; }
+
+/* Navegação Anterior / Próxima */
+.nav-artigo { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 56px; }
+.botao-nav { display: flex; flex-direction: column; gap: 4px; text-align: left; }
+.botao-nav small { color: var(--roxo); font-size: 19.5px; font-weight: 700; }
+.botao-nav strong { font-family: var(--titulo); font-size: 18px; line-height: 1.5; letter-spacing: -.02em; }
+.botao-nav.proximo { grid-column: 2; text-align: right; }
+
 /* Container de conteúdo (lista de soluções e artigos) */
 .container-solucoes { max-width: 1200px; padding: 40px 5% 72px; }
 
@@ -54,6 +76,8 @@ h1 em, h2 em { font-style: normal; color: var(--roxo); }
   .logo-link { width: 96px; }
   .topo nav { gap: 14px; font-size: 13px; }
   .container-solucoes { padding: 28px 5% 56px; }
+  .nav-artigo { grid-template-columns: 1fr; gap: 12px; }
+  .botao-nav.proximo { grid-column: 1; text-align: left; }
 }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; scroll-behavior: auto !important; }
