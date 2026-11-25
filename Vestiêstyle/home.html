@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vestiê Stile | Início</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="app home-app">
+
+    <!-- topo -->
+    <header class="topo">
+      <div class="topo-linha">
+        <div class="logo-area">
+          <img src="imagens/logo.jpeg" alt="Logo Vestiê Stile" class="logo">
+          <div class="logo-texto">
+            <span class="nome-marca">Vestiê</span>
+            <span class="sub-marca">Stile</span>
+          </div>
+        </div>
+
+        <button class="btn-notificacao" type="button" title="Notificações" aria-label="Notificações">
+            <img class="bell" src="imagens/bell.png" alt="">
+        </button>
+      </div>
+
+      <div class="boas-vindas">
+        <h1>Olá!</h1>
+        <p>Qual look combina com o seu dia hoje?</p>
+      </div>
+
+      <div class="busca">
+        <span class="icone-busca">⌕</span>
+        <input type="text" placeholder="Buscar looks, peças ou estilos..." />
+      </div>
+    </header>
+
+    <!-- categorias -->
+    <section class="categorias" id="home-categorias">
+      <button type="button" class="categoria-item active">
+        <div class="categoria-icone"><img src="imagens/icon1.png" alt="" class="iconer"></div>
+        <span>Todas</span>
+      </button>
+
+      <button type="button" class="categoria-item">
+        <div class="categoria-icone"><img src="imagens/icon2.png" alt="" class="iconer"></div>
+        <span>Roupas</span>
+      </button>
+
+      <button type="button" class="categoria-item">
+        <div class="categoria-icone"><img src="imagens/icon3.png" alt="" class="iconer"></div>
+        <span>Calçados</span>
+      </button>
+
+      <button type="button" class="categoria-item">
+        <div class="categoria-icone"><img src="imagens/icon4.png" alt="" class="iconer"></div>
+        <span>Acessórios</span>
+      </button>
+    </section>
+
+    <!-- banner principal em carrossel -->
+    <section class="banner banner-slider" aria-label="Destaques de looks">
+      <div class="banner-slides">
+        <article class="banner-slide ativa">
+          <img src="imagens/banner-principal.jpg" alt="Roupas em arara">
+          <div class="banner-overlay">
+            <div class="banner-conteudo">
+              <h2>Looks para todos os momentos</h2>
+              <a href="explorar.html" class="btn-banner">Explorar</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="banner-slide">
+          <img src="imagens/look-1.jpg" alt="Inspiração de elegância neutra">
+          <div class="banner-overlay">
+            <div class="banner-conteudo">
+              <h2>Elegância em cada detalhe</h2>
+              <a href="explorar.html" class="btn-banner">Explorar</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="banner-slide">
+          <img src="imagens/look-2.jpg" alt="Inspiração de closet refinado">
+          <div class="banner-overlay">
+            <div class="banner-conteudo">
+              <h2>Encontre seu próximo estilo</h2>
+              <a href="explorar.html" class="btn-banner">Explorar</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="banner-indicadores" role="group" aria-label="Selecionar destaque">
+        <button class="indicador ativo" type="button" aria-label="Slide 1" aria-current="true"></button>
+        <button class="indicador" type="button" aria-label="Slide 2"></button>
+        <button class="indicador" type="button" aria-label="Slide 3"></button>
+      </div>
+    </section>
+
+    <!-- em alta -->
+    <section class="secao">
+      <div class="secao-topo">
+        <h3>Em alta</h3>
+        <a href="explorar.html">Ver todos</a>
+      </div>
+
+      <div class="cards-horizontal">
+        <article class="card-look">
+          <img src="imagens/look-1.jpg" alt="Arara elegante com roupas neutras">
+          <div class="card-info">
+            <h4>Elegância neutra</h4>
+            <p>Minimalista • Chic</p>
+          </div>
+        </article>
+
+        <article class="card-look">
+          <img src="imagens/look-2.jpg" alt="Cabides sofisticados">
+          <div class="card-info">
+            <h4>Closet refinado</h4>
+            <p>Clássico • Atemporal</p>
+          </div>
+        </article>
+
+        <article class="card-look">
+          <img src="imagens/look-3.jpg" alt="Ateliê com manequins">
+          <div class="card-info">
+            <h4>Estilo criativo</h4>
+            <p>Fashion • Autoral</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- inspirações -->
+    <section class="secao">
+      <div class="secao-topo">
+        <h3>Inspirações</h3>
+        <a href="explorar.html">Ver mais</a>
+      </div>
+
+      <div class="grid-inspiracoes">
+        <article class="card-inspiracao grande">
+          <img src="imagens/look-4.jpg" alt="Arara dourada com roupas sofisticadas">
+          <div class="card-overlay">
+            <span>Seleção premium</span>
+          </div>
+        </article>
+
+        <article class="card-inspiracao pequena">
+          <img src="imagens/look-3.jpg" alt="Ateliê de moda">
+          <div class="card-overlay">
+            <span>Ateliê</span>
+          </div>
+        </article>
+
+        <article class="card-inspiracao pequena">
+          <img src="imagens/look-2.jpg" alt="Detalhe de cabides">
+          <div class="card-overlay">
+            <span>Closet</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- menu inferior -->
+    <nav class="menu-inferior">
+      <a href="home.html" class="menu-item active">
+        <img src="imagens/icon1-inferior.png" alt="Início" class="menu-inferior-icone">
+        <small>Início</small>
+      </a>
+
+      <a href="montar.html" class="menu-item">
+        <img src="imagens/icon2-inferior.png" alt="Montar" class="menu-inferior-icone">
+        <small>Montar</small>
+      </a>
+
+      <a href="explorar.html" class="menu-item">
+        <img src="imagens/icon3-inferior.png" alt="Explorar" class="menu-inferior-icone">
+        <small>Explorar</small>
+      </a>
+
+      <a href="perfil.html" class="menu-item">
+        <img src="imagens/icon4-inferior.png" alt="Perfil" class="menu-inferior-icone">
+        <small>Perfil</small>
+      </a>
+    </nav>
+
+  </main>
+<script src="shared.js" defer></script><script src="home.js" defer></script></body>
+</html>

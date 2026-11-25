@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vestiê Stile | Montar Look</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="shared.js" defer></script>
+  <script src="montar.js" defer></script>
+</head>
+<body>
+
+  <main class="app">
+
+    <!-- Cabeçalho -->
+    <header class="cabecalho">
+      <div class="linha-titulo">
+        <a href="home.html" class="voltar" aria-label="Voltar">
+         
+        </a>
+        <h1>Montar look</h1>
+        <button class="favoritos" aria-label="Meus favoritos">
+          ♡
+        </button>
+      </div>
+
+      <p>Escolha as peças e combine do seu jeito.</p>
+    </header>
+
+    <!-- Quatro referências demonstrativas. Substitua as imagens em imagens/referencia-*.svg -->
+    <section class="referencias-look" aria-label="Quatro referências de looks">
+      <h2>Referências para montar</h2>
+     
+      <div class="produtos" id="lista-produtos">
+        <article class="produto" data-id="1" data-slot="cima" tabindex="0" role="button" aria-pressed="false">
+          <div class="produto-imagem p1"></div>
+          <div class="produto-info"><h3>Parte de cima</h3><p>Imagem demonstrativa</p></div>
+        </article>
+        <article class="produto" data-id="2" data-slot="baixo" tabindex="0" role="button" aria-pressed="false">
+          <div class="produto-imagem p2"></div>
+          <div class="produto-info"><h3>Parte de baixo</h3><p>Imagem demonstrativa</p></div>
+        </article>
+        <article class="produto" data-id="3" data-slot="calcado" tabindex="0" role="button" aria-pressed="false">
+          <div class="produto-imagem p4"></div>
+          <div class="produto-info"><h3>Calçados</h3><p>Imagem demonstrativa</p></div>
+        </article>
+        <article class="produto" data-id="4" data-slot="acessorio" tabindex="0" role="button" aria-pressed="false">
+          <div class="produto-imagem p3"></div>
+          <div class="produto-info"><h3>Acessórios</h3><p>Imagem demonstrativa</p></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Botão principal -->
+    <div class="area-combinacao">
+      <button class="btn-combinacao" id="criar-look">
+        Criar combinação
+      </button>
+    </div>
+
+    <section id="estudio-look" class="estudio-look" hidden aria-label="Estúdio de looks">
+      <div class="estudio-topo"><h2>Seu estúdio de looks</h2><button type="button" id="fechar-estudio" class="btn-texto">X</button></div>
+      <p>Escolha seu estilo, ocasião e gênero. Adicione fotos das suas peças para gerar uma sugestão.</p>
+      <form id="form-gerador" class="form-gerador">
+        <div class="linha-form"><label>Estilo<select id="estilo-look"><option value="casual">Casual</option><option value="elegante">Elegante</option><option value="festa">Festa</option><option value="streetwear">Streetwear</option><option value="role">Rolê</option><option value="trabalho">Trabalho</option><option value="esportivo">Esportivo</option></select></label><label>Ocasião<input id="ocasiao-look" maxlength="70" placeholder="Ex.: aniversário, passeio"></label></div>
+        <div class="linha-form linha-genero"><label for="genero-look">Gênero / preferência de apresentação
+          <select id="genero-look" name="genero"><option value="nao_informar">Prefiro não informar</option><option value="feminino">Feminino</option><option value="masculino">Masculino</option><option value="neutro">Neutro / sem gênero</option></select>
+        </label></div>
+        <div class="uploads-pecas" id="uploads-pecas">
+          <div class="upload-peca"><h3>Parte de cima</h3><img class="peca-preview" alt="Prévia da parte de cima" hidden><div class="upload-acoes"><button type="button" data-upload="cima" data-origem="camera">📷 Câmera</button><button type="button" data-upload="cima" data-origem="galeria">Galeria</button></div></div>
+          <div class="upload-peca"><h3>Parte de baixo</h3><img class="peca-preview" alt="Prévia da parte de baixo" hidden><div class="upload-acoes"><button type="button" data-upload="baixo" data-origem="camera">📷 Câmera</button><button type="button" data-upload="baixo" data-origem="galeria">Galeria</button></div></div>
+          <div class="upload-peca"><h3>Calçados</h3><img class="peca-preview" alt="Prévia dos calçados" hidden><div class="upload-acoes"><button type="button" data-upload="calcado" data-origem="camera">📷 Câmera</button><button type="button" data-upload="calcado" data-origem="galeria">Galeria</button></div></div>
+          <div class="upload-peca"><h3>Acessórios</h3><img class="peca-preview" alt="Prévia dos acessórios" hidden><div class="upload-acoes"><button type="button" data-upload="acessorio" data-origem="camera">📷 Câmera</button><button type="button" data-upload="acessorio" data-origem="galeria">Galeria</button></div></div>
+        </div>
+        <input id="camera-peca" type="file" accept="image/*" capture="environment" hidden><input id="galeria-peca" type="file" accept="image/*" hidden>
+        <p class="mensagem-fluxo" id="mensagem-gerador" role="status" aria-live="polite"></p>
+        <button type="submit" class="btn-combinacao" id="gerar-look">Gerar look</button>
+      </form>
+      <div id="resultado-gerador" class="resultado-gerador" hidden aria-live="polite"><img id="imagem-look-gerado" class="imagem-look-gerado" alt="Look sugerido" hidden><h3 id="resultado-titulo"></h3><p id="resultado-descricao"></p><p id="resultado-cores"></p><span id="resultado-origem" class="origem-geracao"></span><div class="resultado-acoes"><button id="novo-look" type="button">Novo look</button><a href="perfil.html?salvos=1">Ver histórico</a></div></div>
+      
+    </section>
+    <!-- Menu inferior -->
+    <nav class="menu-inferior" aria-label="Navegação principal">
+
+      <a href="home.html" class="menu-item">
+        <img src="imagens/icon1-inferior.png" alt="Início" class="menu-inferior-icone">
+        <small>Início</small>
+      </a>
+
+      <a href="montar.html" class="menu-item active" aria-current="page">
+        <img src="imagens/icon2-inferior.png" alt="Montar" class="menu-inferior-icone">
+        <small>Montar</small>
+      </a>
+
+      <a href="explorar.html" class="menu-item">
+        <img src="imagens/icon3-inferior.png" alt="Explorar" class="menu-inferior-icone">
+        <small>Explorar</small>
+      </a>
+
+      <a href="perfil.html" class="menu-item">
+        <img src="imagens/icon4-inferior.png" alt="Perfil" class="menu-inferior-icone">
+        <small>Perfil</small>
+      </a>
+
+    </nav>
+
+  </main>
+
+</body>
+</html>

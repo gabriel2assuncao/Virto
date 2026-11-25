@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Vestiê Stile | Explorar Looks</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="shared.js" defer></script>
+  <script src="explorar.js" defer></script>
+</head>
+
+<body>
+
+<main class="explorar-app">
+
+  <!-- TELA 1: EXPLORAR LOOKS -->
+  <section id="tela-explorar" class="tela ativa">
+
+    <header class="explorar-cabecalho">
+      <h1>Explorar looks</h1>
+      <p>Inspirações para todos os momentos.</p>
+    </header>
+
+    <!-- Filtros -->
+    <div class="filtros">
+      <button class="filtro ativo" data-filtro="todos">
+        Todos
+      </button>
+      <button class="filtro" data-filtro="casual">
+        Casual
+      </button>
+      <button class="filtro" data-filtro="urbano">
+        Urbano
+      </button>
+      <button class="filtro" data-filtro="elegante">
+        Elegante
+      </button>
+    </div>
+
+    <!-- Looks -->
+    <div class="grade-looks">
+
+      <article class="look-card"
+               data-categoria="casual"
+               data-look="casual">
+
+        <div class="look-imagem">
+          <img src="imagens/look-casual.png"
+               alt="Look casual feminino">
+          <button class="btn-favorito" aria-label="Favoritar look"
+                  data-favorito="casual"><span class="favoritar-1">♡</span></button>
+        </div>
+
+        <div class="look-info">
+          <h3>Casual</h3>
+          <div class="look-rodape">
+            <div class="cores">
+              <span style="background:#c9ae92"></span>
+              <span style="background:#8e745f"></span>
+              <span style="background:#714b31"></span>
+            </div>
+            <span class="coracao-pequeno">♡</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="look-card"
+               data-categoria="urbano"
+               data-look="urbano">
+
+        <div class="look-imagem">
+          <img src="imagens/look_urbano.png"
+               alt="Look urbano feminino">
+          <button class="btn-favorito" aria-label="Favoritar look"
+                  data-favorito="urbano">♡</button>
+        </div>
+
+        <div class="look-info">
+          <h3>Urbano</h3>
+          <div class="look-rodape">
+            <div class="cores">
+              <span style="background:#515149"></span>
+              <span style="background:#777e6e"></span>
+              <span style="background:#342c28"></span>
+            </div>
+            <span class="coracao-pequeno">♡</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="look-card"
+               data-categoria="elegante"
+               data-look="elegante">
+
+        <div class="look-imagem">
+          <img src="imagens/look-elegante.png"
+               alt="Look elegante feminino">
+          <button class="btn-favorito" aria-label="Favoritar look"
+                  data-favorito="elegante">♡</button>
+        </div>
+
+        <div class="look-info">
+          <h3>Elegante</h3>
+          <div class="look-rodape">
+            <div class="cores">
+              <span style="background:#c0a586"></span>
+              <span style="background:#9d8166"></span>
+              <span style="background:#6d4a32"></span>
+            </div>
+            <span class="coracao-pequeno">♡</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="look-card"
+               data-categoria="trabalho"
+               data-look="trabalho">
+
+        <div class="look-imagem">
+          <img src="imagens/look-trabalho.png"
+               alt="Look para trabalho">
+          <button class="btn-favorito" aria-label="Favoritar look"
+                  data-favorito="trabalho">♡</button>
+        </div>
+
+        <div class="look-info">
+          <h3>Trabalho</h3>
+          <div class="look-rodape">
+            <div class="cores">
+              <span style="background:#f2e9df"></span>
+              <span style="background:#5c534c"></span>
+              <span style="background:#292624"></span>
+            </div>
+            <span class="coracao-pequeno">♡</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Acesso ao quiz -->
+    <div class="quiz-convite">
+      <span>DESCUBRA SEU ESTILO</span>
+      <h2>Qual estilo combina com você?</h2>
+      <p>
+        Responda algumas perguntas e descubra
+        quais looks mais combinam com sua personalidade.
+      </p>
+      <button id="abrir-quiz">Fazer quiz</button>
+    </div>
+
+  </section>
+
+  <!-- TELA 2: DETALHES DO LOOK -->
+  <section id="tela-detalhes" class="tela">
+
+    <header class="detalhes-cabecalho">
+      <button id="voltar-explorar" class="botao-voltar"
+              aria-label="Voltar"><img class="btn-voltar1" src="imagens/voltar-icon.png" alt="icon-de-voltar"></button>
+      <div class="acoes-topo">
+        <button id="curtir-detalhe"
+                aria-label="Curtir look">♡</button>
+        <button id="compartilhar-look"
+                aria-label="Compartilhar"><img class="btn-compartilha" src="imagens/icon-send.png" alt=""></button>
+      </div>
+    </header>
+
+    <div class="galeria-look">
+
+      <div class="foto-principal">
+        <img id="imagem-principal"
+             src="imagens/look-1.jpg"
+             alt="Look selecionado">
+      </div>
+
+      <div class="fotos-secundarias">
+        <button class="foto-detalhe" data-indice="1">
+          <img id="detalhe-imagem-1"
+               src="imagens/urbano-detalhe-1.jpg"
+               alt="Detalhe da roupa">
+        </button>
+        <button class="foto-detalhe" data-indice="2">
+          <img id="detalhe-imagem-2"
+               src="imagens/urbano-detalhe-2.jpg"
+               alt="Detalhe do calçado">
+        </button>
+      </div>
+
+    </div>
+
+    <div class="informacoes-look">
+
+      <h1 id="titulo-look">Look urbano minimalista</h1>
+
+      <div class="tags-look" id="tags-look">
+        <span>Urbano</span>
+        <span>Casual</span>
+        <span>Minimalista</span>
+      </div>
+
+      <div class="estatisticas">
+        <span>♡ <span id="curtidas-look">2,4k</span></span>
+        <span>◉ <span id="visualizacoes-look">8,7k</span></span>
+
+        <div class="paleta-look" id="paleta-look">
+          <span style="background:#c3aa8a"></span>
+          <span style="background:#927357"></span>
+          <span style="background:#433328"></span>
+        </div>
+      </div>
+
+      <p id="descricao-look">
+        Conforto e estilo na medida certa.
+        Ideal para o dia a dia, sem abrir mão da elegância.
+      </p>
+
+      <button id="salvar-look" class="botao-principal">
+        Salvar look
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- TELA 3: QUIZ DE ESTILO -->
+  <section id="tela-quiz" class="tela">
+
+    <header class="quiz-cabecalho">
+      <button id="voltar-quiz" class="botao-voltar"
+              aria-label="Voltar"><img class="btn-voltar1" src="imagens/voltar-icon.png" alt=""></button>
+    </header>
+
+    <div class="quiz-conteudo">
+
+      <h1>Descubra seu estilo</h1>
+      <p>
+        Responda algumas perguntas e encontre
+        o seu estilo ideal.
+      </p>
+
+      <div class="quiz-progresso">
+        <div class="barra-progresso">
+          <div id="progresso-preenchido"></div>
+        </div>
+        <span id="numero-pergunta">1/5</span>
+      </div>
+
+      <h2 id="pergunta-quiz">
+        Qual look te representa mais?
+      </h2>
+
+      <div class="opcoes-quiz" id="opcoes-quiz">
+        <!-- Preenchidas pelo JavaScript -->
+      </div>
+
+      <button id="proxima-pergunta"
+              class="botao-principal">
+        Próximo 
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- TELA 4: RESULTADO DO QUIZ -->
+  <section id="tela-resultado" class="tela">
+
+    <div class="resultado-conteudo">
+      
+
+      <h1>Seu estilo é...</h1>
+      <h2 id="estilo-resultado">Casual</h2>
+
+      <img id="imagem-resultado"
+           src="imagens/look-casual.png"
+           alt="Estilo identificado">
+
+      <p id="descricao-resultado"></p>
+
+      <button id="explorar-resultado"
+              class="botao-principal">
+        Explorar meu estilo 
+      </button>
+
+      <button id="refazer-quiz"
+              class="botao-secundario">
+        Refazer quiz
+      </button>
+    </div>
+
+  </section>
+
+  <!-- NAVEGAÇÃO INFERIOR -->
+  <nav class="menu-inferior" aria-label="Navegação principal">
+
+    <a href="home.html" class="menu-item">
+      <img src="imagens/icon1-inferior.png" alt="Início" class="menu-inferior-icone">
+      <small>Início</small>
+    </a>
+
+    <a href="montar.html" class="menu-item">
+      <img src="imagens/icon2-inferior.png" alt="Montar" class="menu-inferior-icone">
+      <small>Montar</small>
+    </a>
+
+    <a href="explorar.html" class="menu-item active" aria-current="page">
+      <img src="imagens/icon3-inferior.png" alt="Explorar" class="menu-inferior-icone">
+      <small>Explorar</small>
+    </a>
+
+    <a href="perfil.html" class="menu-item">
+      <img src="imagens/icon4-inferior.png" alt="Perfil" class="menu-inferior-icone">
+      <small>Perfil</small>
+    </a>
+
+  </nav>
+
+</main>
+
+</body>
+</html>

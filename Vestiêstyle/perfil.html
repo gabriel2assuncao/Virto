@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Vestiê Stile | Perfil</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="shared.js" defer></script>
+  <script src="perfil.js" defer></script>
+</head>
+
+<body>
+
+<main class="perfil-app">
+
+  <!-- CABEÇALHO -->
+  <header class="perfil-cabecalho">
+
+    <a href="home.html" class="voltar"
+       aria-label="Voltar para início">
+      <img class="btn-voltar2" src="imagens/voltar-icon.png" alt="">
+    </a>
+
+    
+
+    <button id="btn-config-topo"
+            class="config-topo"
+            aria-label="Configurações">
+      <img class="btn-config1" src="imagens/icon-settings.png" alt="">
+    </button>
+
+  </header>
+
+  <!-- TELA PRINCIPAL DO PERFIL -->
+  <section class="pagina ativa" id="pagina-perfil">
+
+    <!-- INFORMAÇÕES DA USUÁRIA -->
+    <div class="usuario">
+
+      <div class="foto-perfil">
+        <img
+          src="imagens/foto-perfil.jpg"
+          alt="Foto de perfil"
+          id="foto-usuario"
+        >
+      </div>
+
+      <div class="usuario-info">
+
+        <div class="usuario-nome">
+          <h2 id="nome-usuario">apollo</h2>
+
+          <button id="editar-perfil"
+                  aria-label="Editar perfil">
+            ✎
+          </button>
+        </div>
+
+        <p id="bio-usuario">
+          Estilo é uma forma de se expressar.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- ESTATÍSTICAS -->
+    <div class="estatisticas">
+
+      <button class="estatistica" id="atalho-salvos">
+        <strong id="numero-looks">12</strong>
+        <span>Looks salvos</span>
+      </button>
+
+      <button class="estatistica" id="btn-seguidores">
+        <strong>4</strong>
+        <span>Seguidores</span>
+      </button>
+
+      <button class="estatistica" id="btn-seguindo">
+        <strong>5</strong>
+        <span>Seguindo</span>
+      </button>
+
+    </div>
+
+    <!-- MEU ESTILO -->
+    <button class="card-meu-estilo"
+            data-pagina="pagina-estilo">
+
+    <img class="btn-config" src="imagens/icone-perfil-camiseta.png" alt="Meu estilo" id="imagem-meu-estilo"> 
+
+      <div class="estilo-info">
+        <h3>Meu estilo</h3>
+        <p>Descubra seu estilo</p>
+      </div>
+
+     
+
+    </button>
+
+    <!-- MENU DE OPÇÕES -->
+    <div class="opcoes-perfil">
+
+      <button class="opcao"
+              data-pagina="pagina-salvos">
+        <img class="btn-config" src="imagens/icon-salvos.png" alt="Looks salvos">
+        <span>Looks salvos</span>
+        
+      </button>
+
+      <button class="opcao"
+              data-pagina="pagina-preferencias">
+        <img class="btn-config" src="imagens/ajustes icon.png" alt="Preferências"> 
+        <span>Minhas preferências</span>
+        
+      </button>
+
+      <a href="explorar.html?quiz=1" class="opcao">
+        <img class="btn-config" src="imagens/icon checklist.png" alt="Quiz de estilo" >
+        <span>Quiz de estilo</span>
+       
+      </a>
+
+      <button class="opcao"
+              data-pagina="pagina-configuracoes">
+
+        <img class="btn-config" src="imagens/icon-settings.png" alt="Configurações" >
+        <span>Configurações</span>
+       
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- EDITAR PERFIL -->
+  <section class="pagina" id="pagina-editar">
+
+    
+    <div class="editar-foto">
+      <img src="imagens/foto-perfil.jpg"
+           id="preview-foto"
+           alt="Foto de perfil">
+
+      <button type="button" id="foto-camera" class="trocar-foto">📷 Tirar foto</button><label for="nova-foto" class="trocar-foto">
+        Alterar foto
+      </label>
+
+      <input type="file"
+             id="nova-foto"
+             accept="image/*"
+             hidden>
+    </div>
+
+    <form id="form-editar">
+
+      <div class="campo">
+        <label for="editar-nome">Nome de usuário</label>
+        <input type="text"
+               id="editar-nome"
+               maxlength="30"
+               required>
+      </div>
+
+      <div class="campo">
+        <label for="editar-bio">Biografia</label>
+        <textarea id="editar-bio"
+                  rows="4"
+                  maxlength="150"></textarea>
+      </div>
+
+      <button type="submit" class="btn-principal">
+        Salvar alterações
+      </button>
+
+    </form>
+
+  </section>
+
+  <!-- MEU ESTILO -->
+  <section class="pagina" id="pagina-estilo">
+
+  
+
+    <div class="resultado-estilo">
+
+      
+
+      <h3 id="nome-estilo">Descubra seu estilo</h3>
+
+      <img src="imagens/look-casual.jpg"
+           id="imagem-estilo"
+           alt="Estilo pessoal">
+
+      <p id="descricao-estilo">
+        Faça o quiz e descubra as combinações
+        que mais combinam com você.
+      </p>
+
+      <a href="explorar.html?quiz=1"
+         class="btn-principal">
+        Fazer quiz de estilo 
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- LOOKS SALVOS -->
+  <section class="pagina" id="pagina-salvos">
+
+   
+
+    <p class="descricao-secao">
+      Suas combinações favoritas em um só lugar.
+    </p>
+
+    <h3 class="subtitulo-historico">Looks criados por você</h3><div class="grade-salvos" id="grade-historico"></div><h3 class="subtitulo-historico">Inspirações favoritas</h3><div class="grade-salvos" id="grade-salvos">
+      <!-- Preenchido pelo JavaScript -->
+    </div>
+
+    <div class="vazio" id="salvos-vazio">
+      <span>♡</span>
+      <h3>Nenhum look salvo</h3>
+      <p>Explore novas combinações e salve suas favoritas.</p>
+      <a href="explorar.html" class="btn-principal">
+        Explorar looks
+      </a>
+    </div>
+
+  </section>
+
+  <!-- PREFERÊNCIAS -->
+  <section class="pagina" id="pagina-preferencias">
+
+    <h2 class="titulo-secao">Minhas preferências</h2>
+
+    <p class="descricao-secao">
+      Personalize suas escolhas de estilo.
+    </p>
+
+    <div class="grupo-preferencias">
+
+      <h3>Estilos favoritos</h3>
+
+      <div class="preferencias-chips">
+        <button class="chip" data-estilo="casual">
+          Casual
+        </button>
+        <button class="chip" data-estilo="urbano">
+          Urbano
+        </button>
+        <button class="chip" data-estilo="elegante">
+          Elegante
+        </button>
+        <button class="chip" data-estilo="classico">
+          Clássico
+        </button>
+        <button class="chip" data-estilo="minimalista">
+          Minimalista
+        </button>
+      </div>
+
+      <h3>Cores favoritas</h3>
+
+      <div class="preferencias-cores">
+
+        <button class="cor-preferencia"
+                data-cor="bege"
+                style="--cor:#ddcbb0"
+                aria-label="Bege"></button>
+
+        <button class="cor-preferencia"
+                data-cor="marrom"
+                style="--cor:#754a2e"
+                aria-label="Marrom"></button>
+
+        <button class="cor-preferencia"
+                data-cor="preto"
+                style="--cor:#252525"
+                aria-label="Preto"></button>
+
+        <button class="cor-preferencia"
+                data-cor="branco"
+                style="--cor:#ffffff"
+                aria-label="Branco"></button>
+
+        <button class="cor-preferencia"
+                data-cor="verde"
+                style="--cor:#69745d"
+                aria-label="Verde"></button>
+
+      </div>
+
+      <button id="salvar-preferencias"
+              class="btn-principal">
+        Salvar preferências
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- CONFIGURAÇÕES -->
+  <section class="pagina" id="pagina-configuracoes">
+
+    <h2 class="titulo-secao">Configurações</h2>
+
+    <div class="lista-config">
+
+      <button class="opcao"
+              data-pagina="pagina-editar">
+        <span class="opcao-icone">✎</span>
+        <span>Editar perfil</span>
+        <span class="seta">›</span>
+      </button>
+
+      <button class="opcao"
+              data-pagina="pagina-preferencias">
+        <span class="opcao-icone">☷</span>
+        <span>Preferências</span>
+        <span class="seta">›</span>
+      </button>
+
+      <a href="index.html" class="opcao sair">
+        <span class="opcao-icone">↪</span>
+        <span>Voltar à tela inicial</span>
+        <span class="seta">›</span>
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- MENU INFERIOR -->
+  <nav class="menu-inferior" aria-label="Navegação principal">
+
+    <a href="home.html" class="menu-item">
+      <img src="imagens/icon1-inferior.png" alt="Início" class="menu-inferior-icone">
+      <small>Início</small>
+    </a>
+
+    <a href="montar.html" class="menu-item">
+      <img src="imagens/icon2-inferior.png" alt="Montar" class="menu-inferior-icone">
+      <small>Montar</small>
+    </a>
+
+    <a href="explorar.html" class="menu-item">
+      <img src="imagens/icon3-inferior.png" alt="Explorar" class="menu-inferior-icone">
+      <small>Explorar</small>
+    </a>
+
+    <a href="perfil.html" class="menu-item active" aria-current="page">
+      <img src="imagens/icon4-inferior.png" alt="Perfil" class="menu-inferior-icone">
+      <small>Perfil</small>
+    </a>
+
+  </nav>
+
+</main>
+
+</body>
+</html>
